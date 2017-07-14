@@ -1,10 +1,9 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 
-namespace Assets.Utils
+namespace Assets.Utils.Unity
 {
 #if UNITY_EDITOR || UNITY_EDITOR_WIN
-
-    using UnityEditor;
 
     public class InspectorExtensions : MonoBehaviour
     {

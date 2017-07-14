@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Utils
+namespace Assets.Utils.Math
 {
     public static class VectorUtils
     {
@@ -38,12 +38,57 @@ namespace Assets.Utils
         {
             return new Vector3(Random.value, Random.value, Random.value);
         }
+
         public static Vector3 RandomVector(this Vector3 self, Vector3 minVec, Vector3 maxVec)
         {
             return new Vector3(
-                Random.value * (maxVec.x-minVec.x) + minVec.x, 
-                Random.value * (maxVec.y - minVec.y) + minVec.y, 
+                Random.value * (maxVec.x - minVec.x) + minVec.x,
+                Random.value * (maxVec.y - minVec.y) + minVec.y,
                 Random.value * (maxVec.z - minVec.z) + minVec.z);
+        }
+
+        public static Vector2 Project(this Vector3 input)
+        {
+            return new Vector2(input.x / input.z, input.y / input.z);
+        }
+
+        public static Vector3 Unproject(this Vector2 input)
+        {
+            return new Vector3(input.x, input.y, 1f);
+        }
+
+        public static float[] GetArray(this Vector3 v)
+        {
+            return new[] { v.x, v.y, v.z };
+        }
+
+        public static double[] ToArrayd(this Vector3 v)
+        {
+            return new double[] { v.x, v.y, v.z };
+        }
+
+        public static Vector3 FromArray(this Vector3 v, double[] arr)
+        {
+            v.x = (float)arr[0];
+            v.y = (float)arr[1];
+            v.z = (float)arr[2];
+            return v;
+        }
+
+        public static float[] GetArray(this Vector2 v)
+        {
+            return new[] { v.x, v.y };
+        }
+
+        public static Vector3 FromArray(this Vector3 v, float[] arr)
+        {
+            v.Set(arr[0], arr[1], arr[2]);
+            return v;
+        }
+
+        public static Vector3 DirectionTo(this Vector3 from, Vector3 to)
+        {
+            return (to - from).normalized;
         }
     }
 }
