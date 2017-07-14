@@ -3,7 +3,7 @@ using System.Diagnostics;
 using Assets.Utils.Data;
 using UniRx;
 
-namespace Assets.Utils.Debug
+namespace Assets.Utils.Debuging
 {
     public class StopWatcher
     {
