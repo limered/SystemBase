@@ -2,6 +2,7 @@
 using Assets.Utils;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ namespace Assets.SystemBase
     public class Game : MonoBehaviour, IGameSystem
     {
         public Text DebugText;
+        private readonly Dictionary<Type, IGameSystem> _gameSystemDict = new Dictionary<Type, IGameSystem>();
         private readonly List<IGameSystem> _gameSystems = new List<IGameSystem>();
         private readonly Dictionary<Type, List<IGameSystem>> _systemToComponentMapper = new Dictionary<Type, List<IGameSystem>>();
         public int Priority { get { return -1; } }
@@ -31,13 +33,37 @@ namespace Assets.SystemBase
             }
         }
 
+        public T System<T>() where T : IGameSystem
+        {
+            IGameSystem system;
+            if (_gameSystemDict.TryGetValue(typeof(T), out system))
+                return (T)system;
+            throw new ArgumentException("System: " + typeof(T) + " not registered!");
+        }
+
+        public void TellDebug(string text)
+        {
+            if (DebugText != null)
+            {
+                DebugText.text = text;
+            }
+        }
+
+        public void AddToDebug(string text)
+        {
+            if (DebugText != null)
+            {
+                DebugText.text += text;
+            }
+        }
+
         private void Awake()
         {
             IoC.RegisterSingleton(this);
 
             #region System Registration
 
-            RegisterSystem(new FunnyMovementSystem()); // 10
+            RegisterSystem(new FunnyMovementSystem());
 
             #endregion System Registration
 
@@ -46,9 +72,9 @@ namespace Assets.SystemBase
 
         private void MapAllSystemsComponents()
         {
-            _gameSystems.Sort((system, gameSystem) => system.Priority - gameSystem.Priority);
+            IOrderedEnumerable<IGameSystem> orderedSystems = _gameSystems.OrderBy(system => system.Priority);
 
-            foreach (var system in _gameSystems)
+            foreach (var system in orderedSystems)
             {
                 foreach (var componentType in system.ComponentsToRegister)
                 {
@@ -68,17 +94,10 @@ namespace Assets.SystemBase
             _systemToComponentMapper[componentType].Add(system);
         }
 
-        private void RegisterSystem(IGameSystem system)
+        private void RegisterSystem<T>(T system) where T : IGameSystem
         {
             _gameSystems.Add(system);
-        }
-
-        public void TellDebug(string text)
-        {
-            if (DebugText != null)
-            {
-                DebugText.text = text;
-            }
+            _gameSystemDict.Add(typeof(T), system);
         }
     }
 }

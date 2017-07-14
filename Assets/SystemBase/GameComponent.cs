@@ -14,5 +14,7 @@ namespace Assets.SystemBase
         {
             IoC.Resolve<Game>().RegisterComponent(this);
         }
+
+        public virtual IGameSystem System { get; private set; }
     }
 }
