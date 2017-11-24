@@ -2,7 +2,7 @@ using System;
 using UniRx;
 using UnityEngine;
 
-namespace Assets.Utils.Plugins
+namespace Assets.Utils
 {
     public static class ReactiveUtils
     {

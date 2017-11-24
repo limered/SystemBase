@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace Assets.Utils.Math
+namespace Assets.Utils
 {
     [StructLayout(LayoutKind.Sequential)]
     public class Matrix2d

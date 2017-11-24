@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Assets.Utils.DotNet
+namespace Assets.Utils
 {
     public static class LinqExtensions
     {

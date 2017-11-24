@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using Random = System.Random;
 
-namespace Assets.Utils.Math
+namespace Assets.Utils
 {
     public static class MathExtensions
     {

@@ -1,4 +1,4 @@
-﻿namespace Assets.Utils.Math
+﻿namespace Assets.Utils
 {
     // ReSharper disable once InconsistentNaming
     public class Matrix3d

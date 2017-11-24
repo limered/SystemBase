@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Utils.Math
+namespace Assets.Utils
 {
     public static class MatrixExtensions
     {

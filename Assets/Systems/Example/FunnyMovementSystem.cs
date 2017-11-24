@@ -1,8 +1,7 @@
 ﻿using Assets.SystemBase;
 using Assets.Utils;
 using System.Collections;
-using Assets.Utils.Math;
-using Assets.Utils.Plugins;
+using Assets.Utils;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;

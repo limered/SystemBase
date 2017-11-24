@@ -12,7 +12,11 @@ namespace Assets.SystemBase
         where TComponent3 : IGameComponent
         where TComponent4 : IGameComponent
     {
-        public override Type[] ComponentsToRegister { get { return new[] { typeof(TComponent1), typeof(TComponent2), typeof(TComponent3), typeof(TComponent4) }; } }
+        public override Type[] ComponentsToRegister
+        {
+            get
+            { return new[] { typeof(TComponent1), typeof(TComponent2), typeof(TComponent3), typeof(TComponent4) }; }
+        }
 
         public abstract void Register(TComponent4 component);
     }
@@ -23,7 +27,11 @@ namespace Assets.SystemBase
         where TComponent2 : IGameComponent
         where TComponent3 : IGameComponent
     {
-        public override Type[] ComponentsToRegister { get { return new[] { typeof(TComponent1), typeof(TComponent2), typeof(TComponent3) }; } }
+        public override Type[] ComponentsToRegister
+        {
+            get
+            { return new[] { typeof(TComponent1), typeof(TComponent2), typeof(TComponent3) }; }
+        }
 
         public abstract void Register(TComponent3 component);
     }
@@ -33,7 +41,11 @@ namespace Assets.SystemBase
         where TComponent1 : IGameComponent
         where TComponent2 : IGameComponent
     {
-        public override Type[] ComponentsToRegister { get { return new[] { typeof(TComponent1), typeof(TComponent2) }; } }
+        public override Type[] ComponentsToRegister
+        {
+            get
+            { return new[] { typeof(TComponent1), typeof(TComponent2) }; }
+        }
 
         public abstract void Register(TComponent2 component);
     }
@@ -43,7 +55,12 @@ namespace Assets.SystemBase
         private Dictionary<Type, Action<IGameComponent>> _registerMethods;
         public abstract int Priority { get; }
 
-        public virtual Type[] ComponentsToRegister { get { return new[] { typeof(TComponent) }; } }
+        public virtual Type[] ComponentsToRegister
+        {
+            get
+            { return new[] { typeof(TComponent) }; }
+        }
+
         public virtual void Init() { }
 
         public void RegisterComponent(IGameComponent component)

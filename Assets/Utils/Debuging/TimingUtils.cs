@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace Assets.Utils.Debuging
+namespace Assets.Utils
 {
     public static class TimingUtils
     {

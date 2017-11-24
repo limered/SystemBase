@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace Assets.Utils.Unity
+namespace Assets.Utils
 {
 #if UNITY_EDITOR || UNITY_EDITOR_WIN
 

@@ -15,7 +15,12 @@ namespace Assets.SystemBase
         private readonly List<IGameSystem> _gameSystems = new List<IGameSystem>();
         private readonly Dictionary<Type, List<IGameSystem>> _systemToComponentMapper = new Dictionary<Type, List<IGameSystem>>();
         public int Priority { get { return -1; } }
-        public Type[] ComponentsToRegister { get { return null; } }
+
+        public Type[] ComponentsToRegister
+        {
+            get
+            { return null; }
+        }
 
         public void Init()
         {
