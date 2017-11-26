@@ -1,4 +1,4 @@
-﻿namespace Assets.SystemBase
+﻿namespace SystemBase
 {
     public interface IGameComponent
     {

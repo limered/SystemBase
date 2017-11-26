@@ -1,12 +1,13 @@
-﻿using Assets.SystemBase;
-using Assets.Utils;
-using System.Collections;
-using Assets.Utils;
+﻿using System.Collections;
+using SystemBase;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
+using Utils;
+using Utils.Math;
+using Utils.Plugins;
 
-namespace Assets.Systems.Example
+namespace Systems.Example
 {
     public class FunnyMovementSystem : GameSystem<FunnyMovementComponent, FunnyMovementConfigComponent>
     {

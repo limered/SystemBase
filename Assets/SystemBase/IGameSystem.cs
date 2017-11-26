@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assets.SystemBase
+namespace SystemBase
 {
     public interface IGameSystem
     {

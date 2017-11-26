@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
-using Assets.Utils;
 using UniRx;
+using Utils.Data;
 
-namespace Assets.Utils
+namespace Utils.Debuging
 {
     public class StopWatcher
     {

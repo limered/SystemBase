@@ -1,7 +1,7 @@
-﻿using Assets.Utils;
-using UnityEngine;
+﻿using UnityEngine;
+using Utils;
 
-namespace Assets.SystemBase
+namespace SystemBase
 {
     public class GameComponent : MonoBehaviour, IGameComponent
     {

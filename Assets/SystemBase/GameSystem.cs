@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
-namespace Assets.SystemBase
+namespace SystemBase
 {
     public abstract class GameSystem<TComponent1, TComponent2, TComponent3, TComponent4>
         : GameSystem<TComponent1, TComponent2, TComponent3>

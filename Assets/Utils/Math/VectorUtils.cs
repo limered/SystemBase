@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Utils
+namespace Utils.Math
 {
     public static class VectorUtils
     {

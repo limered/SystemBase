@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace Assets.Utils
+namespace Utils.Unity
 {
     public static class MarshallingUtils
     {

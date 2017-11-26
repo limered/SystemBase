@@ -4,7 +4,7 @@
 
 using UnityEngine;
 
-namespace Assets.Utils { 
+namespace Utils.Math { 
     public struct Mathd {
         // ReSharper disable once InconsistentNaming
         public const double PI = 3.14159265358979;

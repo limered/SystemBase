@@ -1,7 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Assets.Utils
+namespace Utils.Math
 {
     [StructLayout(LayoutKind.Sequential)]
     public struct Matrix2f

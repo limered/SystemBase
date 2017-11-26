@@ -1,12 +1,12 @@
-﻿using Assets.Systems.Example;
-using Assets.Utils;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Systems.Example;
 using UnityEngine;
 using UnityEngine.UI;
+using Utils;
 
-namespace Assets.SystemBase
+namespace SystemBase
 {
     public class Game : MonoBehaviour, IGameSystem
     {

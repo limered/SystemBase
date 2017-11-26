@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Assets.Utils
+﻿namespace Utils.Data
 {
     public class RingBuffer<T>
     {

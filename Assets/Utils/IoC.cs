@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Assets.SystemBase;
+using SystemBase;
 
-namespace Assets.Utils
+namespace Utils
 {
     public static class IoC
     {
