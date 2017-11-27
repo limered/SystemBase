@@ -1,30 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Systems.Example;
+using UniRx;
 using UnityEngine;
-using UnityEngine.UI;
-using Utils;
 
 namespace SystemBase
 {
-    public class Game : MonoBehaviour, IGameSystem
+    public class GameBase : MonoBehaviour, IGameSystem
     {
-        public Text DebugText;
+        public StringReactiveProperty DebugMainFrameCallback = new StringReactiveProperty();
         private readonly Dictionary<Type, IGameSystem> _gameSystemDict = new Dictionary<Type, IGameSystem>();
         private readonly List<IGameSystem> _gameSystems = new List<IGameSystem>();
         private readonly Dictionary<Type, List<IGameSystem>> _systemToComponentMapper = new Dictionary<Type, List<IGameSystem>>();
+
         public int Priority { get { return -1; } }
+        public Type[] ComponentsToRegister { get { return new Type[0]; } }
 
-        public Type[] ComponentsToRegister
-        {
-            get
-            { return null; }
-        }
-
-        public void Init()
+        public virtual void Init()
         {
             MapAllSystemsComponents();
+
+            DebugMainFrameCallback.ObserveOnMainThread().Subscribe(OnDebugCallbackCalled);
         }
 
         public void RegisterComponent(IGameComponent component)
@@ -46,33 +42,15 @@ namespace SystemBase
             throw new ArgumentException("System: " + typeof(T) + " not registered!");
         }
 
-        public void TellDebug(string text)
+        protected virtual void OnDebugCallbackCalled(string s)
         {
-            if (DebugText != null)
-            {
-                DebugText.text = text;
-            }
+            print(s);
         }
 
-        public void AddToDebug(string text)
+        protected void RegisterSystem<T>(T system) where T : IGameSystem
         {
-            if (DebugText != null)
-            {
-                DebugText.text += text;
-            }
-        }
-
-        private void Awake()
-        {
-            IoC.RegisterSingleton(this);
-
-            #region System Registration
-
-            RegisterSystem(new FunnyMovementSystem());
-
-            #endregion System Registration
-
-            Init();
+            _gameSystems.Add(system);
+            _gameSystemDict.Add(typeof(T), system);
         }
 
         private void MapAllSystemsComponents()
@@ -97,12 +75,6 @@ namespace SystemBase
                 _systemToComponentMapper.Add(componentType, new List<IGameSystem>());
             }
             _systemToComponentMapper[componentType].Add(system);
-        }
-
-        private void RegisterSystem<T>(T system) where T : IGameSystem
-        {
-            _gameSystems.Add(system);
-            _gameSystemDict.Add(typeof(T), system);
         }
     }
 }

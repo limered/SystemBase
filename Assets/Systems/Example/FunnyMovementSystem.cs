@@ -9,6 +9,7 @@ using Utils.Plugins;
 
 namespace Systems.Example
 {
+    [GameSystem]
     public class FunnyMovementSystem : GameSystem<FunnyMovementComponent, FunnyMovementConfigComponent>
     {
         private float _speed;

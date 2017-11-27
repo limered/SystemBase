@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using SystemBase;
+using Systems;
 
 namespace Utils
 {
     public static class IoC
     {
         private static readonly Dictionary<Type, object> Singletons = new Dictionary<Type, object>();
+
         static IoC()
         {
         }
 
         public static Game Game { get { return Resolve<Game>(); } }
+
         public static TSingleton Resolve<TSingleton>()
         {
             var yes = false;
