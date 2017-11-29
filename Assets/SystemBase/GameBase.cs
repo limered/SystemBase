@@ -10,10 +10,9 @@ namespace SystemBase
     {
         public StringReactiveProperty DebugMainFrameCallback = new StringReactiveProperty();
         private readonly Dictionary<Type, IGameSystem> _gameSystemDict = new Dictionary<Type, IGameSystem>();
-        private readonly List<IGameSystem> _gameSystems = new List<IGameSystem>();
         private readonly Dictionary<Type, List<IGameSystem>> _systemToComponentMapper = new Dictionary<Type, List<IGameSystem>>();
-
-        public int Priority { get { return -1; } }
+        private readonly Dictionary<Type, int> _inDegrees = new Dictionary<Type, int>();
+        private List<IGameSystem> _gameSystems = new List<IGameSystem>();
         public Type[] ComponentsToRegister { get { return new Type[0]; } }
 
         public virtual void Init()
@@ -50,14 +49,17 @@ namespace SystemBase
         protected void RegisterSystem<T>(T system) where T : IGameSystem
         {
             _gameSystems.Add(system);
-            _gameSystemDict.Add(typeof(T), system);
+            _gameSystemDict.Add(system.GetType(), system);
+            _inDegrees.Add(system.GetType(), 0);
         }
 
         private void MapAllSystemsComponents()
         {
-            IOrderedEnumerable<IGameSystem> orderedSystems = _gameSystems.OrderBy(system => system.Priority);
+            _gameSystems = SortSystems();
 
-            foreach (var system in orderedSystems)
+            PrintDependencyList(_gameSystems);
+
+            foreach (var system in _gameSystems)
             {
                 foreach (var componentType in system.ComponentsToRegister)
                 {
@@ -66,6 +68,49 @@ namespace SystemBase
 
                 system.Init();
             }
+        }
+
+        private GameSystemAttribute GetAttribute(Type t)
+        {
+            return (GameSystemAttribute)Attribute.GetCustomAttribute(t, typeof(GameSystemAttribute));
+        }
+
+        private List<IGameSystem> SortSystems()
+        {
+            foreach (var system in _gameSystems)
+            {
+                foreach (var dependency in GetAttribute(system.GetType()).Dependencies)
+                {
+                    _inDegrees[dependency]++;
+                }
+            }
+
+            var result = new List<IGameSystem>();
+            var Q = new Queue<IGameSystem>(_gameSystems
+                .Where(system => _inDegrees[system.GetType()] == 0));
+
+            while (Q.Any())
+            {
+                var system = Q.Dequeue();
+                result.Add(system);
+                foreach (var dependency in GetAttribute(system.GetType()).Dependencies)
+                {
+                    _inDegrees[dependency]--;
+                    if (_inDegrees[dependency] == 0)
+                    {
+                        Q.Enqueue(_gameSystemDict[dependency]);
+                    }
+                }
+            }
+            result.Reverse();
+            if (_gameSystems.Count == result.Count) return result;
+            var circ = _gameSystems.First(s => !result.Contains(s));
+            throw new ArgumentException("Circular dependency in GameSystem registration! System: " + circ.GetType());
+        }
+
+        private void PrintDependencyList(IEnumerable<IGameSystem> systems)
+        {
+            Debug.Log("System List:\n" + systems.Aggregate("", (current, system) => current + (system.GetType() + "\n")));
         }
 
         private void MapSystemToComponent(IGameSystem system, Type componentType)

@@ -53,7 +53,6 @@ namespace SystemBase
     public abstract class GameSystem<TComponent> : IGameSystem where TComponent : IGameComponent
     {
         private Dictionary<Type, Action<IGameComponent>> _registerMethods;
-        public abstract int Priority { get; }
 
         public virtual Type[] ComponentsToRegister
         {
@@ -61,7 +60,9 @@ namespace SystemBase
             { return new[] { typeof(TComponent) }; }
         }
 
-        public virtual void Init() { }
+        public virtual void Init()
+        {
+        }
 
         public void RegisterComponent(IGameComponent component)
         {

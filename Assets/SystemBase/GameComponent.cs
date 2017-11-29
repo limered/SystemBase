@@ -6,16 +6,16 @@ namespace SystemBase
 {
     public class GameComponent : MonoBehaviour, IGameComponent
     {
-        protected void Start()
-        {
-            RegisterToGame();
-        }
+        public virtual IGameSystem System { get; set; }
 
         public void RegisterToGame()
         {
             IoC.Resolve<Game>().RegisterComponent(this);
         }
 
-        public virtual IGameSystem System { get; private set; }
+        protected void Start()
+        {
+            RegisterToGame();
+        }
     }
 }

@@ -2,6 +2,6 @@
 {
     public interface IGameComponent
     {
-        IGameSystem System { get; }
+        IGameSystem System { get; set; }
     }
 }
