@@ -1,7 +1,7 @@
-﻿using Assets.SystemBase;
+﻿using SystemBase;
 using UnityEngine;
 
-namespace Assets.Systems.Example
+namespace Systems.Example
 {
     [RequireComponent(typeof(Rigidbody))]
     public class FunnyMovementComponent : GameComponent

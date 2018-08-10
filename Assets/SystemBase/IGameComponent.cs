@@ -1,10 +1,7 @@
-﻿using JetBrains.Annotations;
-using UnityEngine;
-
-namespace Assets.SystemBase
+﻿namespace SystemBase
 {
     public interface IGameComponent
     {
-        GameObject gameObject { get; }
+        IGameSystem System { get; set; }
     }
 }

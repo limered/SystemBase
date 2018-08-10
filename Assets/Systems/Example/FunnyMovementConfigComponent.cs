@@ -1,7 +1,7 @@
-﻿using Assets.SystemBase;
+﻿using SystemBase;
 using UniRx;
 
-namespace Assets.Systems.Example
+namespace Systems.Example
 {
     public class FunnyMovementConfigComponent : GameComponent
     {

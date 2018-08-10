@@ -1,19 +1,18 @@
-﻿using Assets.SystemBase;
-using Assets.Utils;
-using System;
-using System.Collections;
+﻿using System.Collections;
+using SystemBase;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
+using Utils;
+using Utils.Math;
+using Utils.Plugins;
 
-namespace Assets.Systems.Example
+namespace Systems.Example
 {
+    [GameSystem]
     public class FunnyMovementSystem : GameSystem<FunnyMovementComponent, FunnyMovementConfigComponent>
     {
         private float _speed;
-
-        //needs to be set for loading order and component registration order
-        public override int Priority { get { return 10; } }
 
         public override void Init()
         {
@@ -30,7 +29,7 @@ namespace Assets.Systems.Example
                 .Where((_, i) => i % 60 == 0)
 
                 /*
-                 * This Logging extensions can be put anywhere in the observable-creation-call-chain 
+                 * This Logging extensions can be put anywhere in the observable-creation-call-chain
                  * to intercept values/errors and print them before they reach your Subscribtion methods.
                  */
                 .LogError() // Logs OnError and prints exception by using Debug.LogException(). Optionally you can provide a format function.

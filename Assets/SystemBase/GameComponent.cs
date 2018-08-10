@@ -1,18 +1,21 @@
-﻿using Assets.Utils;
+﻿using Systems;
 using UnityEngine;
+using Utils;
 
-namespace Assets.SystemBase
+namespace SystemBase
 {
     public class GameComponent : MonoBehaviour, IGameComponent
     {
-        protected void Start()
-        {
-            RegisterToGame();
-        }
+        public virtual IGameSystem System { get; set; }
 
         public void RegisterToGame()
         {
             IoC.Resolve<Game>().RegisterComponent(this);
+        }
+
+        protected void Start()
+        {
+            RegisterToGame();
         }
     }
 }
