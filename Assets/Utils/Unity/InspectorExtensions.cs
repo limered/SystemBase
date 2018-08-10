@@ -1,4 +1,6 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR || UNITY_EDITOR_WIN
+using UnityEditor;
+#endif
 using UnityEngine;
 
 namespace Utils.Unity

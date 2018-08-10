@@ -4,6 +4,11 @@ namespace Utils.Math
 {
     public static class VectorUtils
     {
+        // ReSharper disable once InconsistentNaming
+        public static Vector2 XY(this Vector3 v)
+        {
+            return new Vector2(v.x, v.y);
+        }
         public static float Angle(Vector2 vector)
         {
             return Angle(vector, Vector2.up);
@@ -89,6 +94,17 @@ namespace Utils.Math
         public static Vector3 DirectionTo(this Vector3 from, Vector3 to)
         {
             return (to - from).normalized;
+        }
+        public static Vector2 Rotate(this Vector2 v, float degrees)
+        {
+            var sin = Mathf.Sin(degrees * Mathf.Deg2Rad);
+            var cos = Mathf.Cos(degrees * Mathf.Deg2Rad);
+
+            var tx = v.x;
+            var ty = v.y;
+            v.x = (cos * tx) - (sin * ty);
+            v.y = (sin * tx) + (cos * ty);
+            return v;
         }
     }
 }

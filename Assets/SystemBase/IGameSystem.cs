@@ -8,6 +8,6 @@ namespace SystemBase
 
         void Init();
 
-        void RegisterComponent(IGameComponent component);
+        void RegisterComponent(GameComponent component);
     }
 }

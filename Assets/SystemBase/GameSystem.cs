@@ -5,12 +5,28 @@ using UnityEngine;
 
 namespace SystemBase
 {
+    public abstract class GameSystem<TComponent1, TComponent2, TComponent3, TComponent4, TComponent5> 
+         : GameSystem<TComponent1,TComponent2, TComponent3, TComponent4>
+        where TComponent1 : GameComponent
+        where TComponent2 : GameComponent
+        where TComponent3 : GameComponent
+        where TComponent4 : GameComponent
+        where TComponent5 : GameComponent
+    {
+        public override Type[] ComponentsToRegister
+        {
+            get
+            { return new[] { typeof(TComponent1), typeof(TComponent2), typeof(TComponent3), typeof(TComponent4), typeof(TComponent5) }; }
+        }
+
+        public abstract void Register(TComponent5 component);
+    }
     public abstract class GameSystem<TComponent1, TComponent2, TComponent3, TComponent4>
         : GameSystem<TComponent1, TComponent2, TComponent3>
-        where TComponent1 : IGameComponent
-        where TComponent2 : IGameComponent
-        where TComponent3 : IGameComponent
-        where TComponent4 : IGameComponent
+        where TComponent1 : GameComponent
+        where TComponent2 : GameComponent
+        where TComponent3 : GameComponent
+        where TComponent4 : GameComponent
     {
         public override Type[] ComponentsToRegister
         {
@@ -23,9 +39,9 @@ namespace SystemBase
 
     public abstract class GameSystem<TComponent1, TComponent2, TComponent3>
         : GameSystem<TComponent1, TComponent2>
-        where TComponent1 : IGameComponent
-        where TComponent2 : IGameComponent
-        where TComponent3 : IGameComponent
+        where TComponent1 : GameComponent
+        where TComponent2 : GameComponent
+        where TComponent3 : GameComponent
     {
         public override Type[] ComponentsToRegister
         {
@@ -38,8 +54,8 @@ namespace SystemBase
 
     public abstract class GameSystem<TComponent1, TComponent2>
         : GameSystem<TComponent1>
-        where TComponent1 : IGameComponent
-        where TComponent2 : IGameComponent
+        where TComponent1 : GameComponent
+        where TComponent2 : GameComponent
     {
         public override Type[] ComponentsToRegister
         {
@@ -50,9 +66,9 @@ namespace SystemBase
         public abstract void Register(TComponent2 component);
     }
 
-    public abstract class GameSystem<TComponent> : IGameSystem where TComponent : IGameComponent
+    public abstract class GameSystem<TComponent> : IGameSystem where TComponent : GameComponent
     {
-        private Dictionary<Type, Action<IGameComponent>> _registerMethods;
+        private Dictionary<Type, Action<GameComponent>> _registerMethods;
 
         public virtual Type[] ComponentsToRegister
         {
@@ -64,11 +80,11 @@ namespace SystemBase
         {
         }
 
-        public void RegisterComponent(IGameComponent component)
+        public void RegisterComponent(GameComponent component)
         {
             if (_registerMethods == null)
             {
-                _registerMethods = new Dictionary<Type, Action<IGameComponent>>();
+                _registerMethods = new Dictionary<Type, Action<GameComponent>>();
                 MethodInfo[] methods = GetType().GetMethods();
                 foreach (var m in methods)
                 {
