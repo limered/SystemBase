@@ -22,6 +22,7 @@ namespace GameState
         private void SetupStates()
         {
             _states = new List<IGameState>();
+            _states.Add(new SplashScreenState());
         }
 
         public void NextState()
