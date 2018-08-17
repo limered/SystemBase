@@ -2,9 +2,12 @@
 
 namespace SystemBase.StateMachineBase
 {
-    public interface IStateContext<TState> where TState : IState
+    public interface IStateContext<TState, T> where TState : IState<T>
     {
         ReactiveProperty<TState> CurrentState { get; }
+        ReactiveCommand<TState> BevoreStateChange { get; }
+        ReactiveCommand<TState> AfterStateChange { get; }
+        void Start(TState initialState);
         
         bool GoToState(TState state);
     }

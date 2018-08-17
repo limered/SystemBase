@@ -3,10 +3,10 @@ using System.Collections.ObjectModel;
 
 namespace SystemBase.StateMachineBase
 {
-    public interface IState
+    public interface IState<T>
     {
         ReadOnlyCollection<Type> ValidNextStates { get; }
-        bool Enter<TState>(IStateContext<TState> context) where TState : IState;
+        bool Enter(IStateContext<IState<T>, T> context);
         void Exit();
     }
 }
