@@ -7,7 +7,6 @@ namespace Systems
 {
     public class Game : GameBase
     {
-        // Why habe this? Maybe Pause Game etc...
         private void Awake()
         {
             IoC.RegisterSingleton(this);
