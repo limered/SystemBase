@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using SystemBase.StateMachineBase;
+using Systems.GameState.Messages;
+using UniRx;
 
 namespace Systems.GameState.States
 {
     public class Paused : BaseState<Game>
     {
-        private ReadOnlyCollection<Type> _validNextStates;
+        private readonly ReadOnlyCollection<Type> _validNextStates = 
+            new ReadOnlyCollection<Type>(new List<Type>{typeof(Running)});
 
         public override ReadOnlyCollection<Type> ValidNextStates
         {
@@ -15,7 +19,11 @@ namespace Systems.GameState.States
 
         public override bool Enter(StateContext<Game> context)
         {
-            throw new NotImplementedException();
+            MessageBroker.Default.Receive<GameMsgUnpause>()
+                .Subscribe(unpause => context.GoToState(new Running()))
+                .AddTo(this);
+
+            return true;
         }
     }
 }

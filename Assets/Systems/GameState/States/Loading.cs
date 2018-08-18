@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using SystemBase.StateMachineBase;
+using Systems.GameState.Messages;
+using UniRx;
 
 namespace Systems.GameState.States
 {
     public class Loading : BaseState<Game>
     {
-        private ReadOnlyCollection<Type> _validNextStates;
+        private readonly ReadOnlyCollection<Type> _validNextStates = new ReadOnlyCollection<Type>(new List<Type>
+        {
+            typeof(StartScreen)
+        });
 
         public override ReadOnlyCollection<Type> ValidNextStates
         {
@@ -16,7 +21,11 @@ namespace Systems.GameState.States
 
         public override bool Enter(StateContext<Game> context)
         {
-            throw new NotImplementedException();
+            MessageBroker.Default.Receive<GameMsgFinishedLoading>()
+                .Subscribe(loading => context.GoToState(new StartScreen()))
+                .AddTo(this);
+
+            return true;
         }
     }
 }
