@@ -7,13 +7,11 @@ namespace Systems.GameState.States
     [NextValidStates(typeof(StartScreen))]
     public class GameOver : BaseState<Game>
     {
-        public override bool Enter(StateContext<Game> context)
+        public override void Enter(StateContext<Game> context)
         {
             MessageBroker.Default.Receive<GameMsgRestart>()
                 .Subscribe(restart => context.GoToState(new StartScreen()))
                 .AddTo(this);
-
-            return true;
         }
     }
 }

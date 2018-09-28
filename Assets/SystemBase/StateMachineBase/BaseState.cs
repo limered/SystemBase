@@ -26,17 +26,18 @@ namespace SystemBase.StateMachineBase
             StateDisposables.Dispose();
         }
 
-        public abstract bool Enter(StateContext<T> context);
+        public abstract void Enter(StateContext<T> context);
 
-        public bool Enter(IStateContext<IState<T>, T> context)
+        public void Enter(IStateContext<IState<T>, T> context)
         {
             // ReSharper disable once SuspiciousTypeConversion.Global
-            return Enter(context as StateContext<T>);
+            Enter(context as StateContext<T>);
         }
 
-        public virtual void Exit()
+        public virtual bool Exit()
         {
             Dispose();
+            return true;
         }
     }
 }

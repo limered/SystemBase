@@ -28,19 +28,20 @@ namespace SystemBase.StateMachineBase
 
         public bool GoToState(BaseState<T> state)
         {
-            try
+            if (!CurrentState.Value.ValidNextStates.Contains(state.GetType()) ||
+                !CurrentState.Value.Exit())
             {
-                if (CurrentState.Value.ValidNextStates.All(st => st != state.GetType())) return false;
+                return false;
+            }
 
-                _bevoreStateChange.Execute(state);
-                CurrentState.Value.Exit();
-                CurrentState.Value = state;
-                return CurrentState.Value.Enter(this);
-            }
-            finally
-            {
-                _afterStateChange.Execute(state);
-            }
+            _bevoreStateChange.Execute(state);
+
+            CurrentState.Value = state;
+            CurrentState.Value.Enter(this);
+
+            _afterStateChange.Execute(state);
+
+            return true;
         }
 
         public void Start(BaseState<T> initialState)

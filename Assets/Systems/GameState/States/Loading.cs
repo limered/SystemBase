@@ -7,13 +7,11 @@ namespace Systems.GameState.States
     [NextValidStates(typeof(StartScreen))]
     public class Loading : BaseState<Game>
     {
-        public override bool Enter(StateContext<Game> context)
+        public override void Enter(StateContext<Game> context)
         {
             MessageBroker.Default.Receive<GameMsgFinishedLoading>()
                 .Subscribe(loading => context.GoToState(new StartScreen()))
                 .AddTo(this);
-
-            return true;
         }
     }
 }

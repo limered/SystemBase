@@ -6,7 +6,7 @@ namespace SystemBase.StateMachineBase
     public interface IState<T>
     {
         ReadOnlyCollection<Type> ValidNextStates { get; }
-        bool Enter(IStateContext<IState<T>, T> context);
-        void Exit();
+        void Enter(IStateContext<IState<T>, T> context);
+        bool Exit();
     }
 }

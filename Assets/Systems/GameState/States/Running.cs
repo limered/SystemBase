@@ -7,7 +7,7 @@ namespace Systems.GameState.States
     [NextValidStates(typeof(GameOver), typeof(Paused))]
     public class Running : BaseState<Game>
     {
-        public override bool Enter(StateContext<Game> context)
+        public override void Enter(StateContext<Game> context)
         {
             MessageBroker.Default.Receive<GameMsgEnd>()
                 .Subscribe(end => context.GoToState(new GameOver()))
@@ -16,8 +16,6 @@ namespace Systems.GameState.States
             MessageBroker.Default.Receive<GameMsgPause>()
                 .Subscribe(pause => context.GoToState(new Paused()))
                 .AddTo(this);
-
-            return true;
         }
     }
 }
