@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using SystemBase;
 using SystemBase.StateMachineBase;
+using Systems.GameState.Messages;
 using Systems.GameState.States;
+using UniRx;
 using Utils;
 
 namespace Systems
 {
     public class Game : GameBase
     {
-        public StateContext<Game> GameStateContext;
+        public readonly StateContext<Game> GameStateContext = new StateContext<Game>();
         private void Awake()
         {
             IoC.RegisterSingleton(this);
 
-            GameStateContext = new StateContext<Game>();
             GameStateContext.Start(new Loading());
 
             foreach (var systemType in CollectAllSystems())
@@ -25,7 +26,7 @@ namespace Systems
 
             Init();
 
-            GameStateContext.GoToState(new StartScreen());
+            MessageBroker.Default.Publish(new GameMsgFinishedLoading());
         }
 
         private static IEnumerable<Type> CollectAllSystems()
