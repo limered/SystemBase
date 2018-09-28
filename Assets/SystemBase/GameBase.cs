@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using SystemBase.StateMachineBase;
-using Systems;
 using UniRx;
 using UnityEngine;
 
