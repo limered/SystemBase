@@ -8,7 +8,16 @@ namespace SystemBase.StateMachineBase
     {
         public readonly CompositeDisposable StateDisposables = new CompositeDisposable();
 
-        public abstract ReadOnlyCollection<Type> ValidNextStates { get; }
+        protected BaseState()
+        {
+            var definedAttribute = Attribute.GetCustomAttribute(GetType(), typeof(NextValidStatesAttribute)) as NextValidStatesAttribute;
+            if (definedAttribute != null)
+            {
+                ValidNextStates = new ReadOnlyCollection<Type>(definedAttribute.ValidStateChanges);
+            }
+        }
+
+        public ReadOnlyCollection<Type> ValidNextStates { get; private set; }
 
         public void Dispose()
         {
