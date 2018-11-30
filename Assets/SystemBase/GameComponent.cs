@@ -18,4 +18,21 @@ namespace SystemBase
             RegisterToGame();
         }
     }
+
+    public class SemanticGameComponent<TGameComponent> : GameComponent where TGameComponent : IGameComponent
+    {
+        public TGameComponent dependency;
+        public TGameComponent Dependency
+        {
+            get
+            {
+                if (dependency != null) return dependency;
+                else return GetComponent<TGameComponent>();
+            }
+            set
+            {
+                dependency = value;
+            }
+        }
+    }
 }

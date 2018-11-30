@@ -88,19 +88,19 @@ namespace SystemBase
             }
 
             var result = new List<IGameSystem>();
-            var Q = new Queue<IGameSystem>(_gameSystems
+            var q = new Queue<IGameSystem>(_gameSystems
                 .Where(system => _inDegrees[system.GetType()] == 0));
 
-            while (Q.Any())
+            while (q.Any())
             {
-                var system = Q.Dequeue();
+                var system = q.Dequeue();
                 result.Add(system);
                 foreach (var dependency in GetAttribute(system.GetType()).Dependencies)
                 {
                     _inDegrees[dependency]--;
                     if (_inDegrees[dependency] == 0)
                     {
-                        Q.Enqueue(_gameSystemDict[dependency]);
+                        q.Enqueue(_gameSystemDict[dependency]);
                     }
                 }
             }

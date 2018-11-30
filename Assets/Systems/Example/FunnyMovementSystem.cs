@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using SystemBase;
+using Systems.Example.States;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
@@ -13,6 +14,7 @@ namespace Systems.Example
     public class FunnyMovementSystem : GameSystem<FunnyMovementComponent, FunnyMovementConfigComponent>
     {
         private float _speed;
+        private FunnyMovementConfigComponent _config;
 
         public override void Init()
         {
@@ -26,7 +28,9 @@ namespace Systems.Example
 
             //UniRX Magic
             comp.UpdateAsObservable()
+                .Where(_ => _config != null)
                 .Where((_, i) => i % 60 == 0)
+                .Where(_ => _config.MovementState.CurrentState.Value.GetType() == typeof(Moving))
 
                 /*
                  * This Logging extensions can be put anywhere in the observable-creation-call-chain
@@ -43,9 +47,13 @@ namespace Systems.Example
         {
             if (!comp) return;
 
+            _config = comp;
+
             comp.Speed
                 .Subscribe(speed => _speed = speed)
                 .AddTo(comp);
+
+            comp.MovementState.Start(new Standing());
         }
 
         private void MoveFunny(FunnyMovementComponent comp)

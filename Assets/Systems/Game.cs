@@ -1,30 +1,40 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using SystemBase;
+using SystemBase.StateMachineBase;
+using Systems.GameState.Messages;
+using Systems.GameState.States;
+using UniRx;
 using Utils;
 
 namespace Systems
 {
     public class Game : GameBase
     {
-        // Why habe this? Maybe Pause Game etc...
+        public readonly StateContext<Game> GameStateContext = new StateContext<Game>();
         private void Awake()
         {
             IoC.RegisterSingleton(this);
 
-            #region System Registration
+            GameStateContext.Start(new Loading());
 
-            foreach (var t in from a in AppDomain.CurrentDomain.GetAssemblies()
-                              from t in a.GetTypes()
-                              where Attribute.IsDefined(t, typeof(GameSystemAttribute))
-                              select t)
+            foreach (var systemType in CollectAllSystems())
             {
-                RegisterSystem(Activator.CreateInstance(t) as IGameSystem);
+                RegisterSystem(Activator.CreateInstance(systemType) as IGameSystem);
             }
 
-            #endregion System Registration
-
             Init();
+
+            MessageBroker.Default.Publish(new GameMsgFinishedLoading());
+        }
+
+        private static IEnumerable<Type> CollectAllSystems()
+        {
+            return AppDomain.CurrentDomain.GetAssemblies()
+                .SelectMany(ass => ass.GetTypes(), (ass, type) => new { ass, type })
+                .Where(assemblyType => Attribute.IsDefined(assemblyType.type, typeof(GameSystemAttribute)))
+                .Select(assemblyType => assemblyType.type);
         }
     }
 }
