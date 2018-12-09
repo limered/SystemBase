@@ -1,8 +1,9 @@
 ﻿using SystemBase.StateMachineBase;
+using Systems;
 using Systems.GameState.Messages;
 using UniRx;
 
-namespace Systems.GameState.States
+namespace GameState.States
 {
     [NextValidStates(typeof(GameOver), typeof(Paused))]
     public class Running : BaseState<Game>
