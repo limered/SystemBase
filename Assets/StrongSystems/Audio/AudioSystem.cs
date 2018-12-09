@@ -30,7 +30,7 @@ namespace StrongSystems.Audio
                 .Throttle(TimeSpan.FromMilliseconds(50))
                 .Select(mute => mute.IsMuted)
                 .Subscribe(b => _sfxIsMuted.Value = b);
-
+             
             MessageBroker.Default
                 .Receive<AudioActMusicSetMute>()
                 .Throttle(TimeSpan.FromMilliseconds(50))
@@ -67,6 +67,21 @@ namespace StrongSystems.Audio
                 .Receive<AudioActMusicStart>()
                 .Subscribe(start =>
                 {
+                    if (start.CrossFadeTime == TimeSpan.Zero)
+                    {
+                        _currentMusic.Source.Stop();
+                        _currentMusic = component;
+                        _currentMusic.Source.Play();
+                    }
+                    else
+                    {
+                        _lastMusic = _currentMusic;
+                        _currentMusic = component;
+                        _currentMusic.Source.volume = 0;
+                        _currentMusic.Source.Play();
+                        FadeIn(_currentMusic, start.CrossFadeTime);
+                        FadeOut(_lastMusic, start.CrossFadeTime);
+                    }
                 })
                 .AddTo(component);
 
@@ -82,6 +97,22 @@ namespace StrongSystems.Audio
             _musicVolume
                 .Subscribe(f => component.Source.volume = f)
                 .AddTo(component);
+        }
+
+        private static void FadeOut(BackgroundMusicComponent bgMusic, TimeSpan time)
+        {
+            var stepPerSecond = bgMusic.Source.volume / time.TotalSeconds;
+            var fadeOut = Observable.EveryUpdate()
+                .Subscribe(deltaTime => bgMusic.Source.volume -= (float) stepPerSecond * deltaTime);
+            Observable.Timer(time).Subscribe(l => fadeOut.Dispose());
+        }
+
+        private static void FadeIn(BackgroundMusicComponent bgMusic, TimeSpan time, float targetVolume)
+        {
+            var stepPerSecond = targetVolume / time.TotalSeconds;
+            var fadeIn = Observable.EveryUpdate()
+                .Subscribe(dettaTime => bgMusic.Source.volume += (float) stepPerSecond * dettaTime);
+            Observable.Timer(time).Subscribe(l => fadeIn.Dispose());
         }
 
         private static void RemoveSourceAfterStopped(AudioSource source)
