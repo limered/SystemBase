@@ -7,10 +7,6 @@ namespace Utils
 {
     public static class IoC
     {
-        static IoC()
-        {
-        }
-
         public static Game Game { get { return Resolve<Game>(); } }
 
         private static readonly Dictionary<Type, object> Singletons = new Dictionary<Type, object>();
@@ -18,14 +14,14 @@ namespace Utils
 
         public static TSingleton Resolve<TSingleton>()
         {
-            var yes = false;
+            var found = false;
 
             if (Singletons.ContainsKey(typeof(TSingleton)) && Singletons[typeof(TSingleton)] is Func<TSingleton>)
             {
                 Singletons[typeof(TSingleton)] = ((Func<TSingleton>)Singletons[typeof(TSingleton)])();
-                yes = true;
+                found = true;
             }
-            if (yes || Singletons.ContainsKey(typeof(TSingleton)))
+            if (found || Singletons.ContainsKey(typeof(TSingleton)))
                 return (TSingleton)Singletons[typeof(TSingleton)];
             throw new KeyNotFoundException("unknown interface: " + typeof(TSingleton).FullName);
         }
@@ -42,24 +38,15 @@ namespace Utils
         public static IObservable<TSingleton> OnResolve<TSingleton>()
         {
             var sub = GetSingletonSubject<TSingleton>();
-            IObservable<TSingleton> obs;
 
+            // ReSharper disable once InvertIf
             if (Singletons.ContainsKey(typeof(TSingleton)) && Singletons[typeof(TSingleton)] is Func<TSingleton>)
             {
                 Singletons[typeof(TSingleton)] = ((Func<TSingleton>)Singletons[typeof(TSingleton)])();
                 SingletonPromises[typeof(TSingleton)] = sub = null;
             }
 
-            if (sub == null)
-            {
-                obs = Observable.Return(Resolve<TSingleton>());
-            }
-            else
-            {
-                obs = sub.Select(_ => Resolve<TSingleton>());
-            }
-
-            return obs;
+            return sub == null ? Observable.Return(Resolve<TSingleton>()) : sub.Select(_ => Resolve<TSingleton>());
         }
 
         public static IObservable<TNext> OnResolve<TSingleton, TNext>(Func<TSingleton, IObservable<TNext>> andThen)
@@ -69,14 +56,14 @@ namespace Utils
 
         public static TSingleton ResolveOrDefault<TSingleton>()
         {
-            var yes = false;
+            var found = false;
 
             if (Singletons.ContainsKey(typeof(TSingleton)) && Singletons[typeof(TSingleton)] is Func<TSingleton>)
             {
                 Singletons[typeof(TSingleton)] = ((Func<TSingleton>)Singletons[typeof(TSingleton)])();
-                yes = true;
+                found = true;
             }
-            if (yes || Singletons.ContainsKey(typeof(TSingleton)))
+            if (found || Singletons.ContainsKey(typeof(TSingleton)))
                 return (TSingleton)Singletons[typeof(TSingleton)];
             return default(TSingleton);
         }
@@ -93,13 +80,12 @@ namespace Utils
             }
 
             var sub = GetSingletonSubject<TSingleton>();
-            if (sub != null)
-            {
-                sub.OnNext(Unit.Default);
-                sub.OnCompleted();
-                sub.Dispose();
-                SingletonPromises[typeof(TSingleton)] = null;
-            }
+            if (sub == null) return;
+
+            sub.OnNext(Unit.Default);
+            sub.OnCompleted();
+            sub.Dispose();
+            SingletonPromises[typeof(TSingleton)] = null;
         }
 
         public static void RegisterSingleton<TSingleton>(Func<TSingleton> lazyConstructor)
