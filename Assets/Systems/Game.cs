@@ -2,7 +2,10 @@
 using SystemBase;
 using SystemBase.StateMachineBase;
 using Systems.GameState.Messages;
+using StrongSystems.Audio;
+using StrongSystems.Audio.Helper;
 using UniRx;
+using UnityEngine;
 using Utils;
 
 namespace Systems
@@ -22,6 +25,13 @@ namespace Systems
             Init();
 
             MessageBroker.Default.Publish(new GameMsgFinishedLoading());
+        }
+
+        public override void Init()
+        {
+            base.Init();
+
+            IoC.RegisterSingleton<ISFXComparer>(()=> new SFXComparer());
         }
     }
 }

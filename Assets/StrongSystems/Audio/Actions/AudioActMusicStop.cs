@@ -1,8 +1,10 @@
-﻿namespace StrongSystems.Audio.Actions
+﻿using System;
+
+namespace StrongSystems.Audio.Actions
 {
     public class AudioActMusicStop
     {
         public string Name { get; set; }
-        public float FadeOutTime { get; set; }
+        public TimeSpan FadeOutTime { get; set; }
     }
 }

@@ -1,8 +1,10 @@
-﻿namespace StrongSystems.Audio.Actions
+﻿using System;
+
+namespace StrongSystems.Audio.Actions
 {
     public class AudioActMusicStart
     {
         public string Name { get; set; }
-        public float FadeInTime { get; set; }
+        public TimeSpan CrossFadeTime { get; set; }
     }
 }

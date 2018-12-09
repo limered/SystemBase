@@ -1,10 +1,11 @@
 ﻿using StrongSystems.Audio.Actions;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using SystemBase;
+using StrongSystems.Audio.Helper;
 using UniRx;
 using UnityEngine;
+using Utils;
 using Object = UnityEngine.Object;
 
 namespace StrongSystems.Audio
@@ -16,6 +17,9 @@ namespace StrongSystems.Audio
         private readonly FloatReactiveProperty _musicVolume = new FloatReactiveProperty(1f);
         private readonly BoolReactiveProperty _sfxIsMuted = new BoolReactiveProperty(false);
         private readonly FloatReactiveProperty _sfxVolume = new FloatReactiveProperty(1f);
+
+        private BackgroundMusicComponent _currentMusic;
+        private BackgroundMusicComponent _lastMusic;
 
         public override void Init()
         {
@@ -51,7 +55,7 @@ namespace StrongSystems.Audio
             MessageBroker.Default
                 .Receive<AudioActSFXPlay>()
                 .Where(_ => !_sfxIsMuted.Value)
-                .DistinctUntilChanged(new SFXComparer())
+                .DistinctUntilChanged(IoC.Resolve<ISFXComparer>())
                 .Select(play => play.Name)
                 .Subscribe(PlaySFX(component))
                 .AddTo(component);
@@ -59,7 +63,25 @@ namespace StrongSystems.Audio
 
         public override void Register(BackgroundMusicComponent component)
         {
-            throw new System.NotImplementedException();
+            MessageBroker.Default
+                .Receive<AudioActMusicStart>()
+                .Subscribe(start =>
+                {
+                })
+                .AddTo(component);
+
+            MessageBroker.Default
+                .Receive<AudioActMusicStop>()
+                .Subscribe(stop => { })
+                .AddTo(component);
+
+            _musicIsMuted
+                .Subscribe(b => component.Source.mute = b)
+                .AddTo(component);
+
+            _musicVolume
+                .Subscribe(f => component.Source.volume = f)
+                .AddTo(component);
         }
 
         private static void RemoveSourceAfterStopped(AudioSource source)
@@ -87,23 +109,6 @@ namespace StrongSystems.Audio
                     Debug.Log("Can't find Sound with Name: " + name);
                 }
             };
-        }
-    }
-
-    public class SFXComparer : IEqualityComparer<AudioActSFXPlay>
-    {
-        public bool Equals(AudioActSFXPlay x, AudioActSFXPlay y)
-        {
-            return x != null &&
-                   y != null &&
-                   !string.IsNullOrEmpty(x.Tag) &&
-                   !string.IsNullOrEmpty(y.Tag) &&
-                   x.Tag.Equals(y.Tag);
-        }
-
-        public int GetHashCode(AudioActSFXPlay obj)
-        {
-            return obj.Tag.GetHashCode();
         }
     }
 }
