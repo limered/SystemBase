@@ -79,7 +79,7 @@ namespace StrongSystems.Audio
                         _currentMusic = component;
                         _currentMusic.Source.volume = 0;
                         _currentMusic.Source.Play();
-                        FadeIn(_currentMusic, start.CrossFadeTime);
+                        FadeIn(_currentMusic, start.CrossFadeTime, 0f);// TODO
                         FadeOut(_lastMusic, start.CrossFadeTime);
                     }
                 })
