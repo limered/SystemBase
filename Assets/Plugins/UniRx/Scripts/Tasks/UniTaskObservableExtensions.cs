@@ -1,4 +1,4 @@
-﻿#if CSHARP_7_OR_LATER
+﻿#if CSHARP_7_OR_LATER || (UNITY_2018_3_OR_NEWER && (NET_STANDARD_2_0 || NET_4_6))
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 using System;
@@ -98,6 +98,8 @@ namespace UniRx
 
         class ToUniTaskObserver<T> : IObserver<T>
         {
+            static readonly Action<object> callback = OnCanceled;
+
             readonly UniTaskCompletionSource<T> promise;
             readonly SingleAssignmentDisposable disposable;
             readonly CancellationToken cancellationToken;
@@ -114,14 +116,15 @@ namespace UniRx
 
                 if (this.cancellationToken.CanBeCanceled)
                 {
-                    this.registration = this.cancellationToken.Register(OnCanceled);
+                    this.registration = this.cancellationToken.RegisterWithoutCaptureExecutionContext(callback, this);
                 }
             }
 
-            void OnCanceled()
+            static void OnCanceled(object state)
             {
-                disposable.Dispose();
-                promise.TrySetCanceled();
+                var self = (ToUniTaskObserver<T>)state;
+                self.disposable.Dispose();
+                self.promise.TrySetCanceled();
             }
 
             public void OnNext(T value)
@@ -166,6 +169,8 @@ namespace UniRx
 
         class FirstValueToUniTaskObserver<T> : IObserver<T>
         {
+            static readonly Action<object> callback = OnCanceled;
+
             readonly UniTaskCompletionSource<T> promise;
             readonly SingleAssignmentDisposable disposable;
             readonly CancellationToken cancellationToken;
@@ -181,14 +186,15 @@ namespace UniRx
 
                 if (this.cancellationToken.CanBeCanceled)
                 {
-                    this.registration = this.cancellationToken.Register(OnCanceled);
+                    this.registration = this.cancellationToken.RegisterWithoutCaptureExecutionContext(callback, this);
                 }
             }
 
-            void OnCanceled()
+            static void OnCanceled(object state)
             {
-                disposable.Dispose();
-                promise.TrySetCanceled();
+                var self = (FirstValueToUniTaskObserver<T>)state;
+                self.disposable.Dispose();
+                self.promise.TrySetCanceled();
             }
 
             public void OnNext(T value)

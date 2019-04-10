@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using UniRx;
 using Utils.Data;
@@ -12,9 +13,9 @@ namespace Utils.Debuging
         public Dictionary<string, Stopwatch> Timers = new Dictionary<string, Stopwatch>();
         public Dictionary<string, RingBuffer<long>> Buffers = new Dictionary<string, RingBuffer<long>>();
 
-        public void InitializeTimers(string[] TimerNames, int bufferLength)
+        public void InitializeTimers(string[] timerNames, int bufferLength)
         {
-            foreach (var name in TimerNames)
+            foreach (var name in timerNames)
             {
                 Timers.Add(name, new Stopwatch());
                 Buffers.Add(name, new RingBuffer<long>(bufferLength));
@@ -24,11 +25,10 @@ namespace Utils.Debuging
         public void StartTimer(string name)
         {
             Stopwatch timer;
-            if (Timers.TryGetValue(name, out timer))
-            {
-                timer.Reset();
-                timer.Start();
-            }
+            if (!Timers.TryGetValue(name, out timer)) return;
+
+            timer.Reset();
+            timer.Start();
         }
 
         public void StopTimer(string name)

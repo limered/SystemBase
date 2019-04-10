@@ -1,4 +1,4 @@
-﻿#if CSHARP_7_OR_LATER
+﻿#if CSHARP_7_OR_LATER || (UNITY_2018_3_OR_NEWER && (NET_STANDARD_2_0 || NET_4_6))
 #pragma warning disable CS1591
 
 using System;
@@ -29,7 +29,11 @@ namespace UniRx.Async
             [DebuggerHidden]
             public void GetResult()
             {
-                UnityEngine.Debug.LogWarning("UniTask can't await, always fire-and-forget. use Forget instead of await.");
+#if !UniRxLibrary
+                UnityEngine.Debug.LogWarning("UniTaskVoid can't await, always fire-and-forget. use Forget instead of await.");
+#else
+                Console.WriteLine("UniTask can't await, always fire-and-forget. use Forget instead of await.");
+#endif
             }
 
             [DebuggerHidden]
