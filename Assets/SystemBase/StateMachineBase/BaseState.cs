@@ -6,12 +6,12 @@ namespace SystemBase.StateMachineBase
 {
     public abstract class BaseState<T> : IState<T>, IDisposable
     {
+        // ReSharper disable once InconsistentNaming
         public readonly CompositeDisposable StateDisposables = new CompositeDisposable();
 
         protected BaseState()
         {
-            var definedAttribute = Attribute.GetCustomAttribute(GetType(), typeof(NextValidStatesAttribute)) as NextValidStatesAttribute;
-            if (definedAttribute != null)
+            if (Attribute.GetCustomAttribute(GetType(), typeof(NextValidStatesAttribute)) is NextValidStatesAttribute definedAttribute)
             {
                 ValidNextStates = new ReadOnlyCollection<Type>(definedAttribute.ValidStateChanges);
             }

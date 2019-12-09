@@ -10,11 +10,6 @@ namespace SystemBase.StateMachineBase
             ValidStateChanges = validStateChanges;
         }
 
-        public NextValidStatesAttribute()
-        {
-            ValidStateChanges = new Type[0];
-        }
-
         public Type[] ValidStateChanges { get; set; }
     }
 }
