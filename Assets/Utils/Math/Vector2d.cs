@@ -65,53 +65,17 @@ namespace Utils.Math
             }
         }
 
-        public double magnitude
-        {
-            get
-            {
-                return Mathd.Sqrt(x * x + y * y);
-            }
-        }
+        public double magnitude => Mathd.Sqrt(x * x + y * y);
 
-        public double sqrMagnitude
-        {
-            get
-            {
-                return x * x + y * y;
-            }
-        }
+        public double sqrMagnitude => x * x + y * y;
 
-        public static Vector2d zero
-        {
-            get
-            {
-                return new Vector2d(0.0d, 0.0d);
-            }
-        }
+        public static Vector2d zero => new Vector2d(0.0d, 0.0d);
 
-        public static Vector2d one
-        {
-            get
-            {
-                return new Vector2d(1d, 1d);
-            }
-        }
+        public static Vector2d one => new Vector2d(1d, 1d);
 
-        public static Vector2d up
-        {
-            get
-            {
-                return new Vector2d(0.0d, 1d);
-            }
-        }
+        public static Vector2d up => new Vector2d(0.0d, 1d);
 
-        public static Vector2d right
-        {
-            get
-            {
-                return new Vector2d(1d, 0.0d);
-            }
-        }
+        public static Vector2d right => new Vector2d(1d, 0.0d);
 
         public Vector2d(double x, double y)
         {

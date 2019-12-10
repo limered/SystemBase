@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using SystemBase;
-using Systems.Example.States;
+using ExampleSystems.Example.States;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
@@ -8,7 +8,7 @@ using Utils;
 using Utils.Math;
 using Utils.Plugins;
 
-namespace Systems.Example
+namespace ExampleSystems.Example
 {
     [GameSystem]
     public class FunnyMovementSystem : GameSystem<FunnyMovementComponent, FunnyMovementConfigComponent>

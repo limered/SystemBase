@@ -2,7 +2,7 @@
 using SystemBase.StateMachineBase;
 using UniRx;
 
-namespace Systems.Example.States
+namespace ExampleSystems.Example.States
 {
     [NextValidStates(typeof(Standing))]
     public class Moving : BaseState<FunnyMovementComponent>

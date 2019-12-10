@@ -23,13 +23,7 @@ namespace Utils.Math
             return new Vector2(m.m00 * v.x + m.m01 * v.y, m.m10 * v.x + m.m11 * v.y);
         }
 
-        public float Determinant
-        {
-            get
-            {
-                return m00 * m11 - m10 * m01;
-            }
-        }
+        public float Determinant => m00 * m11 - m10 * m01;
 
         public Vector2 Col0 {
             set {

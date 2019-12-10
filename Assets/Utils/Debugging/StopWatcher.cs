@@ -4,28 +4,27 @@ using System.Diagnostics;
 using UniRx;
 using Utils.Data;
 
-namespace Utils.Debuging
+namespace Utils.Debugging
 {
     public class StopWatcher
     {
-        public ReactiveProperty<Tuple<string, float>> OnTimerFlushed = new ReactiveProperty<Tuple<string, float>>();
+        public ReactiveProperty<Tuple<string, float>> onTimerFlushed = new ReactiveProperty<Tuple<string, float>>();
 
-        public Dictionary<string, Stopwatch> Timers = new Dictionary<string, Stopwatch>();
-        public Dictionary<string, RingBuffer<long>> Buffers = new Dictionary<string, RingBuffer<long>>();
+        public Dictionary<string, Stopwatch> timers = new Dictionary<string, Stopwatch>();
+        public Dictionary<string, RingBuffer<long>> buffers = new Dictionary<string, RingBuffer<long>>();
 
         public void InitializeTimers(string[] timerNames, int bufferLength)
         {
             foreach (var name in timerNames)
             {
-                Timers.Add(name, new Stopwatch());
-                Buffers.Add(name, new RingBuffer<long>(bufferLength));
+                timers.Add(name, new Stopwatch());
+                buffers.Add(name, new RingBuffer<long>(bufferLength));
             }
         }
 
         public void StartTimer(string name)
         {
-            Stopwatch timer;
-            if (!Timers.TryGetValue(name, out timer)) return;
+            if (!timers.TryGetValue(name, out var timer)) return;
 
             timer.Reset();
             timer.Start();
@@ -33,8 +32,7 @@ namespace Utils.Debuging
 
         public void StopTimer(string name)
         {
-            Stopwatch timer;
-            if (Timers.TryGetValue(name, out timer))
+            if (timers.TryGetValue(name, out var timer))
             {
                 timer.Stop();
             }
@@ -42,9 +40,7 @@ namespace Utils.Debuging
 
         public void SafeTimeToBuffer(string name)
         {
-            Stopwatch timer;
-            RingBuffer<long> buffer;
-            if (Timers.TryGetValue(name, out timer) && Buffers.TryGetValue(name, out buffer))
+            if (timers.TryGetValue(name, out var timer) && buffers.TryGetValue(name, out var buffer))
             {
                 buffer.Add(timer.ElapsedMilliseconds);
             }
@@ -54,22 +50,20 @@ namespace Utils.Debuging
         {
             if (!fromBuffer)
             {
-                Stopwatch timer;
-                if (!Timers.TryGetValue(name, out timer)) return;
+                if (!timers.TryGetValue(name, out var timer)) return;
 
-                OnTimerFlushed.Value = new Tuple<string, float>(name, timer.ElapsedMilliseconds);
+                onTimerFlushed.Value = new Tuple<string, float>(name, timer.ElapsedMilliseconds);
             }
             else
             {
-                RingBuffer<long> buffer;
-                if (!Buffers.TryGetValue(name, out buffer)) return;
+                if (!buffers.TryGetValue(name, out var buffer)) return;
 
                 long time = 0;
                 for (var i = 0; i < buffer.Capacity; i++)
                 {
                     time += buffer[i];
                 }
-                OnTimerFlushed.Value = new Tuple<string, float>(name, (float)time / buffer.Capacity);
+                onTimerFlushed.Value = new Tuple<string, float>(name, (float)time / buffer.Capacity);
             }
         }
 
@@ -77,11 +71,10 @@ namespace Utils.Debuging
         {
             if (!fromBuffer)
             {
-                Stopwatch timer;
-                return !Timers.TryGetValue(name, out timer) ? 0 : timer.ElapsedMilliseconds;
+                return !timers.TryGetValue(name, out var timer) ? 0 : timer.ElapsedMilliseconds;
             }
-            RingBuffer<long> buffer;
-            if (!Buffers.TryGetValue(name, out buffer)) return 0;
+
+            if (!buffers.TryGetValue(name, out var buffer)) return 0;
 
             long time = 0;
             for (var i = 0; i < buffer.Capacity; i++)
@@ -93,7 +86,7 @@ namespace Utils.Debuging
 
         public void FlushAll(bool fromBuffer)
         {
-            foreach (var name in Timers.Keys)
+            foreach (var name in timers.Keys)
             {
                 FlushTimer(name, fromBuffer);
             }

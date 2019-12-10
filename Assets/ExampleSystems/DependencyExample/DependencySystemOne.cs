@@ -1,7 +1,7 @@
 ﻿using SystemBase;
-using Systems.Example;
+using ExampleSystems.Example;
 
-namespace Systems.DependencyExample
+namespace ExampleSystems.DependencyExample
 {
     [GameSystem(typeof(DependencySystemMaster))]
     public class DependencySystemOne : GameSystem<FunnyMovementComponent>

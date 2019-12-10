@@ -2,28 +2,27 @@
 {
     public class RingBuffer<T>
     {
-        private readonly T[] _theBuffer;
         private int _ptr;
 
-        public T[] Buffer { get { return _theBuffer;} }
+        public T[] Buffer { get; }
 
         public RingBuffer(int capacity)
         {
             Capacity = capacity;
             _ptr = 0;
-            _theBuffer = new T[capacity];
+            Buffer = new T[capacity];
         }
 
-        public int Capacity { get; private set; }
+        public int Capacity { get; }
         public T this[int i]
         {
-            get { return _theBuffer[i % Capacity]; }
-            set { _theBuffer[i & Capacity] = value; }
+            get => Buffer[i % Capacity];
+            set => Buffer[i & Capacity] = value;
         }
 
         public void Add(T item)
         {
-            _theBuffer[_ptr] = item;
+            Buffer[_ptr] = item;
             _ptr = _ptr + 1 >= Capacity ? 0 : _ptr + 1;
         }
     }
