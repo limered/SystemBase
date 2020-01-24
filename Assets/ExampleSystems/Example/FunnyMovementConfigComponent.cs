@@ -2,7 +2,7 @@
 using SystemBase.StateMachineBase;
 using UniRx;
 
-namespace Systems.Example
+namespace ExampleSystems.Example
 {
     public class FunnyMovementConfigComponent : GameComponent
     {

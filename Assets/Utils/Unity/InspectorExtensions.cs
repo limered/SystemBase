@@ -23,8 +23,5 @@ namespace Utils.Unity
 
     public class EnumFlagsAttribute : PropertyAttribute
     {
-        public EnumFlagsAttribute()
-        {
-        }
     }
 }

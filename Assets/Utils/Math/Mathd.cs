@@ -222,7 +222,7 @@ namespace Utils.Math {
         }
 
         public static double Gamma(double value, double absmax, double gamma) {
-            bool flag = value < 0.0;
+            var flag = value < 0.0;
             var num1 = Abs(value);
             if (num1 > absmax)
             {
@@ -247,7 +247,7 @@ namespace Utils.Math {
 
         public static double SmoothDamp(double current, double target, ref double currentVelocity, double smoothTime) {
             double deltaTime = Time.deltaTime;
-            var maxSpeed = double.PositiveInfinity;
+            const double maxSpeed = double.PositiveInfinity;
             return SmoothDamp(current, target, ref currentVelocity, smoothTime, maxSpeed, deltaTime);
         }
 
@@ -264,10 +264,12 @@ namespace Utils.Math {
             var num7 = (currentVelocity + num1 * num6) * deltaTime;
             currentVelocity = (currentVelocity - num1 * num7) * num3;
             var num8 = target + (num6 + num7) * num3;
-            if (num5 - current > 0.0 == num8 > num5) {
-                num8 = num5;
-                currentVelocity = (num8 - num5) / deltaTime;
+            if (num5 - current > 0.0 != num8 > num5)
+            {
+                return num8;
             }
+            num8 = num5;
+            currentVelocity = (num8 - num5) / deltaTime;
             return num8;
         }
 

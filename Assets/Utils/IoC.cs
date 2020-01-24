@@ -7,7 +7,7 @@ namespace Utils
 {
     public static class IoC
     {
-        public static Game Game { get { return Resolve<Game>(); } }
+        public static Game Game => Resolve<Game>();
 
         private static readonly Dictionary<Type, object> Singletons = new Dictionary<Type, object>();
         private static readonly Dictionary<Type, Subject<Unit>> SingletonPromises = new Dictionary<Type, Subject<Unit>>();

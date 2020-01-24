@@ -27,13 +27,7 @@ namespace Utils.Math
             return new Matrix2d { m00 = m.m00 * s, m01 = m.m01 * s, m10 = m.m10 * s, m11 = m.m11 * s };
         }
 
-        public double Determinant
-        {
-            get
-            {
-                return m00 * m11 - m10 * m01;
-            }
-        }
+        public double Determinant => m00 * m11 - m10 * m01;
 
         public Matrix2d Inverse
         {

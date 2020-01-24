@@ -1,11 +1,17 @@
 using System;
-using System.Linq;
-using System.Runtime.CompilerServices;
 using UniRx;
 using UnityEngine;
 
 namespace Utils.Plugins
 {
+    public enum LogLevel
+    {
+        Debug,
+        Info,
+        Warning,
+        Error
+    }
+
     public static class ReactiveUtils
     {
         #region Logging
@@ -18,9 +24,11 @@ namespace Utils.Plugins
                 case LogLevel.Info:
                     Debug.Log(o);
                     break;
+
                 case LogLevel.Warning:
                     Debug.LogWarning(o);
                     break;
+
                 case LogLevel.Error:
                     Debug.LogError(o);
                     break;
@@ -85,6 +93,7 @@ namespace Utils.Plugins
         {
             return obs.Do(DoNothing, () => { Log(messageFac(), level); });
         }
+
         #endregion Logging
 
         #region Actions
@@ -111,8 +120,13 @@ namespace Utils.Plugins
             });
         }
 
-        public static void DoNothing<T>(T _) { }
-        public static void DoNothing() { }
+        public static void DoNothing<T>(T _)
+        {
+        }
+
+        public static void DoNothing()
+        {
+        }
 
         public static IObservable<T> DoError<T>(this IObservable<T> obs, Action<Exception> onError)
         {
@@ -144,13 +158,14 @@ namespace Utils.Plugins
                 });
             });
         }
+
         #endregion Actions
 
         #region Filter
 
         ///<summary>
         /// Apply conversion operator to observable
-        ///</summary>        
+        ///</summary>
         public static IObservable<T2> Operator<T1, T2>(this IObservable<T1> obs, Func<IObservable<T1>, IObservable<T2>> operation)
         {
             return operation(obs);
@@ -159,7 +174,7 @@ namespace Utils.Plugins
         ///<summary>
         /// Apply conversion operator to observable only if the given condition is true.
         /// This way you can easily active/deactivate operators like .Select() or .Where() in the observer-chain when creating an obseravble
-        ///</summary>        
+        ///</summary>
         public static IObservable<T> OperatorIf<T>(this IObservable<T> obs, bool condition, Func<IObservable<T>, IObservable<T>> then, Func<IObservable<T>, IObservable<T>> otherwise = null)
         {
             if (condition)
@@ -176,8 +191,8 @@ namespace Utils.Plugins
         ///<summary>
         /// Waits for at least 2 elements beeing emitted before starts firing.
         /// Example: sequence [A, B, C, D, E] would result in following emits: [(A,B), (B,C), (C,D), (D,E)]
-        ///</summary>  
-        public static IObservable<U> LatestWithPrevious<T, U>(this IObservable<T> obs, Func<T, T, U> combineFunc)
+        ///</summary>
+        public static IObservable<TU> LatestWithPrevious<T, TU>(this IObservable<T> obs, Func<T, T, TU> combineFunc)
         {
             var latest = obs.Skip(1);
             return latest.CombineLatest(obs, combineFunc);
@@ -185,7 +200,7 @@ namespace Utils.Plugins
 
         ///<summary>
         /// Like Take until but get the last value also
-        ///</summary>  
+        ///</summary>
         public static IObservable<TSource> TakeUntilInclusive<TSource>(this IObservable<TSource> source, Func<TSource, bool> predicate)
         {
             return Observable.Create<TSource>(observer =>
@@ -232,6 +247,7 @@ namespace Utils.Plugins
         {
             return obs.Where(x => x);
         }
+
         public static IObservable<bool> WhereIsFalse(this IObservable<bool> obs)
         {
             return obs.Where(x => !x);
@@ -243,13 +259,5 @@ namespace Utils.Plugins
         }
 
         #endregion Filter
-    }
-
-    public enum LogLevel
-    {
-        Debug,
-        Info,
-        Warning,
-        Error
     }
 }

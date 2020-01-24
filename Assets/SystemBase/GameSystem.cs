@@ -1,26 +1,26 @@
 using System;
 using System.Collections.Generic;
-using System.Reflection;
+using System.Linq;
+using UniRx;
+using UniRx.Triggers;
 using UnityEngine;
+using Utils;
 
 namespace SystemBase
 {
-    public abstract class GameSystem<TComponent1, TComponent2, TComponent3, TComponent4, TComponent5> 
-         : GameSystem<TComponent1,TComponent2, TComponent3, TComponent4>
+    public abstract class GameSystem<TComponent1, TComponent2, TComponent3, TComponent4, TComponent5>
+         : GameSystem<TComponent1, TComponent2, TComponent3, TComponent4>
         where TComponent1 : GameComponent
         where TComponent2 : GameComponent
         where TComponent3 : GameComponent
         where TComponent4 : GameComponent
         where TComponent5 : GameComponent
     {
-        public override Type[] ComponentsToRegister
-        {
-            get
-            { return new[] { typeof(TComponent1), typeof(TComponent2), typeof(TComponent3), typeof(TComponent4), typeof(TComponent5) }; }
-        }
+        public override Type[] ComponentsToRegister => new[] { typeof(TComponent1), typeof(TComponent2), typeof(TComponent3), typeof(TComponent4), typeof(TComponent5) };
 
         public abstract void Register(TComponent5 component);
     }
+
     public abstract class GameSystem<TComponent1, TComponent2, TComponent3, TComponent4>
         : GameSystem<TComponent1, TComponent2, TComponent3>
         where TComponent1 : GameComponent
@@ -28,11 +28,7 @@ namespace SystemBase
         where TComponent3 : GameComponent
         where TComponent4 : GameComponent
     {
-        public override Type[] ComponentsToRegister
-        {
-            get
-            { return new[] { typeof(TComponent1), typeof(TComponent2), typeof(TComponent3), typeof(TComponent4) }; }
-        }
+        public override Type[] ComponentsToRegister => new[] { typeof(TComponent1), typeof(TComponent2), typeof(TComponent3), typeof(TComponent4) };
 
         public abstract void Register(TComponent4 component);
     }
@@ -43,11 +39,7 @@ namespace SystemBase
         where TComponent2 : GameComponent
         where TComponent3 : GameComponent
     {
-        public override Type[] ComponentsToRegister
-        {
-            get
-            { return new[] { typeof(TComponent1), typeof(TComponent2), typeof(TComponent3) }; }
-        }
+        public override Type[] ComponentsToRegister => new[] { typeof(TComponent1), typeof(TComponent2), typeof(TComponent3) };
 
         public abstract void Register(TComponent3 component);
     }
@@ -57,11 +49,7 @@ namespace SystemBase
         where TComponent1 : GameComponent
         where TComponent2 : GameComponent
     {
-        public override Type[] ComponentsToRegister
-        {
-            get
-            { return new[] { typeof(TComponent1), typeof(TComponent2) }; }
-        }
+        public override Type[] ComponentsToRegister => new[] { typeof(TComponent1), typeof(TComponent2) };
 
         public abstract void Register(TComponent2 component);
     }
@@ -70,11 +58,7 @@ namespace SystemBase
     {
         private Dictionary<Type, Action<GameComponent>> _registerMethods;
 
-        public virtual Type[] ComponentsToRegister
-        {
-            get
-            { return new[] { typeof(TComponent) }; }
-        }
+        public virtual Type[] ComponentsToRegister => new[] { typeof(TComponent) };
 
         public virtual void Init()
         {
@@ -85,11 +69,10 @@ namespace SystemBase
             if (_registerMethods == null)
             {
                 _registerMethods = new Dictionary<Type, Action<GameComponent>>();
-                MethodInfo[] methods = GetType().GetMethods();
-                foreach (var m in methods)
-                {
-                    if (m.Name != "Register" || m.GetParameters().Length != 1) continue;
+                var methods = GetType().GetMethods();
 
+                foreach (var m in methods.Where(m => m.Name == "Register" && m.GetParameters().Length == 1))
+                {
                     //Debug.Log(GetType().Name + ": found Register(" + m.GetParameters()[0].ParameterType.Name + ")");
                     // ReSharper disable once AccessToForEachVariableInClosure
                     _registerMethods.Add(m.GetParameters()[0].ParameterType, c => m.Invoke(this, new object[] { c }));
@@ -101,5 +84,38 @@ namespace SystemBase
         }
 
         public abstract void Register(TComponent component);
+
+        public IObservable<float> SystemUpdate()
+        {
+            return IoC.Game.UpdateAsObservable().Select(_ => Time.deltaTime);
+        }
+
+        public IObservable<float> SystemFixedUpdate()
+        {
+            return IoC.Game.FixedUpdateAsObservable().Select(_ => Time.deltaTime);
+        }
+
+        public IObservable<float> SystemLateUpdate()
+        {
+            return IoC.Game.LateUpdateAsObservable().Select(_ => Time.deltaTime);
+        }
+
+        public IObservable<TComp> SystemUpdate<TComp>(TComp returnedComponent)
+            where TComp : GameComponent
+        {
+            return IoC.Game.UpdateAsObservable().Select(_ => returnedComponent);
+        }
+
+        public IObservable<TComp> SystemFixedUpdate<TComp>(TComp returnedComponent)
+            where TComp : GameComponent
+        {
+            return IoC.Game.UpdateAsObservable().Select(_ => returnedComponent);
+        }
+
+        public IObservable<TComp> SystemLateUpdate<TComp>(TComp returnedComponent)
+            where TComp : GameComponent
+        {
+            return IoC.Game.UpdateAsObservable().Select(_ => returnedComponent);
+        }
     }
 }

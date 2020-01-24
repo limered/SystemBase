@@ -1,7 +1,7 @@
 ﻿using SystemBase;
 using UnityEngine;
 
-namespace Systems.Example
+namespace ExampleSystems.Example
 {
     [RequireComponent(typeof(Rigidbody))]
     public class FunnyMovementComponent : GameComponent
