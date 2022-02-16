@@ -8,7 +8,6 @@ namespace Editor.SystemBase
     [InitializeOnLoad]
     public class GameEditor
     {
-        // ReSharper disable once MemberCanBePrivate.Global
         public static readonly ReactiveProperty<MouseData> MouseData = new ReactiveProperty<MouseData>();
         public static readonly EditorSystemCollection EditorSystems = new EditorSystemCollection();
 

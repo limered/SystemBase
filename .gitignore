@@ -28,3 +28,7 @@ Assets/VSCode\.meta
 
 
 _ReSharper.Caches/
+
+.idea/
+
+Logs/
