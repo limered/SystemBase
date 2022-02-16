@@ -1,5 +1,5 @@
 ﻿using System;
-using SystemBase.StateMachineBase;
+using SystemBase.Core;
 using UniRx;
 
 namespace ExampleSystems.Example.States

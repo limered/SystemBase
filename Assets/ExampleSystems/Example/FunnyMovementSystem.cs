@@ -1,12 +1,10 @@
 ﻿using System.Collections;
-using SystemBase;
 using ExampleSystems.Example.States;
+using SystemBase.Core;
+using SystemBase.Utils;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
-using Utils;
-using Utils.Math;
-using Utils.Plugins;
 
 namespace ExampleSystems.Example
 {
