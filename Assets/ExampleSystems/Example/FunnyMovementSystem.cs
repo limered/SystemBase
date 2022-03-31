@@ -1,12 +1,10 @@
 ﻿using System.Collections;
-using SystemBase;
 using ExampleSystems.Example.States;
+using SystemBase.Core;
+using SystemBase.Utils;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
-using Utils;
-using Utils.Math;
-using Utils.Plugins;
 
 namespace ExampleSystems.Example
 {
@@ -22,12 +20,12 @@ namespace ExampleSystems.Example
             IoC.RegisterSingleton(this);
         }
 
-        public override void Register(FunnyMovementComponent comp)
+        public override void Register(FunnyMovementComponent currentChunk)
         {
-            if (!comp) return;
+            if (!currentChunk) return;
 
             //UniRX Magic
-            comp.UpdateAsObservable()
+            currentChunk.UpdateAsObservable()
                 .Where(_ => _config != null)
                 .Where((_, i) => i % 60 == 0)
                 .Where(_ => _config.MovementState.CurrentState.Value.GetType() == typeof(Moving))
@@ -39,8 +37,8 @@ namespace ExampleSystems.Example
                 .LogError() // Logs OnError and prints exception by using Debug.LogException(). Optionally you can provide a format function.
                 .LogOnNext("move funny") //Logs every OnNext value. Optionally you can provide a format string where {0} is replaced by the value.
 
-                .Subscribe(_ => MoveFunny(comp))
-                .AddTo(comp);
+                .Subscribe(_ => MoveFunny(currentChunk))
+                .AddTo(currentChunk);
         }
 
         public override void Register(FunnyMovementConfigComponent comp)

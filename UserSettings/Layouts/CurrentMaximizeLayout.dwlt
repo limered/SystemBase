@@ -1,0 +1,3117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 3}
+  - {fileID: 13}
+  - {fileID: 15}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 2491
+    height: 1300
+  m_MinSize: {x: 400, y: 200}
+  m_MaxSize: {x: 32384, y: 16192}
+  vertical: 0
+  controlID: 144
+--- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 924ffcbe75518854f97b48776d0f1939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: LowPoly
+    m_Image: {fileID: 2800000, guid: 7129268cf102b2f45809905bcb27ce8b, type: 3}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1294
+    y: 82
+    width: 1349
+    height: 807
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_Selected: c6b05f5d7c31bc34a946bd20724d009e
+  m_GraphObject: {fileID: 0}
+  m_LastSerializedFileContents: "{\n    \"m_SGVersion\": 3,\n    \"m_Type\": \"UnityEditor.ShaderGraph.GraphData\",\n   
+    \"m_ObjectId\": \"72cf4eb3bc83437e91b9cc3603dcbb4a\",\n    \"m_Properties\":
+    [],\n    \"m_Keywords\": [],\n    \"m_Dropdowns\": [],\n    \"m_CategoryData\":
+    [\n        {\n            \"m_Id\": \"5ea83754c5f54e5098198d7e0ddae220\"\n       
+    }\n    ],\n    \"m_Nodes\": [\n        {\n            \"m_Id\": \"631f6ea2c1ac40a1bcaa73b2f3e6c4dc\"\n       
+    },\n        {\n            \"m_Id\": \"5e0c080f56a246688abb7d414353d883\"\n       
+    },\n        {\n            \"m_Id\": \"505f5da933b34e48a5deb59ea5dbf59a\"\n       
+    },\n        {\n            \"m_Id\": \"93c295d360604a739aba204a7244419c\"\n       
+    },\n        {\n            \"m_Id\": \"a708aa99ccb64f7fb018c0296913a5bf\"\n       
+    },\n        {\n            \"m_Id\": \"3cbbe0b0e5e24f2994d019ac52132268\"\n       
+    },\n        {\n            \"m_Id\": \"8dda514246d840d8bc31eccdd0c704d7\"\n       
+    },\n        {\n            \"m_Id\": \"1cd83306258c41b193f212cb676469bd\"\n       
+    },\n        {\n            \"m_Id\": \"e4b00ef525d042d392c7cb632cc39298\"\n       
+    },\n        {\n            \"m_Id\": \"d1dd13905c1a409cb3939583deab8d7f\"\n       
+    },\n        {\n            \"m_Id\": \"949f61e9a2a24bea83c3ce0609196483\"\n       
+    },\n        {\n            \"m_Id\": \"d5a9ff3d1c58464dad44af42a8899339\"\n       
+    },\n        {\n            \"m_Id\": \"30dd185b184f4231b945801bb51c191f\"\n       
+    },\n        {\n            \"m_Id\": \"95466ce00d4342fabc9f6e5b38a9cfb2\"\n       
+    },\n        {\n            \"m_Id\": \"52bb8c77d0644d2698bac5fe2f065d4d\"\n       
+    },\n        {\n            \"m_Id\": \"41d03331d4fb4e3ebf3c30c9748e5e22\"\n       
+    }\n    ],\n    \"m_GroupDatas\": [],\n    \"m_StickyNoteDatas\": [],\n    \"m_Edges\":
+    [\n        {\n            \"m_OutputSlot\": {\n                \"m_Node\": {\n                   
+    \"m_Id\": \"41d03331d4fb4e3ebf3c30c9748e5e22\"\n                },\n               
+    \"m_SlotId\": 2\n            },\n            \"m_InputSlot\": {\n               
+    \"m_Node\": {\n                    \"m_Id\": \"3cbbe0b0e5e24f2994d019ac52132268\"\n               
+    },\n                \"m_SlotId\": 0\n            }\n        },\n        {\n           
+    \"m_OutputSlot\": {\n                \"m_Node\": {\n                    \"m_Id\":
+    \"505f5da933b34e48a5deb59ea5dbf59a\"\n                },\n                \"m_SlotId\":
+    2\n            },\n            \"m_InputSlot\": {\n                \"m_Node\":
+    {\n                    \"m_Id\": \"a708aa99ccb64f7fb018c0296913a5bf\"\n               
+    },\n                \"m_SlotId\": 0\n            }\n        },\n        {\n           
+    \"m_OutputSlot\": {\n                \"m_Node\": {\n                    \"m_Id\":
+    \"5e0c080f56a246688abb7d414353d883\"\n                },\n                \"m_SlotId\":
+    1\n            },\n            \"m_InputSlot\": {\n                \"m_Node\":
+    {\n                    \"m_Id\": \"505f5da933b34e48a5deb59ea5dbf59a\"\n               
+    },\n                \"m_SlotId\": 0\n            }\n        },\n        {\n           
+    \"m_OutputSlot\": {\n                \"m_Node\": {\n                    \"m_Id\":
+    \"631f6ea2c1ac40a1bcaa73b2f3e6c4dc\"\n                },\n                \"m_SlotId\":
+    1\n            },\n            \"m_InputSlot\": {\n                \"m_Node\":
+    {\n                    \"m_Id\": \"505f5da933b34e48a5deb59ea5dbf59a\"\n               
+    },\n                \"m_SlotId\": 1\n            }\n        },\n        {\n           
+    \"m_OutputSlot\": {\n                \"m_Node\": {\n                    \"m_Id\":
+    \"93c295d360604a739aba204a7244419c\"\n                },\n                \"m_SlotId\":
+    0\n            },\n            \"m_InputSlot\": {\n                \"m_Node\":
+    {\n                    \"m_Id\": \"41d03331d4fb4e3ebf3c30c9748e5e22\"\n               
+    },\n                \"m_SlotId\": 0\n            }\n        },\n        {\n           
+    \"m_OutputSlot\": {\n                \"m_Node\": {\n                    \"m_Id\":
+    \"93c295d360604a739aba204a7244419c\"\n                },\n                \"m_SlotId\":
+    0\n            },\n            \"m_InputSlot\": {\n                \"m_Node\":
+    {\n                    \"m_Id\": \"5e0c080f56a246688abb7d414353d883\"\n               
+    },\n                \"m_SlotId\": 0\n            }\n        },\n        {\n           
+    \"m_OutputSlot\": {\n                \"m_Node\": {\n                    \"m_Id\":
+    \"93c295d360604a739aba204a7244419c\"\n                },\n                \"m_SlotId\":
+    0\n            },\n            \"m_InputSlot\": {\n                \"m_Node\":
+    {\n                    \"m_Id\": \"631f6ea2c1ac40a1bcaa73b2f3e6c4dc\"\n               
+    },\n                \"m_SlotId\": 0\n            }\n        },\n        {\n           
+    \"m_OutputSlot\": {\n                \"m_Node\": {\n                    \"m_Id\":
+    \"a708aa99ccb64f7fb018c0296913a5bf\"\n                },\n                \"m_SlotId\":
+    1\n            },\n            \"m_InputSlot\": {\n                \"m_Node\":
+    {\n                    \"m_Id\": \"41d03331d4fb4e3ebf3c30c9748e5e22\"\n               
+    },\n                \"m_SlotId\": 1\n            }\n        },\n        {\n           
+    \"m_OutputSlot\": {\n                \"m_Node\": {\n                    \"m_Id\":
+    \"a708aa99ccb64f7fb018c0296913a5bf\"\n                },\n                \"m_SlotId\":
+    1\n            },\n            \"m_InputSlot\": {\n                \"m_Node\":
+    {\n                    \"m_Id\": \"95466ce00d4342fabc9f6e5b38a9cfb2\"\n               
+    },\n                \"m_SlotId\": 0\n            }\n        }\n    ],\n    \"m_VertexContext\":
+    {\n        \"m_Position\": {\n            \"x\": 1255.0001220703125,\n           
+    \"y\": -454.0000305175781\n        },\n        \"m_Blocks\": [\n            {\n               
+    \"m_Id\": \"8dda514246d840d8bc31eccdd0c704d7\"\n            },\n            {\n               
+    \"m_Id\": \"1cd83306258c41b193f212cb676469bd\"\n            },\n            {\n               
+    \"m_Id\": \"e4b00ef525d042d392c7cb632cc39298\"\n            }\n        ]\n   
+    },\n    \"m_FragmentContext\": {\n        \"m_Position\": {\n            \"x\":
+    1240.9998779296875,\n            \"y\": -163.99990844726563\n        },\n       
+    \"m_Blocks\": [\n            {\n                \"m_Id\": \"3cbbe0b0e5e24f2994d019ac52132268\"\n           
+    },\n            {\n                \"m_Id\": \"d1dd13905c1a409cb3939583deab8d7f\"\n           
+    },\n            {\n                \"m_Id\": \"949f61e9a2a24bea83c3ce0609196483\"\n           
+    },\n            {\n                \"m_Id\": \"d5a9ff3d1c58464dad44af42a8899339\"\n           
+    },\n            {\n                \"m_Id\": \"30dd185b184f4231b945801bb51c191f\"\n           
+    },\n            {\n                \"m_Id\": \"95466ce00d4342fabc9f6e5b38a9cfb2\"\n           
+    }\n        ]\n    },\n    \"m_PreviewData\": {\n        \"serializedMesh\": {\n           
+    \"m_SerializedMesh\": \"{\\\"mesh\\\":{\\\"instanceID\\\":0}}\",\n           
+    \"m_Guid\": \"\"\n        },\n        \"preventRotation\": false\n    },\n   
+    \"m_Path\": \"Shader Graphs\",\n    \"m_GraphPrecision\": 1,\n    \"m_PreviewMode\":
+    2,\n    \"m_OutputNode\": {\n        \"m_Id\": \"\"\n    },\n    \"m_ActiveTargets\":
+    [\n        {\n            \"m_Id\": \"bf4e5652b0354861832bc2558d156c93\"\n       
+    }\n    ]\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.NormalMaterialSlot\",\n   
+    \"m_ObjectId\": \"090c89ac23854280b15466b5fa959cd9\",\n    \"m_Id\": 0,\n   
+    \"m_DisplayName\": \"Normal\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\": false,\n   
+    \"m_ShaderOutputName\": \"Normal\",\n    \"m_StageCapability\": 1,\n    \"m_Value\":
+    {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\": 0.0\n    },\n   
+    \"m_DefaultValue\": {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\":
+    0.0\n    },\n    \"m_Labels\": [],\n    \"m_Space\": 0\n}\n\n{\n    \"m_SGVersion\":
+    0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.BlockNode\",\n    \"m_ObjectId\":
+    \"1cd83306258c41b193f212cb676469bd\",\n    \"m_Group\": {\n        \"m_Id\":
+    \"\"\n    },\n    \"m_Name\": \"VertexDescription.Normal\",\n    \"m_DrawState\":
+    {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n            \"serializedVersion\":
+    \"2\",\n            \"x\": 0.0,\n            \"y\": 0.0,\n            \"width\":
+    0.0,\n            \"height\": 0.0\n        }\n    },\n    \"m_Slots\": [\n       
+    {\n            \"m_Id\": \"090c89ac23854280b15466b5fa959cd9\"\n        }\n   
+    ],\n    \"synonyms\": [],\n    \"m_Precision\": 0,\n    \"m_PreviewExpanded\":
+    true,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\": {\n        \"m_SerializableColors\":
+    []\n    },\n    \"m_SerializedDescriptor\": \"VertexDescription.Normal\"\n}\n\n{\n   
+    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.DynamicVectorMaterialSlot\",\n   
+    \"m_ObjectId\": \"1d15f7bfa016426aa199d3c523adbc51\",\n    \"m_Id\": 1,\n   
+    \"m_DisplayName\": \"Out\",\n    \"m_SlotType\": 1,\n    \"m_Hidden\": false,\n   
+    \"m_ShaderOutputName\": \"Out\",\n    \"m_StageCapability\": 2,\n    \"m_Value\":
+    {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\": 0.0,\n        \"w\":
+    0.0\n    },\n    \"m_DefaultValue\": {\n        \"x\": 0.0,\n        \"y\": 0.0,\n       
+    \"z\": 0.0,\n        \"w\": 0.0\n    }\n}\n\n{\n    \"m_SGVersion\": 0,\n   
+    \"m_Type\": \"UnityEditor.Rendering.BuiltIn.ShaderGraph.BuiltInLitSubTarget\",\n   
+    \"m_ObjectId\": \"26fb55cabcd64d3fa7da72e1f0c7e495\",\n    \"m_WorkflowMode\":
+    1,\n    \"m_NormalDropOffSpace\": 2\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\":
+    \"UnityEditor.ShaderGraph.BlockNode\",\n    \"m_ObjectId\": \"30dd185b184f4231b945801bb51c191f\",\n   
+    \"m_Group\": {\n        \"m_Id\": \"\"\n    },\n    \"m_Name\": \"SurfaceDescription.Metallic\",\n   
+    \"m_DrawState\": {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n           
+    \"serializedVersion\": \"2\",\n            \"x\": 0.0,\n            \"y\": 0.0,\n           
+    \"width\": 0.0,\n            \"height\": 0.0\n        }\n    },\n    \"m_Slots\":
+    [\n        {\n            \"m_Id\": \"9739664cd9e84cddbca3cdbf71346101\"\n       
+    }\n    ],\n    \"synonyms\": [],\n    \"m_Precision\": 0,\n    \"m_PreviewExpanded\":
+    true,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\": {\n        \"m_SerializableColors\":
+    []\n    },\n    \"m_SerializedDescriptor\": \"SurfaceDescription.Metallic\"\n}\n\n{\n   
+    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.DynamicVectorMaterialSlot\",\n   
+    \"m_ObjectId\": \"3380fcaa30824562b893c04ddf7ec9f6\",\n    \"m_Id\": 0,\n   
+    \"m_DisplayName\": \"In\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\": false,\n   
+    \"m_ShaderOutputName\": \"In\",\n    \"m_StageCapability\": 3,\n    \"m_Value\":
+    {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\": 0.0,\n        \"w\":
+    0.0\n    },\n    \"m_DefaultValue\": {\n        \"x\": 0.0,\n        \"y\": 0.0,\n       
+    \"z\": 0.0,\n        \"w\": 0.0\n    }\n}\n\n{\n    \"m_SGVersion\": 0,\n   
+    \"m_Type\": \"UnityEditor.ShaderGraph.Vector3MaterialSlot\",\n    \"m_ObjectId\":
+    \"3c9398ac025347898e8613a7ea70ff96\",\n    \"m_Id\": 1,\n    \"m_DisplayName\":
+    \"B\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\": false,\n    \"m_ShaderOutputName\":
+    \"B\",\n    \"m_StageCapability\": 3,\n    \"m_Value\": {\n        \"x\": 0.0,\n       
+    \"y\": 1.0,\n        \"z\": 0.0\n    },\n    \"m_DefaultValue\": {\n        \"x\":
+    0.0,\n        \"y\": 0.0,\n        \"z\": 0.0\n    },\n    \"m_Labels\": []\n}\n\n{\n   
+    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.BlockNode\",\n   
+    \"m_ObjectId\": \"3cbbe0b0e5e24f2994d019ac52132268\",\n    \"m_Group\": {\n       
+    \"m_Id\": \"\"\n    },\n    \"m_Name\": \"SurfaceDescription.BaseColor\",\n   
+    \"m_DrawState\": {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n           
+    \"serializedVersion\": \"2\",\n            \"x\": 665.9999389648438,\n           
+    \"y\": -96.00000762939453,\n            \"width\": 200.00006103515626,\n           
+    \"height\": 40.99999237060547\n        }\n    },\n    \"m_Slots\": [\n       
+    {\n            \"m_Id\": \"c84a42a097aa4378ae97f7aa0bf6b4f6\"\n        }\n   
+    ],\n    \"synonyms\": [],\n    \"m_Precision\": 0,\n    \"m_PreviewExpanded\":
+    true,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\": {\n        \"m_SerializableColors\":
+    []\n    },\n    \"m_SerializedDescriptor\": \"SurfaceDescription.BaseColor\"\n}\n\n{\n   
+    \"m_SGVersion\": 1,\n    \"m_Type\": \"UnityEditor.ShaderGraph.CustomFunctionNode\",\n   
+    \"m_ObjectId\": \"41d03331d4fb4e3ebf3c30c9748e5e22\",\n    \"m_Group\": {\n       
+    \"m_Id\": \"\"\n    },\n    \"m_Name\": \"Light (Custom Function)\",\n    \"m_DrawState\":
+    {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n            \"serializedVersion\":
+    \"2\",\n            \"x\": 242.0,\n            \"y\": -715.0,\n            \"width\":
+    208.0,\n            \"height\": 302.0\n        }\n    },\n    \"m_Slots\": [\n       
+    {\n            \"m_Id\": \"46d0cfdc022246e4a5c5a52771e17957\"\n        },\n       
+    {\n            \"m_Id\": \"bc8a7edddf504946a96539ed07b69eb3\"\n        },\n       
+    {\n            \"m_Id\": \"42b905c342bc4466ae32a62609fa6b49\"\n        }\n   
+    ],\n    \"synonyms\": [\n        \"code\",\n        \"HLSL\"\n    ],\n    \"m_Precision\":
+    0,\n    \"m_PreviewExpanded\": true,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\":
+    {\n        \"m_SerializableColors\": []\n    },\n    \"m_SourceType\": 1,\n   
+    \"m_FunctionName\": \"Light\",\n    \"m_FunctionSource\": \"\",\n    \"m_FunctionBody\":
+    \"color = 0;\\r\\n#ifndef SHADERGRAPH_PREVIEW\\r\\nint additionalLightsCount
+    = GetAdditionalLightsCount();\\r\\nfor (int i = 0; i < additionalLightsCount;
+    ++i)\\r\\n{\\r\\n    Light light = GetAdditionalLight(i, positionWS);\\r\\n   
+    float toonLambert = dot(normal, light.direction);\\r\\n    toonLambert = step(0,
+    toonLambert);\\r\\n    color += (toonLambert * light.distanceAttenuation) * light.color;\\r\\n}\\r\\n#endif\"\n}\n\n{\n   
+    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.Vector3MaterialSlot\",\n   
+    \"m_ObjectId\": \"42b905c342bc4466ae32a62609fa6b49\",\n    \"m_Id\": 2,\n   
+    \"m_DisplayName\": \"color\",\n    \"m_SlotType\": 1,\n    \"m_Hidden\": false,\n   
+    \"m_ShaderOutputName\": \"color\",\n    \"m_StageCapability\": 3,\n    \"m_Value\":
+    {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\": 0.0\n    },\n   
+    \"m_DefaultValue\": {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\":
+    0.0\n    },\n    \"m_Labels\": []\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\":
+    \"UnityEditor.ShaderGraph.Vector3MaterialSlot\",\n    \"m_ObjectId\": \"46d0cfdc022246e4a5c5a52771e17957\",\n   
+    \"m_Id\": 0,\n    \"m_DisplayName\": \"positionWS\",\n    \"m_SlotType\": 0,\n   
+    \"m_Hidden\": false,\n    \"m_ShaderOutputName\": \"positionWS\",\n    \"m_StageCapability\":
+    3,\n    \"m_Value\": {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\":
+    0.0\n    },\n    \"m_DefaultValue\": {\n        \"x\": 0.0,\n        \"y\": 0.0,\n       
+    \"z\": 0.0\n    },\n    \"m_Labels\": []\n}\n\n{\n    \"m_SGVersion\": 0,\n   
+    \"m_Type\": \"UnityEditor.ShaderGraph.CrossProductNode\",\n    \"m_ObjectId\":
+    \"505f5da933b34e48a5deb59ea5dbf59a\",\n    \"m_Group\": {\n        \"m_Id\":
+    \"\"\n    },\n    \"m_Name\": \"Cross Product\",\n    \"m_DrawState\": {\n       
+    \"m_Expanded\": true,\n        \"m_Position\": {\n            \"serializedVersion\":
+    \"2\",\n            \"x\": -314.0,\n            \"y\": -182.0,\n            \"width\":
+    130.0,\n            \"height\": 118.0\n        }\n    },\n    \"m_Slots\": [\n       
+    {\n            \"m_Id\": \"a402d14e8b82449b8b9747a1ff5a45db\"\n        },\n       
+    {\n            \"m_Id\": \"3c9398ac025347898e8613a7ea70ff96\"\n        },\n       
+    {\n            \"m_Id\": \"afc01e3b0d354abf90dfca87997ade4f\"\n        }\n   
+    ],\n    \"synonyms\": [\n        \"perpendicular\"\n    ],\n    \"m_Precision\":
+    0,\n    \"m_PreviewExpanded\": false,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\":
+    {\n        \"m_SerializableColors\": []\n    }\n}\n\n{\n    \"m_SGVersion\":
+    1,\n    \"m_Type\": \"UnityEditor.ShaderGraph.ColorNode\",\n    \"m_ObjectId\":
+    \"52bb8c77d0644d2698bac5fe2f065d4d\",\n    \"m_Group\": {\n        \"m_Id\":
+    \"\"\n    },\n    \"m_Name\": \"Color\",\n    \"m_DrawState\": {\n        \"m_Expanded\":
+    true,\n        \"m_Position\": {\n            \"serializedVersion\": \"2\",\n           
+    \"x\": 1033.0,\n            \"y\": -625.0,\n            \"width\": 208.0,\n           
+    \"height\": 127.0\n        }\n    },\n    \"m_Slots\": [\n        {\n           
+    \"m_Id\": \"7de77e5269314c62ad2843e2dabdc728\"\n        }\n    ],\n    \"synonyms\":
+    [\n        \"rgba\"\n    ],\n    \"m_Precision\": 0,\n    \"m_PreviewExpanded\":
+    true,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\": {\n        \"m_SerializableColors\":
+    []\n    },\n    \"m_Color\": {\n        \"color\": {\n            \"r\": 0.10494235157966614,\n           
+    \"g\": 0.37735849618911745,\n            \"b\": 0.09789961576461792,\n           
+    \"a\": 0.0\n        },\n        \"mode\": 0\n    }\n}\n\n{\n    \"m_SGVersion\":
+    0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.Vector1MaterialSlot\",\n    \"m_ObjectId\":
+    \"52d480180fed45499ad28c30897ea892\",\n    \"m_Id\": 0,\n    \"m_DisplayName\":
+    \"Smoothness\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\": false,\n    \"m_ShaderOutputName\":
+    \"Smoothness\",\n    \"m_StageCapability\": 2,\n    \"m_Value\": 0.0,\n    \"m_DefaultValue\":
+    0.5,\n    \"m_Labels\": []\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\":
+    \"UnityEditor.ShaderGraph.DDYNode\",\n    \"m_ObjectId\": \"5e0c080f56a246688abb7d414353d883\",\n   
+    \"m_Group\": {\n        \"m_Id\": \"\"\n    },\n    \"m_Name\": \"DDY\",\n   
+    \"m_DrawState\": {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n           
+    \"serializedVersion\": \"2\",\n            \"x\": -483.0000305175781,\n           
+    \"y\": -341.0000305175781,\n            \"width\": 208.00003051757813,\n           
+    \"height\": 278.00006103515627\n        }\n    },\n    \"m_Slots\": [\n       
+    {\n            \"m_Id\": \"3380fcaa30824562b893c04ddf7ec9f6\"\n        },\n       
+    {\n            \"m_Id\": \"caa1bcba9fa84344b12edbbe68cc84c5\"\n        }\n   
+    ],\n    \"synonyms\": [\n        \"derivative\"\n    ],\n    \"m_Precision\":
+    0,\n    \"m_PreviewExpanded\": false,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\":
+    {\n        \"m_SerializableColors\": []\n    }\n}\n\n{\n    \"m_SGVersion\":
+    0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.CategoryData\",\n    \"m_ObjectId\":
+    \"5ea83754c5f54e5098198d7e0ddae220\",\n    \"m_Name\": \"\",\n    \"m_ChildObjectList\":
+    []\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.DDXNode\",\n   
+    \"m_ObjectId\": \"631f6ea2c1ac40a1bcaa73b2f3e6c4dc\",\n    \"m_Group\": {\n       
+    \"m_Id\": \"\"\n    },\n    \"m_Name\": \"DDX\",\n    \"m_DrawState\": {\n       
+    \"m_Expanded\": true,\n        \"m_Position\": {\n            \"serializedVersion\":
+    \"2\",\n            \"x\": -483.0000305175781,\n            \"y\": -6.000021934509277,\n           
+    \"width\": 208.00003051757813,\n            \"height\": 278.0000305175781\n       
+    }\n    },\n    \"m_Slots\": [\n        {\n            \"m_Id\": \"c12335f078cf405880ff2a2c660cb29f\"\n       
+    },\n        {\n            \"m_Id\": \"1d15f7bfa016426aa199d3c523adbc51\"\n       
+    }\n    ],\n    \"synonyms\": [\n        \"derivative\"\n    ],\n    \"m_Precision\":
+    0,\n    \"m_PreviewExpanded\": false,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\":
+    {\n        \"m_SerializableColors\": []\n    }\n}\n\n{\n    \"m_SGVersion\":
+    0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.TangentMaterialSlot\",\n    \"m_ObjectId\":
+    \"7463b6540c0c48f88dd0754157541cff\",\n    \"m_Id\": 0,\n    \"m_DisplayName\":
+    \"Tangent\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\": false,\n    \"m_ShaderOutputName\":
+    \"Tangent\",\n    \"m_StageCapability\": 1,\n    \"m_Value\": {\n        \"x\":
+    0.0,\n        \"y\": 0.0,\n        \"z\": 0.0\n    },\n    \"m_DefaultValue\":
+    {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\": 0.0\n    },\n   
+    \"m_Labels\": [],\n    \"m_Space\": 0\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\":
+    \"UnityEditor.ShaderGraph.Vector1MaterialSlot\",\n    \"m_ObjectId\": \"7cfb0ed8a6474db4a7e6049615d5a950\",\n   
+    \"m_Id\": 0,\n    \"m_DisplayName\": \"Ambient Occlusion\",\n    \"m_SlotType\":
+    0,\n    \"m_Hidden\": false,\n    \"m_ShaderOutputName\": \"Occlusion\",\n   
+    \"m_StageCapability\": 2,\n    \"m_Value\": 0.0,\n    \"m_DefaultValue\": 1.0,\n   
+    \"m_Labels\": []\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.Vector4MaterialSlot\",\n   
+    \"m_ObjectId\": \"7de77e5269314c62ad2843e2dabdc728\",\n    \"m_Id\": 0,\n   
+    \"m_DisplayName\": \"Out\",\n    \"m_SlotType\": 1,\n    \"m_Hidden\": false,\n   
+    \"m_ShaderOutputName\": \"Out\",\n    \"m_StageCapability\": 3,\n    \"m_Value\":
+    {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\": 0.0,\n        \"w\":
+    0.0\n    },\n    \"m_DefaultValue\": {\n        \"x\": 0.0,\n        \"y\": 0.0,\n       
+    \"z\": 0.0,\n        \"w\": 0.0\n    },\n    \"m_Labels\": []\n}\n\n{\n    \"m_SGVersion\":
+    0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.PositionMaterialSlot\",\n    \"m_ObjectId\":
+    \"8dab353c8e624bbfbc966b370ebec552\",\n    \"m_Id\": 0,\n    \"m_DisplayName\":
+    \"Position\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\": false,\n    \"m_ShaderOutputName\":
+    \"Position\",\n    \"m_StageCapability\": 1,\n    \"m_Value\": {\n        \"x\":
+    0.0,\n        \"y\": 0.0,\n        \"z\": 0.0\n    },\n    \"m_DefaultValue\":
+    {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\": 0.0\n    },\n   
+    \"m_Labels\": [],\n    \"m_Space\": 0\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\":
+    \"UnityEditor.ShaderGraph.BlockNode\",\n    \"m_ObjectId\": \"8dda514246d840d8bc31eccdd0c704d7\",\n   
+    \"m_Group\": {\n        \"m_Id\": \"\"\n    },\n    \"m_Name\": \"VertexDescription.Position\",\n   
+    \"m_DrawState\": {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n           
+    \"serializedVersion\": \"2\",\n            \"x\": 0.0,\n            \"y\": 0.0,\n           
+    \"width\": 0.0,\n            \"height\": 0.0\n        }\n    },\n    \"m_Slots\":
+    [\n        {\n            \"m_Id\": \"8dab353c8e624bbfbc966b370ebec552\"\n       
+    }\n    ],\n    \"synonyms\": [],\n    \"m_Precision\": 0,\n    \"m_PreviewExpanded\":
+    true,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\": {\n        \"m_SerializableColors\":
+    []\n    },\n    \"m_SerializedDescriptor\": \"VertexDescription.Position\"\n}\n\n{\n   
+    \"m_SGVersion\": 1,\n    \"m_Type\": \"UnityEditor.ShaderGraph.PositionNode\",\n   
+    \"m_ObjectId\": \"93c295d360604a739aba204a7244419c\",\n    \"m_Group\": {\n       
+    \"m_Id\": \"\"\n    },\n    \"m_Name\": \"Position\",\n    \"m_DrawState\": {\n       
+    \"m_Expanded\": true,\n        \"m_Position\": {\n            \"serializedVersion\":
+    \"2\",\n            \"x\": -753.0,\n            \"y\": -154.0,\n            \"width\":
+    208.0,\n            \"height\": 315.0\n        }\n    },\n    \"m_Slots\": [\n       
+    {\n            \"m_Id\": \"db0b461ad7864636b9de9b1574b199fb\"\n        }\n   
+    ],\n    \"synonyms\": [\n        \"location\"\n    ],\n    \"m_Precision\": 1,\n   
+    \"m_PreviewExpanded\": true,\n    \"m_PreviewMode\": 2,\n    \"m_CustomColors\":
+    {\n        \"m_SerializableColors\": []\n    },\n    \"m_Space\": 2,\n    \"m_PositionSource\":
+    0\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.BlockNode\",\n   
+    \"m_ObjectId\": \"949f61e9a2a24bea83c3ce0609196483\",\n    \"m_Group\": {\n       
+    \"m_Id\": \"\"\n    },\n    \"m_Name\": \"SurfaceDescription.Emission\",\n   
+    \"m_DrawState\": {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n           
+    \"serializedVersion\": \"2\",\n            \"x\": 0.0,\n            \"y\": 0.0,\n           
+    \"width\": 0.0,\n            \"height\": 0.0\n        }\n    },\n    \"m_Slots\":
+    [\n        {\n            \"m_Id\": \"a4db36d2385a4a18b73628891085e264\"\n       
+    }\n    ],\n    \"synonyms\": [],\n    \"m_Precision\": 0,\n    \"m_PreviewExpanded\":
+    true,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\": {\n        \"m_SerializableColors\":
+    []\n    },\n    \"m_SerializedDescriptor\": \"SurfaceDescription.Emission\"\n}\n\n{\n   
+    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.BlockNode\",\n   
+    \"m_ObjectId\": \"95466ce00d4342fabc9f6e5b38a9cfb2\",\n    \"m_Group\": {\n       
+    \"m_Id\": \"\"\n    },\n    \"m_Name\": \"SurfaceDescription.NormalWS\",\n   
+    \"m_DrawState\": {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n           
+    \"serializedVersion\": \"2\",\n            \"x\": 0.0,\n            \"y\": 0.0,\n           
+    \"width\": 0.0,\n            \"height\": 0.0\n        }\n    },\n    \"m_Slots\":
+    [\n        {\n            \"m_Id\": \"c4923ef65ffe46c69ef46143e9224401\"\n       
+    }\n    ],\n    \"synonyms\": [],\n    \"m_Precision\": 0,\n    \"m_PreviewExpanded\":
+    true,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\": {\n        \"m_SerializableColors\":
+    []\n    },\n    \"m_SerializedDescriptor\": \"SurfaceDescription.NormalWS\"\n}\n\n{\n   
+    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.Vector1MaterialSlot\",\n   
+    \"m_ObjectId\": \"9739664cd9e84cddbca3cdbf71346101\",\n    \"m_Id\": 0,\n   
+    \"m_DisplayName\": \"Metallic\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\": false,\n   
+    \"m_ShaderOutputName\": \"Metallic\",\n    \"m_StageCapability\": 2,\n    \"m_Value\":
+    0.0,\n    \"m_DefaultValue\": 0.0,\n    \"m_Labels\": []\n}\n\n{\n    \"m_SGVersion\":
+    0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.Vector3MaterialSlot\",\n    \"m_ObjectId\":
+    \"a402d14e8b82449b8b9747a1ff5a45db\",\n    \"m_Id\": 0,\n    \"m_DisplayName\":
+    \"A\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\": false,\n    \"m_ShaderOutputName\":
+    \"A\",\n    \"m_StageCapability\": 3,\n    \"m_Value\": {\n        \"x\": 0.0,\n       
+    \"y\": 0.0,\n        \"z\": 0.0\n    },\n    \"m_DefaultValue\": {\n        \"x\":
+    0.0,\n        \"y\": 0.0,\n        \"z\": 0.0\n    },\n    \"m_Labels\": []\n}\n\n{\n   
+    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.ColorRGBMaterialSlot\",\n   
+    \"m_ObjectId\": \"a4db36d2385a4a18b73628891085e264\",\n    \"m_Id\": 0,\n   
+    \"m_DisplayName\": \"Emission\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\": false,\n   
+    \"m_ShaderOutputName\": \"Emission\",\n    \"m_StageCapability\": 2,\n    \"m_Value\":
+    {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\": 0.0\n    },\n   
+    \"m_DefaultValue\": {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\":
+    0.0\n    },\n    \"m_Labels\": [],\n    \"m_ColorMode\": 1,\n    \"m_DefaultColor\":
+    {\n        \"r\": 0.0,\n        \"g\": 0.0,\n        \"b\": 0.0,\n        \"a\":
+    1.0\n    }\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.NormalizeNode\",\n   
+    \"m_ObjectId\": \"a708aa99ccb64f7fb018c0296913a5bf\",\n    \"m_Group\": {\n       
+    \"m_Id\": \"\"\n    },\n    \"m_Name\": \"Normalize\",\n    \"m_DrawState\":
+    {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n            \"serializedVersion\":
+    \"2\",\n            \"x\": -137.00001525878907,\n            \"y\": -182.00001525878907,\n           
+    \"width\": 208.00003051757813,\n            \"height\": 278.0000305175781\n       
+    }\n    },\n    \"m_Slots\": [\n        {\n            \"m_Id\": \"cb1aad4942414ca897fb7073e93a2ae7\"\n       
+    },\n        {\n            \"m_Id\": \"d6de1c075cbd49fb9f985b984b12aed1\"\n       
+    }\n    ],\n    \"synonyms\": [],\n    \"m_Precision\": 0,\n    \"m_PreviewExpanded\":
+    true,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\": {\n        \"m_SerializableColors\":
+    []\n    }\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.Vector3MaterialSlot\",\n   
+    \"m_ObjectId\": \"afc01e3b0d354abf90dfca87997ade4f\",\n    \"m_Id\": 2,\n   
+    \"m_DisplayName\": \"Out\",\n    \"m_SlotType\": 1,\n    \"m_Hidden\": false,\n   
+    \"m_ShaderOutputName\": \"Out\",\n    \"m_StageCapability\": 3,\n    \"m_Value\":
+    {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\": 0.0\n    },\n   
+    \"m_DefaultValue\": {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\":
+    0.0\n    },\n    \"m_Labels\": []\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\":
+    \"UnityEditor.ShaderGraph.Vector3MaterialSlot\",\n    \"m_ObjectId\": \"bc8a7edddf504946a96539ed07b69eb3\",\n   
+    \"m_Id\": 1,\n    \"m_DisplayName\": \"normal\",\n    \"m_SlotType\": 0,\n   
+    \"m_Hidden\": false,\n    \"m_ShaderOutputName\": \"normal\",\n    \"m_StageCapability\":
+    3,\n    \"m_Value\": {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\":
+    0.0\n    },\n    \"m_DefaultValue\": {\n        \"x\": 0.0,\n        \"y\": 0.0,\n       
+    \"z\": 0.0\n    },\n    \"m_Labels\": []\n}\n\n{\n    \"m_SGVersion\": 2,\n   
+    \"m_Type\": \"UnityEditor.Rendering.BuiltIn.ShaderGraph.BuiltInTarget\",\n   
+    \"m_ObjectId\": \"bf4e5652b0354861832bc2558d156c93\",\n    \"m_ActiveSubTarget\":
+    {\n        \"m_Id\": \"26fb55cabcd64d3fa7da72e1f0c7e495\"\n    },\n    \"m_AllowMaterialOverride\":
+    false,\n    \"m_SurfaceType\": 0,\n    \"m_ZWriteControl\": 0,\n    \"m_ZTestMode\":
+    4,\n    \"m_AlphaMode\": 0,\n    \"m_RenderFace\": 2,\n    \"m_AlphaClip\": false,\n   
+    \"m_CustomEditorGUI\": \"\"\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\":
+    \"UnityEditor.ShaderGraph.DynamicVectorMaterialSlot\",\n    \"m_ObjectId\": \"c12335f078cf405880ff2a2c660cb29f\",\n   
+    \"m_Id\": 0,\n    \"m_DisplayName\": \"In\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\":
+    false,\n    \"m_ShaderOutputName\": \"In\",\n    \"m_StageCapability\": 3,\n   
+    \"m_Value\": {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\": 0.0,\n       
+    \"w\": 0.0\n    },\n    \"m_DefaultValue\": {\n        \"x\": 0.0,\n        \"y\":
+    0.0,\n        \"z\": 0.0,\n        \"w\": 0.0\n    }\n}\n\n{\n    \"m_SGVersion\":
+    0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.NormalMaterialSlot\",\n    \"m_ObjectId\":
+    \"c4923ef65ffe46c69ef46143e9224401\",\n    \"m_Id\": 0,\n    \"m_DisplayName\":
+    \"Normal (World Space)\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\": false,\n   
+    \"m_ShaderOutputName\": \"NormalWS\",\n    \"m_StageCapability\": 2,\n    \"m_Value\":
+    {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\": 0.0\n    },\n   
+    \"m_DefaultValue\": {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\":
+    0.0\n    },\n    \"m_Labels\": [],\n    \"m_Space\": 2\n}\n\n{\n    \"m_SGVersion\":
+    0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.ColorRGBMaterialSlot\",\n    \"m_ObjectId\":
+    \"c84a42a097aa4378ae97f7aa0bf6b4f6\",\n    \"m_Id\": 0,\n    \"m_DisplayName\":
+    \"Base Color\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\": false,\n    \"m_ShaderOutputName\":
+    \"BaseColor\",\n    \"m_StageCapability\": 2,\n    \"m_Value\": {\n        \"x\":
+    0.5,\n        \"y\": 0.5,\n        \"z\": 0.5\n    },\n    \"m_DefaultValue\":
+    {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\": 0.0\n    },\n   
+    \"m_Labels\": [],\n    \"m_ColorMode\": 0,\n    \"m_DefaultColor\": {\n       
+    \"r\": 0.5,\n        \"g\": 0.5,\n        \"b\": 0.5,\n        \"a\": 1.0\n   
+    }\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.DynamicVectorMaterialSlot\",\n   
+    \"m_ObjectId\": \"caa1bcba9fa84344b12edbbe68cc84c5\",\n    \"m_Id\": 1,\n   
+    \"m_DisplayName\": \"Out\",\n    \"m_SlotType\": 1,\n    \"m_Hidden\": false,\n   
+    \"m_ShaderOutputName\": \"Out\",\n    \"m_StageCapability\": 2,\n    \"m_Value\":
+    {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\": 0.0,\n        \"w\":
+    0.0\n    },\n    \"m_DefaultValue\": {\n        \"x\": 0.0,\n        \"y\": 0.0,\n       
+    \"z\": 0.0,\n        \"w\": 0.0\n    }\n}\n\n{\n    \"m_SGVersion\": 0,\n   
+    \"m_Type\": \"UnityEditor.ShaderGraph.DynamicVectorMaterialSlot\",\n    \"m_ObjectId\":
+    \"cb1aad4942414ca897fb7073e93a2ae7\",\n    \"m_Id\": 0,\n    \"m_DisplayName\":
+    \"In\",\n    \"m_SlotType\": 0,\n    \"m_Hidden\": false,\n    \"m_ShaderOutputName\":
+    \"In\",\n    \"m_StageCapability\": 3,\n    \"m_Value\": {\n        \"x\": 0.0,\n       
+    \"y\": 0.0,\n        \"z\": 0.0,\n        \"w\": 0.0\n    },\n    \"m_DefaultValue\":
+    {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\": 0.0,\n        \"w\":
+    0.0\n    }\n}\n\n{\n    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.BlockNode\",\n   
+    \"m_ObjectId\": \"d1dd13905c1a409cb3939583deab8d7f\",\n    \"m_Group\": {\n       
+    \"m_Id\": \"\"\n    },\n    \"m_Name\": \"SurfaceDescription.Smoothness\",\n   
+    \"m_DrawState\": {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n           
+    \"serializedVersion\": \"2\",\n            \"x\": 0.0,\n            \"y\": 0.0,\n           
+    \"width\": 0.0,\n            \"height\": 0.0\n        }\n    },\n    \"m_Slots\":
+    [\n        {\n            \"m_Id\": \"52d480180fed45499ad28c30897ea892\"\n       
+    }\n    ],\n    \"synonyms\": [],\n    \"m_Precision\": 0,\n    \"m_PreviewExpanded\":
+    true,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\": {\n        \"m_SerializableColors\":
+    []\n    },\n    \"m_SerializedDescriptor\": \"SurfaceDescription.Smoothness\"\n}\n\n{\n   
+    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.BlockNode\",\n   
+    \"m_ObjectId\": \"d5a9ff3d1c58464dad44af42a8899339\",\n    \"m_Group\": {\n       
+    \"m_Id\": \"\"\n    },\n    \"m_Name\": \"SurfaceDescription.Occlusion\",\n   
+    \"m_DrawState\": {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n           
+    \"serializedVersion\": \"2\",\n            \"x\": 0.0,\n            \"y\": 0.0,\n           
+    \"width\": 0.0,\n            \"height\": 0.0\n        }\n    },\n    \"m_Slots\":
+    [\n        {\n            \"m_Id\": \"7cfb0ed8a6474db4a7e6049615d5a950\"\n       
+    }\n    ],\n    \"synonyms\": [],\n    \"m_Precision\": 0,\n    \"m_PreviewExpanded\":
+    true,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\": {\n        \"m_SerializableColors\":
+    []\n    },\n    \"m_SerializedDescriptor\": \"SurfaceDescription.Occlusion\"\n}\n\n{\n   
+    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.DynamicVectorMaterialSlot\",\n   
+    \"m_ObjectId\": \"d6de1c075cbd49fb9f985b984b12aed1\",\n    \"m_Id\": 1,\n   
+    \"m_DisplayName\": \"Out\",\n    \"m_SlotType\": 1,\n    \"m_Hidden\": false,\n   
+    \"m_ShaderOutputName\": \"Out\",\n    \"m_StageCapability\": 3,\n    \"m_Value\":
+    {\n        \"x\": 0.0,\n        \"y\": 0.0,\n        \"z\": 0.0,\n        \"w\":
+    0.0\n    },\n    \"m_DefaultValue\": {\n        \"x\": 0.0,\n        \"y\": 0.0,\n       
+    \"z\": 0.0,\n        \"w\": 0.0\n    }\n}\n\n{\n    \"m_SGVersion\": 0,\n   
+    \"m_Type\": \"UnityEditor.ShaderGraph.Vector3MaterialSlot\",\n    \"m_ObjectId\":
+    \"db0b461ad7864636b9de9b1574b199fb\",\n    \"m_Id\": 0,\n    \"m_DisplayName\":
+    \"Out\",\n    \"m_SlotType\": 1,\n    \"m_Hidden\": false,\n    \"m_ShaderOutputName\":
+    \"Out\",\n    \"m_StageCapability\": 3,\n    \"m_Value\": {\n        \"x\": 0.0,\n       
+    \"y\": 0.0,\n        \"z\": 0.0\n    },\n    \"m_DefaultValue\": {\n        \"x\":
+    0.0,\n        \"y\": 0.0,\n        \"z\": 0.0\n    },\n    \"m_Labels\": []\n}\n\n{\n   
+    \"m_SGVersion\": 0,\n    \"m_Type\": \"UnityEditor.ShaderGraph.BlockNode\",\n   
+    \"m_ObjectId\": \"e4b00ef525d042d392c7cb632cc39298\",\n    \"m_Group\": {\n       
+    \"m_Id\": \"\"\n    },\n    \"m_Name\": \"VertexDescription.Tangent\",\n    \"m_DrawState\":
+    {\n        \"m_Expanded\": true,\n        \"m_Position\": {\n            \"serializedVersion\":
+    \"2\",\n            \"x\": 0.0,\n            \"y\": 0.0,\n            \"width\":
+    0.0,\n            \"height\": 0.0\n        }\n    },\n    \"m_Slots\": [\n       
+    {\n            \"m_Id\": \"7463b6540c0c48f88dd0754157541cff\"\n        }\n   
+    ],\n    \"synonyms\": [],\n    \"m_Precision\": 0,\n    \"m_PreviewExpanded\":
+    true,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\": {\n        \"m_SerializableColors\":
+    []\n    },\n    \"m_SerializedDescriptor\": \"VertexDescription.Tangent\"\n}\n\n"
+  m_AssetMaybeChangedOnDisk: 0
+  m_AssetMaybeDeleted: 0
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 4}
+  - {fileID: 10}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1699
+    height: 1300
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 145
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 5}
+  - {fileID: 7}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1699
+    height: 828
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 146
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneHierarchyWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 348
+    height: 828
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 6}
+  m_Panes:
+  - {fileID: 6}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Hierarchy
+    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 946
+    y: 82
+    width: 347
+    height: 807
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: e2520000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 2cfbffff
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 5}
+      m_SearchString: 
+    m_ExpandedScenes: []
+    m_CurrenRootInstanceID: 0
+    m_LockTracker:
+      m_IsLocked: 0
+    m_CurrentSortingName: TransformSorting
+  m_WindowGUID: 4c969a2b90040154d917609493e03593
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: MaterialGraphEditWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 348
+    y: 0
+    width: 1351
+    height: 828
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 2}
+  m_Panes:
+  - {fileID: 8}
+  - {fileID: 9}
+  - {fileID: 2}
+  m_Selected: 2
+  m_LastSelected: 1
+--- !u!114 &8
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Scene
+    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 929
+    y: 82
+    width: 1174
+    height: 807
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData:
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: -101, y: -26}
+      snapCorner: 3
+      id: Tool Settings
+      index: 0
+      layout: 1
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: -141, y: 149}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 1
+      id: unity-grid-and-snap-toolbar
+      index: 1
+      layout: 1
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: -419, y: -483}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 3
+      id: unity-transform-toolbar
+      index: 2
+      layout: 2
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: unity-scene-view-toolbar
+      index: 0
+      layout: 1
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 1
+      id: unity-search-toolbar
+      index: 1
+      layout: 1
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Open Tile Palette
+      index: 2
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Tilemap Focus
+      index: 3
+      layout: 4
+    - dockPosition: 0
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 67.5, y: 86}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Orientation
+      index: 0
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Light Settings
+      index: 0
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Camera
+      index: 1
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Cloth Constraints
+      index: 2
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Cloth Collisions
+      index: 3
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Navmesh Display
+      index: 4
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Agent Display
+      index: 5
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Obstacle Display
+      index: 6
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Occlusion Culling
+      index: 7
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Physics Debugger
+      index: 8
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Scene Visibility
+      index: 9
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Particles
+      index: 10
+      layout: 4
+  m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
+  m_Gizmos: 1
+  m_OverrideSceneCullingMask: 6917529027641081856
+  m_SceneIsLit: 1
+  m_SceneLighting: 1
+  m_2DMode: 0
+  m_isRotationLocked: 0
+  m_PlayAudio: 0
+  m_AudioPlay: 0
+  m_Position:
+    m_Target: {x: -11.571942, y: -8.803733, z: 7.7895694}
+    speed: 2
+    m_Value: {x: 2.5913558, y: -2.3240108, z: 1.6103549}
+  m_RenderMode: 0
+  m_CameraMode:
+    drawMode: 0
+    name: Shaded
+    section: Shading Mode
+  m_ValidateTrueMetals: 0
+  m_DoValidateTrueMetals: 0
+  m_ExposureSliderValue: 0
+  m_SceneViewState:
+    m_AlwaysRefresh: 0
+    showFog: 1
+    showSkybox: 1
+    showFlares: 1
+    showImageEffects: 1
+    showParticleSystems: 1
+    showVisualEffectGraphs: 1
+    m_FxEnabled: 1
+  m_Grid:
+    xGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 1, y: 1}
+    yGrid:
+      m_Fade:
+        m_Target: 1
+        speed: 2
+        m_Value: 1
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 1, y: 1}
+    zGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 1, y: 1}
+    m_ShowGrid: 1
+    m_GridAxis: 1
+    m_gridOpacity: 0.5
+  m_Rotation:
+    m_Target: {x: -0.27759343, y: 0.4740163, z: -0.16048194, w: -0.8200989}
+    speed: 2
+    m_Value: {x: -0.38518775, y: -0.18759783, z: 0.08028897, w: -0.89999723}
+  m_Size:
+    m_Target: 7.5266633
+    speed: 2
+    m_Value: 4.5004964
+  m_Ortho:
+    m_Target: 0
+    speed: 2
+    m_Value: 0
+  m_CameraSettings:
+    m_Speed: 1
+    m_SpeedNormalized: 0.5
+    m_SpeedMin: 0.001
+    m_SpeedMax: 2
+    m_EasingEnabled: 1
+    m_EasingDuration: 0.4
+    m_AccelerationEnabled: 1
+    m_FieldOfViewHorizontalOrVertical: 60
+    m_NearClip: 0.03
+    m_FarClip: 10000
+    m_DynamicClip: 1
+    m_OcclusionCulling: 0
+  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
+  m_LastSceneViewOrtho: 0
+  m_ReplacementShader: {fileID: 0}
+  m_ReplacementString: 
+  m_SceneVisActive: 1
+  m_LastLockedObject: {fileID: 0}
+  m_ViewIsLockedToObject: 0
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1403
+    y: 82
+    width: 1166
+    height: 807
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1166, y: 786}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 2
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -583
+    m_HBaseRangeMax: 583
+    m_VBaseRangeMin: -393
+    m_VBaseRangeMax: 393
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 1
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 1166
+      height: 786
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 583, y: 393}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -583
+      y: -393
+      width: 1166
+      height: 786
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1166, y: 807}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ConsoleWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 828
+    width: 1699
+    height: 472
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 11}
+  m_Panes:
+  - {fileID: 11}
+  - {fileID: 12}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &11
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console
+    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 946
+    y: 910
+    width: 1698
+    height: 451
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 463
+    y: 910
+    width: 1614
+    height: 451
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_Spl:
+    ID: 160
+    splitterInitialOffset: 316
+    currentActiveSplitter: -1
+    realSizes:
+    - 249
+    - 132
+    relativeSizes:
+    - 0.6535433
+    - 0.3464567
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 381
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 0
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 12}
+    m_NewResultList:
+    - id: 1014
+      uniqueId: '[SystemBase][suite]'
+      name: SystemBase
+      fullName: SystemBase
+      resultStatus: 2
+      duration: 1.0998093
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1034
+      uniqueId: '[SystemTests.dll][suite]'
+      name: SystemTests.dll
+      fullName: F:/source/SystemBase/Library/ScriptAssemblies/SystemTests.dll
+      resultStatus: 2
+      duration: 0.9863591
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1019
+      parentUniqueId: '[SystemBase][suite]'
+    - id: 1035
+      uniqueId: SystemTests.dll/[SystemTests][suite]
+      name: SystemTests
+      fullName: SystemTests
+      resultStatus: 2
+      duration: 0.9825296
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1034
+      parentUniqueId: '[SystemTests.dll][suite]'
+    - id: 1066
+      uniqueId: SystemTests.dll/SystemTests/[Core][suite]
+      name: Core
+      fullName: SystemTests.Core
+      resultStatus: 1
+      duration: 0.1060192
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1064
+      parentUniqueId: SystemTests.dll/[SystemTests][suite]
+    - id: 1067
+      uniqueId: SystemTests.dll/SystemTests/Core/[SystemTests][SystemTests.Core.Hexagon][suite]
+      name: Hexagon
+      fullName: SystemTests.Core.Hexagon
+      resultStatus: 1
+      duration: 0.0984252
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1066
+      parentUniqueId: SystemTests.dll/SystemTests/[Core][suite]
+    - id: 1052
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+EmptyGrid][suite]
+      name: HexGridTests+EmptyGrid
+      fullName: SystemTests.Core.Hexagon.HexGridTests+EmptyGrid
+      resultStatus: 1
+      duration: 0.0434132
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1067
+      parentUniqueId: SystemTests.dll/SystemTests/Core/[SystemTests][SystemTests.Core.Hexagon][suite]
+    - id: 1053
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexGridTests+EmptyGrid/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+EmptyGrid.HasCountOfZero]
+      name: HasCountOfZero
+      fullName: SystemTests.Core.Hexagon.HexGridTests+EmptyGrid.HasCountOfZero
+      resultStatus: 1
+      duration: 0.020372
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1052
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+EmptyGrid][suite]
+    - id: 1054
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexGridTests+EmptyGrid/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+EmptyGrid.HasLengthOneAfterAddingOneHex]
+      name: HasLengthOneAfterAddingOneHex
+      fullName: SystemTests.Core.Hexagon.HexGridTests+EmptyGrid.HasLengthOneAfterAddingOneHex
+      resultStatus: 1
+      duration: 0.0010753
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1052
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+EmptyGrid][suite]
+    - id: 1054
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexGridTests+EmptyGrid/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+EmptyGrid.HasLengthOneAfterAddingOneHex_Hex]
+      name: HasLengthOneAfterAddingOneHex_Hex
+      fullName: SystemTests.Core.Hexagon.HexGridTests+EmptyGrid.HasLengthOneAfterAddingOneHex_Hex
+      resultStatus: 1
+      duration: 0.0002603
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1052
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+EmptyGrid][suite]
+    - id: 1055
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexGridTests+EmptyGrid/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+EmptyGrid.ReturnsKeyNotFound]
+      name: ReturnsKeyNotFound
+      fullName: SystemTests.Core.Hexagon.HexGridTests+EmptyGrid.ReturnsKeyNotFound
+      resultStatus: 1
+      duration: 0.0034262
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1052
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+EmptyGrid][suite]
+    - id: 1056
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexGridTests+EmptyGrid/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+EmptyGrid.ReturnsKeyNotFound_Hex]
+      name: ReturnsKeyNotFound_Hex
+      fullName: SystemTests.Core.Hexagon.HexGridTests+EmptyGrid.ReturnsKeyNotFound_Hex
+      resultStatus: 1
+      duration: 0.0002506
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1052
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+EmptyGrid][suite]
+    - id: 1057
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+OneElementInGrid][suite]
+      name: HexGridTests+OneElementInGrid
+      fullName: SystemTests.Core.Hexagon.HexGridTests+OneElementInGrid
+      resultStatus: 1
+      duration: 0.0119751
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1067
+      parentUniqueId: SystemTests.dll/SystemTests/Core/[SystemTests][SystemTests.Core.Hexagon][suite]
+    - id: 1061
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexGridTests+OneElementInGrid/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+OneElementInGrid.CanBeIterated]
+      name: CanBeIterated
+      fullName: SystemTests.Core.Hexagon.HexGridTests+OneElementInGrid.CanBeIterated
+      resultStatus: 1
+      duration: 0.0048773
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1057
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+OneElementInGrid][suite]
+    - id: 1058
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexGridTests+OneElementInGrid/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+OneElementInGrid.ElementCanBeRetrieved]
+      name: ElementCanBeRetrieved
+      fullName: SystemTests.Core.Hexagon.HexGridTests+OneElementInGrid.ElementCanBeRetrieved
+      resultStatus: 1
+      duration: 0.0026811
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1057
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+OneElementInGrid][suite]
+    - id: 1059
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexGridTests+OneElementInGrid/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+OneElementInGrid.ElementCanBeRetrieved_Hex]
+      name: ElementCanBeRetrieved_Hex
+      fullName: SystemTests.Core.Hexagon.HexGridTests+OneElementInGrid.ElementCanBeRetrieved_Hex
+      resultStatus: 1
+      duration: 0.0003096
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1057
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+OneElementInGrid][suite]
+    - id: 1060
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexGridTests+OneElementInGrid/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+OneElementInGrid.WrongElementCanNotBeRetrieved]
+      name: WrongElementCanNotBeRetrieved
+      fullName: SystemTests.Core.Hexagon.HexGridTests+OneElementInGrid.WrongElementCanNotBeRetrieved
+      resultStatus: 1
+      duration: 0.0003404
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1057
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexGridTests+OneElementInGrid][suite]
+    - id: 1018
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTests][suite]
+      name: HexTests
+      fullName: SystemTests.Core.Hexagon.HexTests
+      resultStatus: 1
+      duration: 0.0233416
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1067
+      parentUniqueId: SystemTests.dll/SystemTests/Core/[SystemTests][SystemTests.Core.Hexagon][suite]
+    - id: 1022
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.Add_AddsAllValues]
+      name: Add_AddsAllValues
+      fullName: SystemTests.Core.Hexagon.HexTests.Add_AddsAllValues
+      resultStatus: 1
+      duration: 0.0006226
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTests][suite]
+    - id: 1024
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.Add_InPlaceAdd]
+      name: Add_InPlaceAdd
+      fullName: SystemTests.Core.Hexagon.HexTests.Add_InPlaceAdd
+      resultStatus: 1
+      duration: 0.0001945
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTests][suite]
+    - id: 1023
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.Add_IsCommutative]
+      name: Add_IsCommutative
+      fullName: SystemTests.Core.Hexagon.HexTests.Add_IsCommutative
+      resultStatus: 1
+      duration: 0.0001718
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTests][suite]
+    - id: 1029
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.Distance_CalculatesDistanceFromAToB]
+      name: Distance_CalculatesDistanceFromAToB
+      fullName: SystemTests.Core.Hexagon.HexTests.Distance_CalculatesDistanceFromAToB
+      resultStatus: 1
+      duration: 0.000606
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTests][suite]
+    - id: 1027
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.FromFraction_RoundsToNearestValidInt]
+      name: FromFraction_RoundsToNearestValidInt
+      fullName: SystemTests.Core.Hexagon.HexTests.FromFraction_RoundsToNearestValidInt
+      resultStatus: 1
+      duration: 0.0003028
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTests][suite]
+    - id: 1028
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.Length_CalculatesLengthFromCenter]
+      name: Length_CalculatesLengthFromCenter
+      fullName: SystemTests.Core.Hexagon.HexTests.Length_CalculatesLengthFromCenter
+      resultStatus: 1
+      duration: 0.0001456
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTests][suite]
+    - id: 1036
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour][suite]
+      name: Neighbour_ReturnsCorrectNeighbour
+      fullName: SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour
+      resultStatus: 1
+      duration: 0.0078944
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1018
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTests][suite]
+    - id: 1030
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/Neighbour_ReturnsCorrectNeighbour/[SystemTests][SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour(R,[
+        2, 1, -3 ])]
+      name: Neighbour_ReturnsCorrectNeighbour(R,[ 2, 1, -3 ])
+      fullName: SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour(R,[
+        2, 1, -3 ])
+      resultStatus: 1
+      duration: 0.0003996
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour][suite]
+    - id: 1031
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/Neighbour_ReturnsCorrectNeighbour/[SystemTests][SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour(BR,[
+        1, 2, -3 ])]
+      name: Neighbour_ReturnsCorrectNeighbour(BR,[ 1, 2, -3 ])
+      fullName: SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour(BR,[
+        1, 2, -3 ])
+      resultStatus: 1
+      duration: 0.0000766
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour][suite]
+    - id: 1032
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/Neighbour_ReturnsCorrectNeighbour/[SystemTests][SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour(BL,[
+        0, 2, -2 ])]
+      name: Neighbour_ReturnsCorrectNeighbour(BL,[ 0, 2, -2 ])
+      fullName: SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour(BL,[
+        0, 2, -2 ])
+      resultStatus: 1
+      duration: 0.0000678
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour][suite]
+    - id: 1033
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/Neighbour_ReturnsCorrectNeighbour/[SystemTests][SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour(L,[
+        0, 1, -1 ])]
+      name: Neighbour_ReturnsCorrectNeighbour(L,[ 0, 1, -1 ])
+      fullName: SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour(L,[
+        0, 1, -1 ])
+      resultStatus: 1
+      duration: 0.0000674
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour][suite]
+    - id: 1034
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/Neighbour_ReturnsCorrectNeighbour/[SystemTests][SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour(TL,[
+        1, 0, -1 ])]
+      name: Neighbour_ReturnsCorrectNeighbour(TL,[ 1, 0, -1 ])
+      fullName: SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour(TL,[
+        1, 0, -1 ])
+      resultStatus: 1
+      duration: 0.0000677
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour][suite]
+    - id: 1035
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/Neighbour_ReturnsCorrectNeighbour/[SystemTests][SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour(TR,[
+        2, 0, -2 ])]
+      name: Neighbour_ReturnsCorrectNeighbour(TR,[ 2, 0, -2 ])
+      fullName: SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour(TR,[
+        2, 0, -2 ])
+      resultStatus: 1
+      duration: 0.000066
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.Neighbour_ReturnsCorrectNeighbour][suite]
+    - id: 1021
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.QRS_ReturnCorrectValues]
+      name: QRS_ReturnCorrectValues
+      fullName: SystemTests.Core.Hexagon.HexTests.QRS_ReturnCorrectValues
+      resultStatus: 1
+      duration: 0.0001856
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTests][suite]
+    - id: 1026
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.Scale_Scales]
+      name: Scale_Scales
+      fullName: SystemTests.Core.Hexagon.HexTests.Scale_Scales
+      resultStatus: 1
+      duration: 0.0002229
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTests][suite]
+    - id: 1025
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.Subtract_Subtracts]
+      name: Subtract_Subtracts
+      fullName: SystemTests.Core.Hexagon.HexTests.Subtract_Subtracts
+      resultStatus: 1
+      duration: 0.0001638
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTests][suite]
+    - id: 1020
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.ThreeParamConstructor_ThrowsIfQRSDoesNotEqualZero]
+      name: ThreeParamConstructor_ThrowsIfQRSDoesNotEqualZero
+      fullName: SystemTests.Core.Hexagon.HexTests.ThreeParamConstructor_ThrowsIfQRSDoesNotEqualZero
+      resultStatus: 1
+      duration: 0.0003628
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTests][suite]
+    - id: 1019
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTests/[SystemTests][SystemTests.Core.Hexagon.HexTests.TwoParamConstructor_CalculatesS]
+      name: TwoParamConstructor_CalculatesS
+      fullName: SystemTests.Core.Hexagon.HexTests.TwoParamConstructor_CalculatesS
+      resultStatus: 1
+      duration: 0.0006629
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTests][suite]
+    - id: 1037
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTileTests][suite]
+      name: HexTileTests
+      fullName: SystemTests.Core.Hexagon.HexTileTests
+      resultStatus: 1
+      duration: 0.0101582
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1067
+      parentUniqueId: SystemTests.dll/SystemTests/Core/[SystemTests][SystemTests.Core.Hexagon][suite]
+    - id: 1042
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTileTests/[SystemTests][SystemTests.Core.Hexagon.HexTileTests.Add_AddsTwoHexTiles_IgnoresSecondSize]
+      name: Add_AddsTwoHexTiles_IgnoresSecondSize
+      fullName: SystemTests.Core.Hexagon.HexTileTests.Add_AddsTwoHexTiles_IgnoresSecondSize
+      resultStatus: 1
+      duration: 0.0012507
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTileTests][suite]
+    - id: 1044
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTileTests/[SystemTests][SystemTests.Core.Hexagon.HexTileTests.Add_Hex]
+      name: Add_Hex
+      fullName: SystemTests.Core.Hexagon.HexTileTests.Add_Hex
+      resultStatus: 1
+      duration: 0.000394
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTileTests][suite]
+    - id: 1041
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTileTests/[SystemTests][SystemTests.Core.Hexagon.HexTileTests.Add_InPlaceAddsToSelfAndIgnoresSecondSize]
+      name: Add_InPlaceAddsToSelfAndIgnoresSecondSize
+      fullName: SystemTests.Core.Hexagon.HexTileTests.Add_InPlaceAddsToSelfAndIgnoresSecondSize
+      resultStatus: 1
+      duration: 0.0002782
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTileTests][suite]
+    - id: 1043
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTileTests/[SystemTests][SystemTests.Core.Hexagon.HexTileTests.Add_IsNotCommutativeBecauseOfSize]
+      name: Add_IsNotCommutativeBecauseOfSize
+      fullName: SystemTests.Core.Hexagon.HexTileTests.Add_IsNotCommutativeBecauseOfSize
+      resultStatus: 1
+      duration: 0.0004858
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTileTests][suite]
+    - id: 1051
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTileTests/[SystemTests][SystemTests.Core.Hexagon.HexTileTests.Corners_ReturnsCornerPoints]
+      name: Corners_ReturnsCornerPoints
+      fullName: SystemTests.Core.Hexagon.HexTileTests.Corners_ReturnsCornerPoints
+      resultStatus: 1
+      duration: 0.0013152
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTileTests][suite]
+    - id: 1049
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTileTests/[SystemTests][SystemTests.Core.Hexagon.HexTileTests.FromPlaneCoordinates_SelectsCorrectElement]
+      name: FromPlaneCoordinates_SelectsCorrectElement
+      fullName: SystemTests.Core.Hexagon.HexTileTests.FromPlaneCoordinates_SelectsCorrectElement
+      resultStatus: 1
+      duration: 0.0003948
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTileTests][suite]
+    - id: 1040
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTileTests/[SystemTests][SystemTests.Core.Hexagon.HexTileTests.FullConstructor]
+      name: FullConstructor
+      fullName: SystemTests.Core.Hexagon.HexTileTests.FullConstructor
+      resultStatus: 1
+      duration: 0.0005278
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTileTests][suite]
+    - id: 1047
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTileTests/[SystemTests][SystemTests.Core.Hexagon.HexTileTests.Multiply]
+      name: Multiply
+      fullName: SystemTests.Core.Hexagon.HexTileTests.Multiply
+      resultStatus: 1
+      duration: 0.0002516
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTileTests][suite]
+    - id: 1048
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTileTests/[SystemTests][SystemTests.Core.Hexagon.HexTileTests.Scale_ChangesSize]
+      name: Scale_ChangesSize
+      fullName: SystemTests.Core.Hexagon.HexTileTests.Scale_ChangesSize
+      resultStatus: 1
+      duration: 0.0002268
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTileTests][suite]
+    - id: 1038
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTileTests/[SystemTests][SystemTests.Core.Hexagon.HexTileTests.SimpleConstructor]
+      name: SimpleConstructor
+      fullName: SystemTests.Core.Hexagon.HexTileTests.SimpleConstructor
+      resultStatus: 1
+      duration: 0.0002326
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTileTests][suite]
+    - id: 1046
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTileTests/[SystemTests][SystemTests.Core.Hexagon.HexTileTests.Subtract_Hex]
+      name: Subtract_Hex
+      fullName: SystemTests.Core.Hexagon.HexTileTests.Subtract_Hex
+      resultStatus: 1
+      duration: 0.0002492
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTileTests][suite]
+    - id: 1045
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTileTests/[SystemTests][SystemTests.Core.Hexagon.HexTileTests.Subtract_SubtractsBFromA_IgnoresSizeOfB]
+      name: Subtract_SubtractsBFromA_IgnoresSizeOfB
+      fullName: SystemTests.Core.Hexagon.HexTileTests.Subtract_SubtractsBFromA_IgnoresSizeOfB
+      resultStatus: 1
+      duration: 0.0002463
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTileTests][suite]
+    - id: 1050
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTileTests/[SystemTests][SystemTests.Core.Hexagon.HexTileTests.ToPlaneCoordinate_ReturnsCorrectTile]
+      name: ToPlaneCoordinate_ReturnsCorrectTile
+      fullName: SystemTests.Core.Hexagon.HexTileTests.ToPlaneCoordinate_ReturnsCorrectTile
+      resultStatus: 1
+      duration: 0.000443
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTileTests][suite]
+    - id: 1039
+      uniqueId: SystemTests.dll/SystemTests/Core/Hexagon/HexTileTests/[SystemTests][SystemTests.Core.Hexagon.HexTileTests.TwoPartConstructor_SetsOriginToZero]
+      name: TwoPartConstructor_SetsOriginToZero
+      fullName: SystemTests.Core.Hexagon.HexTileTests.TwoPartConstructor_SetsOriginToZero
+      resultStatus: 1
+      duration: 0.000246
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: SystemTests.dll/SystemTests/Core/Hexagon/[SystemTests][SystemTests.Core.Hexagon.HexTileTests][suite]
+    - id: 1036
+      uniqueId: SystemTests.dll/SystemTests/[SystemTests][SystemTests.World][suite]
+      name: World
+      fullName: SystemTests.World
+      resultStatus: 2
+      duration: 0.8694546
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1035
+      parentUniqueId: SystemTests.dll/[SystemTests][suite]
+    - id: 1001
+      uniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.ChunkSystemTests][suite]
+      name: ChunkSystemTests
+      fullName: SystemTests.World.ChunkSystemTests
+      resultStatus: 2
+      duration: 0.8397298
+      messages: One or more child tests had errors
+      output: 'System List:
+
+        ExampleSystems.DependencyExample.DependencySystemMaster
+
+        ExampleSystems.Example.FunnyMovementSystem
+
+        ExampleSystems.DependencyExample.DependencySystemOne
+
+        ExampleSystems.DependencyExample.DependencySystemThree
+
+        Systems.Tiles.TileSystem
+
+        Systems.World.ChunkSystem
+
+        SystemBase.CommonSystems.Audio.AudioSystem
+
+        ExampleSystems.DependencyExample.DependencySystemTwo
+
+
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1065
+      parentUniqueId: SystemTests.dll/SystemTests/[SystemTests][SystemTests.World][suite]
+    - id: 1005
+      uniqueId: SystemTests.dll/SystemTests/World/ChunkSystemTests/[SystemTests][SystemTests.World.ChunkSystemTests.ChangeSizeOfGridDependingOnChunkRowLength]
+      name: ChangeSizeOfGridDependingOnChunkRowLength
+      fullName: SystemTests.World.ChunkSystemTests.ChangeSizeOfGridDependingOnChunkRowLength
+      resultStatus: 2
+      duration: 0.1968874
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'NullReferenceException: Object reference not set to an instance of
+        an object
+
+        Null
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.ChunkSystemTests][suite]
+    - id: 1003
+      uniqueId: SystemTests.dll/SystemTests/World/ChunkSystemTests/[SystemTests][SystemTests.World.ChunkSystemTests.InitialisesTileGridWithColumnXRows]
+      name: InitialisesTileGridWithColumnXRows
+      fullName: SystemTests.World.ChunkSystemTests.InitialisesTileGridWithColumnXRows
+      resultStatus: 2
+      duration: 0.0672213
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 
+      stacktrace: "  at Systems.Tiles.TileFactory.InstantiateGroundTile (Systems.Core.Hexagon.IHexGrid
+        grid, UnityEngine.Transform parentTransform, System.Int32 q, System.Int32
+        r, System.Single halfWith, Systems.Core.IPreSeededPerlinNoiseMapGenerator2D
+        preSeededPerlinNoiseMapGenerator2D) [0x0005a] in F:\\source\\SystemBase\\Assets\\Systems\\Tiles\\TileFactory.cs:36
+        \r\n  at Systems.World.ChunkSystem.Generate (Systems.World.CurrentChunkComponent
+        currentChunk) [0x00075] in F:\\source\\SystemBase\\Assets\\Systems\\World\\ChunkSystem.cs:75
+        \r\n  at Systems.World.ChunkSystem.Register (Systems.World.CurrentChunkComponent
+        currentChunk) [0x00020] in F:\\source\\SystemBase\\Assets\\Systems\\World\\ChunkSystem.cs:22
+        \r\n  at SystemTests.World.ChunkSystemTests+<InitialisesTileGridWithColumnXRows>d__11.MoveNext
+        () [0x0001e] in F:\\source\\SystemBase\\Assets\\SystemTests\\World\\ChunkSystemTests.cs:109
+        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in F:\\source\\SystemBase\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.ChunkSystemTests][suite]
+    - id: 1008
+      uniqueId: SystemTests.dll/SystemTests/World/ChunkSystemTests/[SystemTests][SystemTests.World.ChunkSystemTests.InstantiateTilePrefab]
+      name: InstantiateTilePrefab
+      fullName: SystemTests.World.ChunkSystemTests.InstantiateTilePrefab
+      resultStatus: 2
+      duration: 0.0627816
+      messages: 'NSubstitute.Exceptions.NullSubstituteReferenceException : NSubstitute
+        extension methods like .Received() can only be called on objects created
+        using Substitute.For<T>() and related methods.'
+      output: 
+      stacktrace: "  at NSubstitute.Core.CallRouterResolver.ResolveFor (System.Object
+        substitute) [0x0000e] in <7fb3187ca05745e4988d21f3238e76cd>:0 \r\n  at NSubstitute.Core.SubstitutionContext.GetCallRouterFor
+        (System.Object substitute) [0x00000] in <7fb3187ca05745e4988d21f3238e76cd>:0
+        \r\n  at NSubstitute.ClearExtensions.ClearExtensions.ClearSubstitute[T] (T
+        substitute, NSubstitute.ClearOptions options) [0x00007] in <7fb3187ca05745e4988d21f3238e76cd>:0
+        \r\n  at NSubstitute.SubstituteExtensions.ClearReceivedCalls[T] (T substitute)
+        [0x00001] in <7fb3187ca05745e4988d21f3238e76cd>:0 \r\n  at SystemTests.World.ChunkSystemTests+<InstantiateTilePrefab>d__16.MoveNext
+        () [0x0001e] in F:\\source\\SystemBase\\Assets\\SystemTests\\World\\ChunkSystemTests.cs:221
+        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in F:\\source\\SystemBase\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.ChunkSystemTests][suite]
+    - id: 1006
+      uniqueId: SystemTests.dll/SystemTests/World/ChunkSystemTests/[SystemTests][SystemTests.World.ChunkSystemTests.ModelHasCorrectGridPositions]
+      name: ModelHasCorrectGridPositions
+      fullName: SystemTests.World.ChunkSystemTests.ModelHasCorrectGridPositions
+      resultStatus: 2
+      duration: 0.0764196
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 
+      stacktrace: "  at Systems.Tiles.TileFactory.InstantiateGroundTile (Systems.Core.Hexagon.IHexGrid
+        grid, UnityEngine.Transform parentTransform, System.Int32 q, System.Int32
+        r, System.Single halfWith, Systems.Core.IPreSeededPerlinNoiseMapGenerator2D
+        preSeededPerlinNoiseMapGenerator2D) [0x0005a] in F:\\source\\SystemBase\\Assets\\Systems\\Tiles\\TileFactory.cs:36
+        \r\n  at Systems.World.ChunkSystem.Generate (Systems.World.CurrentChunkComponent
+        currentChunk) [0x00075] in F:\\source\\SystemBase\\Assets\\Systems\\World\\ChunkSystem.cs:75
+        \r\n  at Systems.World.ChunkSystem.Register (Systems.World.CurrentChunkComponent
+        currentChunk) [0x00020] in F:\\source\\SystemBase\\Assets\\Systems\\World\\ChunkSystem.cs:22
+        \r\n  at SystemTests.World.ChunkSystemTests+<ModelHasCorrectGridPositions>d__14.MoveNext
+        () [0x0001e] in F:\\source\\SystemBase\\Assets\\SystemTests\\World\\ChunkSystemTests.cs:176
+        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in F:\\source\\SystemBase\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.ChunkSystemTests][suite]
+    - id: 1004
+      uniqueId: SystemTests.dll/SystemTests/World/ChunkSystemTests/[SystemTests][SystemTests.World.ChunkSystemTests.ModelHasCorrectWorldPositions]
+      name: ModelHasCorrectWorldPositions
+      fullName: SystemTests.World.ChunkSystemTests.ModelHasCorrectWorldPositions
+      resultStatus: 2
+      duration: 0.0561712
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 
+      stacktrace: "  at Systems.Tiles.TileFactory.InstantiateGroundTile (Systems.Core.Hexagon.IHexGrid
+        grid, UnityEngine.Transform parentTransform, System.Int32 q, System.Int32
+        r, System.Single halfWith, Systems.Core.IPreSeededPerlinNoiseMapGenerator2D
+        preSeededPerlinNoiseMapGenerator2D) [0x0005a] in F:\\source\\SystemBase\\Assets\\Systems\\Tiles\\TileFactory.cs:36
+        \r\n  at Systems.World.ChunkSystem.Generate (Systems.World.CurrentChunkComponent
+        currentChunk) [0x00075] in F:\\source\\SystemBase\\Assets\\Systems\\World\\ChunkSystem.cs:75
+        \r\n  at Systems.World.ChunkSystem.Register (Systems.World.CurrentChunkComponent
+        currentChunk) [0x00020] in F:\\source\\SystemBase\\Assets\\Systems\\World\\ChunkSystem.cs:22
+        \r\n  at SystemTests.World.ChunkSystemTests+<ModelHasCorrectWorldPositions>d__12.MoveNext
+        () [0x0001e] in F:\\source\\SystemBase\\Assets\\SystemTests\\World\\ChunkSystemTests.cs:120
+        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in F:\\source\\SystemBase\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.ChunkSystemTests][suite]
+    - id: 1007
+      uniqueId: SystemTests.dll/SystemTests/World/ChunkSystemTests/[SystemTests][SystemTests.World.ChunkSystemTests.ModelHasTheHeightFromHeightMap]
+      name: ModelHasTheHeightFromHeightMap
+      fullName: SystemTests.World.ChunkSystemTests.ModelHasTheHeightFromHeightMap
+      resultStatus: 2
+      duration: 0.0696843
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 
+      stacktrace: "  at Systems.Tiles.TileFactory.InstantiateGroundTile (Systems.Core.Hexagon.IHexGrid
+        grid, UnityEngine.Transform parentTransform, System.Int32 q, System.Int32
+        r, System.Single halfWith, Systems.Core.IPreSeededPerlinNoiseMapGenerator2D
+        preSeededPerlinNoiseMapGenerator2D) [0x0005a] in F:\\source\\SystemBase\\Assets\\Systems\\Tiles\\TileFactory.cs:36
+        \r\n  at Systems.World.ChunkSystem.Generate (Systems.World.CurrentChunkComponent
+        currentChunk) [0x00075] in F:\\source\\SystemBase\\Assets\\Systems\\World\\ChunkSystem.cs:75
+        \r\n  at Systems.World.ChunkSystem.Register (Systems.World.CurrentChunkComponent
+        currentChunk) [0x00020] in F:\\source\\SystemBase\\Assets\\Systems\\World\\ChunkSystem.cs:22
+        \r\n  at SystemTests.World.ChunkSystemTests+<ModelHasTheHeightFromHeightMap>d__15.MoveNext
+        () [0x00066] in F:\\source\\SystemBase\\Assets\\SystemTests\\World\\ChunkSystemTests.cs:204
+        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in F:\\source\\SystemBase\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.ChunkSystemTests][suite]
+    - id: 1002
+      uniqueId: SystemTests.dll/SystemTests/World/ChunkSystemTests/[SystemTests][SystemTests.World.ChunkSystemTests.SetupPerlinNoiseWithValuesFromChunk]
+      name: SetupPerlinNoiseWithValuesFromChunk
+      fullName: SystemTests.World.ChunkSystemTests.SetupPerlinNoiseWithValuesFromChunk
+      resultStatus: 2
+      duration: 0.0629292
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 
+      stacktrace: "  at Systems.Tiles.TileFactory.InstantiateGroundTile (Systems.Core.Hexagon.IHexGrid
+        grid, UnityEngine.Transform parentTransform, System.Int32 q, System.Int32
+        r, System.Single halfWith, Systems.Core.IPreSeededPerlinNoiseMapGenerator2D
+        preSeededPerlinNoiseMapGenerator2D) [0x0005a] in F:\\source\\SystemBase\\Assets\\Systems\\Tiles\\TileFactory.cs:36
+        \r\n  at Systems.World.ChunkSystem.Generate (Systems.World.CurrentChunkComponent
+        currentChunk) [0x00075] in F:\\source\\SystemBase\\Assets\\Systems\\World\\ChunkSystem.cs:75
+        \r\n  at Systems.World.ChunkSystem.Register (Systems.World.CurrentChunkComponent
+        currentChunk) [0x00020] in F:\\source\\SystemBase\\Assets\\Systems\\World\\ChunkSystem.cs:22
+        \r\n  at SystemTests.World.ChunkSystemTests+<SetupPerlinNoiseWithValuesFromChunk>d__10.MoveNext
+        () [0x000b3] in F:\\source\\SystemBase\\Assets\\SystemTests\\World\\ChunkSystemTests.cs:90
+        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in F:\\source\\SystemBase\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.ChunkSystemTests][suite]
+    - id: 1020
+      uniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests][suite]
+      name: PerlinNoiseGenerator2DTests
+      fullName: SystemTests.World.PerlinNoiseGenerator2DTests
+      resultStatus: 1
+      duration: 0.0275165
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1036
+      parentUniqueId: SystemTests.dll/SystemTests/[SystemTests][SystemTests.World][suite]
+    - id: 1022
+      uniqueId: SystemTests.dll/SystemTests/World/PerlinNoiseGenerator2DTests/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests.DimensionsDefineTheSizeOfGrid]
+      name: DimensionsDefineTheSizeOfGrid
+      fullName: SystemTests.World.PerlinNoiseGenerator2DTests.DimensionsDefineTheSizeOfGrid
+      resultStatus: 1
+      duration: 0.0042835
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1020
+      parentUniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests][suite]
+    - id: 1023
+      uniqueId: SystemTests.dll/SystemTests/World/PerlinNoiseGenerator2DTests/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests.GeneratePerlinNoiseMap]
+      name: GeneratePerlinNoiseMap
+      fullName: SystemTests.World.PerlinNoiseGenerator2DTests.GeneratePerlinNoiseMap
+      resultStatus: 1
+      duration: 0.001051
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1020
+      parentUniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests][suite]
+    - id: 1026
+      uniqueId: SystemTests.dll/SystemTests/World/PerlinNoiseGenerator2DTests/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests.LucanarityDefinesFrequency]
+      name: LucanarityDefinesFrequency
+      fullName: SystemTests.World.PerlinNoiseGenerator2DTests.LucanarityDefinesFrequency
+      resultStatus: 1
+      duration: 0.0005008
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1020
+      parentUniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests][suite]
+    - id: 1028
+      uniqueId: SystemTests.dll/SystemTests/World/PerlinNoiseGenerator2DTests/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests.OctavesDefineOctaves]
+      name: OctavesDefineOctaves
+      fullName: SystemTests.World.PerlinNoiseGenerator2DTests.OctavesDefineOctaves
+      resultStatus: 1
+      duration: 0.0004316
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1020
+      parentUniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests][suite]
+    - id: 1024
+      uniqueId: SystemTests.dll/SystemTests/World/PerlinNoiseGenerator2DTests/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests.Offset_OffsetsTheMap]
+      name: Offset_OffsetsTheMap
+      fullName: SystemTests.World.PerlinNoiseGenerator2DTests.Offset_OffsetsTheMap
+      resultStatus: 1
+      duration: 0.0006136
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1020
+      parentUniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests][suite]
+    - id: 1027
+      uniqueId: SystemTests.dll/SystemTests/World/PerlinNoiseGenerator2DTests/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests.PersistanceDefinesAmplitude]
+      name: PersistanceDefinesAmplitude
+      fullName: SystemTests.World.PerlinNoiseGenerator2DTests.PersistanceDefinesAmplitude
+      resultStatus: 1
+      duration: 0.0003899
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1020
+      parentUniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests][suite]
+    - id: 1025
+      uniqueId: SystemTests.dll/SystemTests/World/PerlinNoiseGenerator2DTests/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests.ScaleScalesNoiseMap]
+      name: ScaleScalesNoiseMap
+      fullName: SystemTests.World.PerlinNoiseGenerator2DTests.ScaleScalesNoiseMap
+      resultStatus: 1
+      duration: 0.0003999
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1020
+      parentUniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests][suite]
+    - id: 1021
+      uniqueId: SystemTests.dll/SystemTests/World/PerlinNoiseGenerator2DTests/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests.SetsSeedOnRandom]
+      name: SetsSeedOnRandom
+      fullName: SystemTests.World.PerlinNoiseGenerator2DTests.SetsSeedOnRandom
+      resultStatus: 1
+      duration: 0.0037
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1020
+      parentUniqueId: SystemTests.dll/SystemTests/World/[SystemTests][SystemTests.World.PerlinNoiseGenerator2DTests][suite]
+    m_ResultText: "SetupPerlinNoiseWithValuesFromChunk (0,063s)\n---\nSystem.NullReferenceException
+      : Object reference not set to an instance of an object\n---\nat Systems.Tiles.TileFactory.InstantiateGroundTile
+      (Systems.Core.Hexagon.IHexGrid grid, UnityEngine.Transform parentTransform,
+      System.Int32 q, System.Int32 r, System.Single halfWith, Systems.Core.IPreSeededPerlinNoiseMapGenerator2D
+      preSeededPerlinNoiseMapGenerator2D) [0x0005a] in F:\\source\\SystemBase\\Assets\\Systems\\Tiles\\TileFactory.cs:36
+      \r\n  at Systems.World.ChunkSystem.Generate (Systems.World.CurrentChunkComponent
+      currentChunk) [0x00075] in F:\\source\\SystemBase\\Assets\\Systems\\World\\ChunkSystem.cs:75
+      \r\n  at Systems.World.ChunkSystem.Register (Systems.World.CurrentChunkComponent
+      currentChunk) [0x00020] in F:\\source\\SystemBase\\Assets\\Systems\\World\\ChunkSystem.cs:22
+      \r\n  at SystemTests.World.ChunkSystemTests+<SetupPerlinNoiseWithValuesFromChunk>d__10.MoveNext
+      () [0x000b3] in F:\\source\\SystemBase\\Assets\\SystemTests\\World\\ChunkSystemTests.cs:90
+      \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+      in F:\\source\\SystemBase\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46"
+    m_ResultStacktrace: "  at Systems.Tiles.TileFactory.InstantiateGroundTile (Systems.Core.Hexagon.IHexGrid
+      grid, UnityEngine.Transform parentTransform, System.Int32 q, System.Int32 r,
+      System.Single halfWith, Systems.Core.IPreSeededPerlinNoiseMapGenerator2D preSeededPerlinNoiseMapGenerator2D)
+      [0x0005a] in F:\\source\\SystemBase\\Assets\\Systems\\Tiles\\TileFactory.cs:36
+      \r\n  at Systems.World.ChunkSystem.Generate (Systems.World.CurrentChunkComponent
+      currentChunk) [0x00075] in F:\\source\\SystemBase\\Assets\\Systems\\World\\ChunkSystem.cs:75
+      \r\n  at Systems.World.ChunkSystem.Register (Systems.World.CurrentChunkComponent
+      currentChunk) [0x00020] in F:\\source\\SystemBase\\Assets\\Systems\\World\\ChunkSystem.cs:22
+      \r\n  at SystemTests.World.ChunkSystemTests+<SetupPerlinNoiseWithValuesFromChunk>d__10.MoveNext
+      () [0x000b3] in F:\\source\\SystemBase\\Assets\\SystemTests\\World\\ChunkSystemTests.cs:90
+      \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+      in F:\\source\\SystemBase\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+    m_TestListState:
+      scrollPos: {x: 0, y: 59}
+      m_SelectedIDs: 6e77226e
+      m_LastClickedID: 1847752558
+      m_ExpandedIDs: 7fddb5a1ccc801c4232fdecf74d39fd67671f3d9578bcee303c8b2f39d7b160577b1dc2adcb63e319fdfa05affffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 12}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[SystemBase][suite]'
+      name: SystemBase
+      fullName: SystemBase
+      resultStatus: 1
+      duration: 0.1110264
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1008
+      uniqueId: '[SystemBaseTests.dll][suite]'
+      name: SystemBaseTests.dll
+      fullName: F:/source/SystemBase/Library/ScriptAssemblies/SystemBaseTests.dll
+      resultStatus: 1
+      duration: 0.0593599
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[SystemBase][suite]'
+    - id: 1009
+      uniqueId: SystemBaseTests.dll/[SystemBaseTests][suite]
+      name: SystemBaseTests
+      fullName: SystemBaseTests
+      resultStatus: 1
+      duration: 0.0572926
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1008
+      parentUniqueId: '[SystemBaseTests.dll][suite]'
+    - id: 1139
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/[Utils][suite]
+      name: Utils
+      fullName: SystemBaseTests.Utils
+      resultStatus: 1
+      duration: 0.0501915
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1138
+      parentUniqueId: SystemBaseTests.dll/[SystemBaseTests][suite]
+    - id: 1140
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/[SystemBaseTests][SystemBaseTests.Utils.IoC][suite]
+      name: IoC
+      fullName: SystemBaseTests.Utils.IoC
+      resultStatus: 1
+      duration: 0.0372668
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1139
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/[Utils][suite]
+    - id: 1120
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests][suite]
+      name: IoCTests
+      fullName: SystemBaseTests.Utils.IoC.IoCTests
+      resultStatus: 1
+      duration: 0.0340147
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1140
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/[SystemBaseTests][SystemBaseTests.Utils.IoC][suite]
+    - id: 1123
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/IoCTests/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests.Overwrite_OverwritesTypeWithNewInstance]
+      name: Overwrite_OverwritesTypeWithNewInstance
+      fullName: SystemBaseTests.Utils.IoC.IoCTests.Overwrite_OverwritesTypeWithNewInstance
+      resultStatus: 1
+      duration: 0.0001359
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1120
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests][suite]
+    - id: 1128
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/IoCTests/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests.OverwriteSingleton]
+      name: OverwriteSingleton
+      fullName: SystemBaseTests.Utils.IoC.IoCTests.OverwriteSingleton
+      resultStatus: 1
+      duration: 0.0000904
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1120
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests][suite]
+    - id: 1121
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/IoCTests/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests.RegisterType_Interfaced_ResolvesNewInstanceEveryTime]
+      name: RegisterType_Interfaced_ResolvesNewInstanceEveryTime
+      fullName: SystemBaseTests.Utils.IoC.IoCTests.RegisterType_Interfaced_ResolvesNewInstanceEveryTime
+      resultStatus: 1
+      duration: 0.0000802
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1120
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests][suite]
+    - id: 1122
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/IoCTests/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests.RegisterType_NotInterfaced_ResolvesNewInstanceEveryTime]
+      name: RegisterType_NotInterfaced_ResolvesNewInstanceEveryTime
+      fullName: SystemBaseTests.Utils.IoC.IoCTests.RegisterType_NotInterfaced_ResolvesNewInstanceEveryTime
+      resultStatus: 1
+      duration: 0.0000803
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1120
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests][suite]
+    - id: 1129
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/IoCTests/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests.ResolveAutomaticRegistrations]
+      name: ResolveAutomaticRegistrations
+      fullName: SystemBaseTests.Utils.IoC.IoCTests.ResolveAutomaticRegistrations
+      resultStatus: 1
+      duration: 0.0000619
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1120
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests][suite]
+    - id: 1126
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/IoCTests/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests.ResolveSingletonInstance]
+      name: ResolveSingletonInstance
+      fullName: SystemBaseTests.Utils.IoC.IoCTests.ResolveSingletonInstance
+      resultStatus: 1
+      duration: 0.0000697
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1120
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests][suite]
+    - id: 1127
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/IoCTests/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests.ResolveSingletonLazyInstance]
+      name: ResolveSingletonLazyInstance
+      fullName: SystemBaseTests.Utils.IoC.IoCTests.ResolveSingletonLazyInstance
+      resultStatus: 1
+      duration: 0.0000706
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1120
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests][suite]
+    - id: 1124
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/IoCTests/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests.ResolveSingletonWithInterface]
+      name: ResolveSingletonWithInterface
+      fullName: SystemBaseTests.Utils.IoC.IoCTests.ResolveSingletonWithInterface
+      resultStatus: 1
+      duration: 0.0001652
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1120
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests][suite]
+    - id: 1125
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/IoCTests/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests.ResolveSingletonWithoutInterface]
+      name: ResolveSingletonWithoutInterface
+      fullName: SystemBaseTests.Utils.IoC.IoCTests.ResolveSingletonWithoutInterface
+      resultStatus: 1
+      duration: 0.0000689
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1120
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/IoC/[SystemBaseTests][SystemBaseTests.Utils.IoC.IoCTests][suite]
+    - id: 1003
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/[SystemBaseTests][SystemBaseTests.Utils.RingBufferTests+Add][suite]
+      name: RingBufferTests+Add
+      fullName: SystemBaseTests.Utils.RingBufferTests+Add
+      resultStatus: 1
+      duration: 0.0085332
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1010
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/[SystemBaseTests][SystemBaseTests.Utils][suite]
+    - id: 1007
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/RingBufferTests+Add/[SystemBaseTests][SystemBaseTests.Utils.RingBufferTests+Add.CanNotAddDirectlyWithOverflow]
+      name: CanNotAddDirectlyWithOverflow
+      fullName: SystemBaseTests.Utils.RingBufferTests+Add.CanNotAddDirectlyWithOverflow
+      resultStatus: 1
+      duration: 0.0019415
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1003
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/[SystemBaseTests][SystemBaseTests.Utils.RingBufferTests+Add][suite]
+    - id: 1004
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/RingBufferTests+Add/[SystemBaseTests][SystemBaseTests.Utils.RingBufferTests+Add.IfBufferIsEmpty_AddsAtTheFront]
+      name: IfBufferIsEmpty_AddsAtTheFront
+      fullName: SystemBaseTests.Utils.RingBufferTests+Add.IfBufferIsEmpty_AddsAtTheFront
+      resultStatus: 1
+      duration: 0.0003047
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1003
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/[SystemBaseTests][SystemBaseTests.Utils.RingBufferTests+Add][suite]
+    - id: 1006
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/RingBufferTests+Add/[SystemBaseTests][SystemBaseTests.Utils.RingBufferTests+Add.IfBufferIsFull_OverwritesFromTheBeginning]
+      name: IfBufferIsFull_OverwritesFromTheBeginning
+      fullName: SystemBaseTests.Utils.RingBufferTests+Add.IfBufferIsFull_OverwritesFromTheBeginning
+      resultStatus: 1
+      duration: 0.000256
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1003
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/[SystemBaseTests][SystemBaseTests.Utils.RingBufferTests+Add][suite]
+    - id: 1005
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/RingBufferTests+Add/[SystemBaseTests][SystemBaseTests.Utils.RingBufferTests+Add.IfBufferIsNotFull_AddsAfterLastAdding]
+      name: IfBufferIsNotFull_AddsAfterLastAdding
+      fullName: SystemBaseTests.Utils.RingBufferTests+Add.IfBufferIsNotFull_AddsAfterLastAdding
+      resultStatus: 1
+      duration: 0.0001874
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1003
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/[SystemBaseTests][SystemBaseTests.Utils.RingBufferTests+Add][suite]
+    - id: 1001
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/[SystemBaseTests][SystemBaseTests.Utils.RingBufferTests+Capacity][suite]
+      name: RingBufferTests+Capacity
+      fullName: SystemBaseTests.Utils.RingBufferTests+Capacity
+      resultStatus: 1
+      duration: 0.0039172
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1010
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/[SystemBaseTests][SystemBaseTests.Utils][suite]
+    - id: 1002
+      uniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/RingBufferTests+Capacity/[SystemBaseTests][SystemBaseTests.Utils.RingBufferTests+Capacity.ReturnTheCapacity]
+      name: ReturnTheCapacity
+      fullName: SystemBaseTests.Utils.RingBufferTests+Capacity.ReturnTheCapacity
+      resultStatus: 1
+      duration: 0.0005645
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: SystemBaseTests.dll/SystemBaseTests/Utils/[SystemBaseTests][SystemBaseTests.Utils.RingBufferTests+Capacity][suite]
+    m_ResultText: SystemBase (0,111s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: dcb63e31
+      m_LastClickedID: 826193628
+      m_ExpandedIDs: 232fdecf578bcee39d7b1605dcb63e3147c9a153ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ProjectBrowser
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1699
+    y: 0
+    width: 379
+    height: 1300
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 2645
+    y: 82
+    width: 377
+    height: 1279
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_VersionControlStates: []
+    m_SoftLockControlStates: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders:
+    - Assets/Prefabs/Tiles
+    m_Globs: []
+    m_OriginalText: 
+  m_ViewMode: 1
+  m_StartGridSize: 16
+  m_LastFolders:
+  - Assets/Prefabs/Tiles
+  m_LastFoldersGridSize: 16
+  m_LastProjectPath: F:\source\SystemBase
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 60540000
+    m_LastClickedID: 21600
+    m_ExpandedIDs: 00000000185300001a5300001c5300001e53000020530000225300002453000000ca9a3bffffff7f
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 13}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000185300001a5300001c5300001e530000205300002253000024530000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: e2520000
+    m_LastClickedInstanceID: 21218
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 13}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 16
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 207
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 2078
+    y: 0
+    width: 413
+    height: 1300
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 16}
+  m_Panes:
+  - {fileID: 16}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 2079
+    y: 19
+    width: 412
+    height: 1279
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: 507
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_InspectorMode: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}

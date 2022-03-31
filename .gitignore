@@ -28,3 +28,9 @@ Assets/VSCode\.meta
 
 
 _ReSharper.Caches/
+
+.idea/
+
+Logs/
+
+UserSettings/Layouts/default-2021.dwlt

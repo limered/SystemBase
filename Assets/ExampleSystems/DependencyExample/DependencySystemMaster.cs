@@ -1,5 +1,5 @@
-﻿using SystemBase;
-using ExampleSystems.Example;
+﻿using ExampleSystems.Example;
+using SystemBase.Core;
 
 namespace ExampleSystems.DependencyExample
 {
