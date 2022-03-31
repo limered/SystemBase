@@ -10,9 +10,19 @@ namespace SystemBase.Utils
             return new Vector2(v.x, v.y);
         }
 
+        public static Vector2Int XYInt(this Vector3 v)
+        {
+            return new Vector2Int((int) v.x, (int) v.y);
+        }
+        
         public static Vector2 XZ(this Vector3 v)
         {
             return new Vector2(v.x, v.z);
+        }
+        
+        public static Vector2Int XZInt(this Vector3 v)
+        {
+            return new Vector2Int((int) v.x, (int) v.z);
         }
 
         public static float Angle(this Vector2 vector)

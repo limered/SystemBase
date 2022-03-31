@@ -22,5 +22,16 @@ namespace SystemBase.Utils
             }
             return result;
         }
+        
+        public static IEnumerable<T> AddDefaultCount<T>(this IEnumerable<T> coll, int n) where T : new()
+        {
+            var result = new List<T>();
+            for (var i = 0; i < n; i++)
+            {
+                result.Add(new T());
+            }
+
+            return coll.Concat(result);
+        }
     }
 }

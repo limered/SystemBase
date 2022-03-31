@@ -5,6 +5,6 @@ namespace SystemBase
 {
     public class PrefabComponent : GameComponent
     {
-        public GameObject[] Placeables;
+        public GameObject[] prefabs;
     }
 }

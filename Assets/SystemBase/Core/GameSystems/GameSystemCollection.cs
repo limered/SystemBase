@@ -17,6 +17,11 @@ namespace SystemBase.Core
             PrintDependencyList(systemInstances);
             _componentToSystemMap = ComponentToSystemsMapper.CreateMap(systemInstances);
             _systems = systemInstances.ToDictionary(system => system.GetType(), system => system);
+            
+            foreach (var system in _systems.Values)
+            {
+                system.Init();
+            }
         }
 
         public TSystem GetSystem<TSystem>() where TSystem : IGameSystem, new()

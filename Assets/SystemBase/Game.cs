@@ -1,4 +1,5 @@
-﻿using SystemBase.CommonSystems.Audio.Helper;
+﻿using SystemBase.Adapter;
+using SystemBase.CommonSystems.Audio.Helper;
 using SystemBase.Core;
 using SystemBase.GameState.Messages;
 using SystemBase.GameState.States;
@@ -11,7 +12,7 @@ namespace SystemBase
     public class Game : GameBase
     {
         // ReSharper disable once MemberCanBePrivate.Global
-        public readonly StateContext<Game> gameStateContext = new StateContext<Game>();
+        public readonly StateContext<Game> gameStateContext = new();
 
         private void Awake()
         {
@@ -21,7 +22,7 @@ namespace SystemBase
 
             MessageBroker.Default.Publish(new GameMsgFinishedLoading());
             MessageBroker.Default.Publish(new GameMsgStart());
-            UnityEngine.Cursor.visible = true;
+            Cursor.visible = true;
         }
 
         private void Start()
@@ -36,7 +37,7 @@ namespace SystemBase
             base.Init();
             
             IoC.RegisterSingleton(this);
-            IoC.RegisterSingleton<ISFXComparer>(()=> new SFXComparer());
+            IoC.RegisterSingleton<ISFXComparer, SFXComparer>();
         }
     }
 }
