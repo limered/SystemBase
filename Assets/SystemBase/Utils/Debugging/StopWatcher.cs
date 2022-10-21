@@ -7,12 +7,12 @@ namespace SystemBase.Utils
 {
     public class StopWatcher
     {
-        public ReactiveProperty<Tuple<string, float>> onTimerFlushed = new ReactiveProperty<Tuple<string, float>>();
+        public readonly ReactiveProperty<Tuple<string, float>> onTimerFlushed = new();
 
-        public Dictionary<string, Stopwatch> timers = new Dictionary<string, Stopwatch>();
-        public Dictionary<string, RingBuffer<long>> buffers = new Dictionary<string, RingBuffer<long>>();
+        public readonly Dictionary<string, Stopwatch> timers = new();
+        public readonly Dictionary<string, RingBuffer<long>> buffers = new();
 
-        public void InitializeTimers(string[] timerNames, int bufferLength)
+        public void InitializeTimers(IEnumerable<string> timerNames, int bufferLength)
         {
             foreach (var name in timerNames)
             {

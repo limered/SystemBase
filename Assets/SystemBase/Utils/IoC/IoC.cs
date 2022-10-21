@@ -21,14 +21,14 @@ namespace SystemBase.Utils
             _registrations = new Dictionary<Type, IoCRegister>();
             RegisterAllRegistrations();
         }
-        
+
         public static void RegisterType<TInterface, TImplementation>() where TImplementation : TInterface, new()
         {
             var reg = new IoCRegister
             {
                 ResolveType = typeof(TImplementation),
             };
-            
+
             _registrations.Add(typeof(TInterface), reg);
         }
 
@@ -41,7 +41,8 @@ namespace SystemBase.Utils
             _registrations.Add(typeof(TImplementation), reg);
         }
 
-        public static void RegisterSingleton<TInterface, TImplementation>() where TImplementation : TInterface, new()
+        public static void RegisterSingleton<TInterface, TImplementation>(bool replaceIfAlreadyRegistered = false)
+            where TImplementation : TInterface, new()
         {
             var reg = new IoCRegister
             {
@@ -49,11 +50,19 @@ namespace SystemBase.Utils
                 SingletonSubject = new ReactiveProperty<dynamic>(),
                 ResolveType = typeof(TImplementation),
             };
-            
-            _registrations.Add(typeof(TInterface), reg);
+
+            if (replaceIfAlreadyRegistered && _registrations.ContainsKey(typeof(TImplementation)))
+            {
+                _registrations[typeof(TImplementation)] = reg;
+            }
+            else
+            {
+                _registrations.Add(typeof(TImplementation), reg);
+            }
         }
 
-        public static void RegisterSingleton<TImplementation>(TImplementation instance)
+        public static void RegisterSingleton<TImplementation>(TImplementation instance,
+            bool replaceIfAlreadyRegistered = false)
         {
             var reg = new IoCRegister
             {
@@ -62,11 +71,19 @@ namespace SystemBase.Utils
                 ResolveType = typeof(TImplementation),
                 CachedInstance = instance
             };
-            
-            _registrations.Add(typeof(TImplementation), reg);
+
+            if (replaceIfAlreadyRegistered && _registrations.ContainsKey(typeof(TImplementation)))
+            {
+                _registrations[typeof(TImplementation)] = reg;
+            }
+            else
+            {
+                _registrations.Add(typeof(TImplementation), reg);
+            }
         }
 
-        public static void RegisterSingleton<TResolve, TImplementation>(TImplementation instance)
+        public static void RegisterSingleton<TResolve, TImplementation>(TImplementation instance,
+            bool replaceIfAlreadyRegistered = false)
             where TImplementation : TResolve, new()
         {
             var reg = new IoCRegister
@@ -76,11 +93,19 @@ namespace SystemBase.Utils
                 ResolveType = typeof(TImplementation),
                 CachedInstance = instance
             };
-            
-            _registrations.Add(typeof(TResolve), reg);
+
+            if (replaceIfAlreadyRegistered && _registrations.ContainsKey(typeof(TResolve)))
+            {
+                _registrations[typeof(TResolve)] = reg;
+            }
+            else
+            {
+                _registrations.Add(typeof(TResolve), reg);
+            }
         }
 
-        public static void RegisterSingleton<TResolve>(Func<object> lazyInstance)
+        public static void RegisterSingleton<TResolve>(Func<object> lazyInstance,
+            bool replaceIfAlreadyRegistered = false)
         {
             var reg = new IoCRegister
             {
@@ -88,8 +113,15 @@ namespace SystemBase.Utils
                 SingletonSubject = new ReactiveProperty<dynamic>(),
                 CreationFunction = lazyInstance,
             };
-            
-            _registrations.Add(typeof(TResolve), reg);
+
+            if (replaceIfAlreadyRegistered && _registrations.ContainsKey(typeof(TResolve)))
+            {
+                _registrations[typeof(TResolve)] = reg;
+            }
+            else
+            {
+                _registrations.Add(typeof(TResolve), reg);
+            }
         }
 
         public static void Overwrite<TResolve>(object replacement)
@@ -115,10 +147,10 @@ namespace SystemBase.Utils
 
             if (!reg.IsSingleton)
             {
-                return (TResolve) ResolveType(reg);
+                return (TResolve)ResolveType(reg);
             }
 
-            return (TResolve) ResolveSingleton(reg);
+            return (TResolve)ResolveSingleton(reg);
         }
 
         private static void RegisterAllRegistrations()
@@ -144,11 +176,11 @@ namespace SystemBase.Utils
             }
 
             if (reg.CachedInstance != null) return reg.CachedInstance;
-            
-            reg.CachedInstance = reg.CreationFunction == null ? 
-                Activator.CreateInstance(reg.ResolveType) : 
-                reg.CreationFunction();
-                
+
+            reg.CachedInstance = reg.CreationFunction == null
+                ? Activator.CreateInstance(reg.ResolveType)
+                : reg.CreationFunction();
+
             reg.SingletonSubject.Value = reg.CachedInstance;
 
             return reg.CachedInstance;
@@ -156,12 +188,10 @@ namespace SystemBase.Utils
 
         private static object ResolveType(IoCRegister reg)
         {
-            return reg.IsOverwritten ? 
-                reg.OverwriteInstance : 
-                Activator.CreateInstance(reg.ResolveType);
+            return reg.IsOverwritten ? reg.OverwriteInstance : Activator.CreateInstance(reg.ResolveType);
         }
     }
-    
+
     internal class IoCRegister
     {
         public Type ResolveType { get; set; }
@@ -172,7 +202,7 @@ namespace SystemBase.Utils
         public bool IsOverwritten { get; set; }
         public object OverwriteInstance { get; set; }
     }
-    
+
     public interface IIocRegistration
     {
         void Register();

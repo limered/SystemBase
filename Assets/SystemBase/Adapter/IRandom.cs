@@ -7,6 +7,7 @@ namespace SystemBase.Adapter
     {
         void Create(int seed);
         int Next(int minValue, int maxValue);
+        int Next(int maxValue);
     }
 
     public class RandomAdapter : IRandom
@@ -21,6 +22,11 @@ namespace SystemBase.Adapter
         public int Next(int minValue, int maxValue)
         {
             return _original.Next(minValue, maxValue);
+        }
+        
+        public int Next(int maxValue)
+        {
+            return _original.Next(maxValue);
         }
     }
 }

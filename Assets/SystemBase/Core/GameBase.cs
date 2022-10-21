@@ -15,7 +15,7 @@ namespace SystemBase.Core
         {
             _systems.Initialize();
             
-            DontDestroyOnLoad(this);
+            // DontDestroyOnLoad(this);
             
             DebugMainFrameCallback.ObserveOnMainThread()
                 .Subscribe(OnDebugCallbackCalled);
