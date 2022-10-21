@@ -53,15 +53,16 @@ namespace SystemBase.Utils
 
             if (replaceIfAlreadyRegistered && _registrations.ContainsKey(typeof(TImplementation)))
             {
-                _registrations[typeof(TImplementation)] = reg;
+                _registrations[typeof(TInterface)] = reg;
             }
             else
             {
-                _registrations.Add(typeof(TImplementation), reg);
+                _registrations.Add(typeof(TInterface), reg);
             }
         }
 
-        public static void RegisterSingleton<TImplementation>(TImplementation instance,
+        public static void RegisterSingleton<TImplementation>(
+            TImplementation instance,
             bool replaceIfAlreadyRegistered = false)
         {
             var reg = new IoCRegister
