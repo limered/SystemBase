@@ -7,6 +7,7 @@ namespace SystemBase.Adapter
         public void Register()
         {
             IoC.RegisterType<ISystemRandom, SystemRandomAdapter>();
+            IoC.RegisterType<IUnityRandom, UnityRandomAdapter>();
             IoC.RegisterType<IMathf, MathfAdapter>();
         }
     }

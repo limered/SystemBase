@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using SystemBase.Adapter;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace SystemBase.Utils.DotNet
 {
@@ -15,9 +15,10 @@ namespace SystemBase.Utils.DotNet
 
         public static T[] RandomizeInPlace<T>(this T[] list)
         {
+            var random = IoC.Resolve<IUnityRandom>();
             for (var i = 0; i < list.Length; i++)
             {
-                var rnd = (int)(Random.value * list.Length);
+                var rnd = (int)(random.Value * list.Length);
                 (list[rnd], list[i]) = (list[i], list[rnd]);
             }
 
@@ -26,9 +27,10 @@ namespace SystemBase.Utils.DotNet
 
         public static List<T> RandomizeInPlace<T>(this List<T> list)
         {
+            var random = IoC.Resolve<IUnityRandom>();
             for (var i = 0; i < list.Count; i++)
             {
-                var rnd = (int)(Random.value * list.Count);
+                var rnd = (int)(random.Value * list.Count);
                 (list[rnd], list[i]) = (list[i], list[rnd]);
             }
 
@@ -37,10 +39,11 @@ namespace SystemBase.Utils.DotNet
 
         public static T[] Randomize<T>(this T[] list)
         {
+            var random = IoC.Resolve<IUnityRandom>();
             var result = (T[])list.Clone();
             for (var i = 0; i < result.Length; i++)
             {
-                var rnd = (int)(Random.value * result.Length);
+                var rnd = (int)(random.Value * result.Length);
                 (result[rnd], result[i]) = (result[i], result[rnd]);
             }
 
@@ -49,10 +52,11 @@ namespace SystemBase.Utils.DotNet
 
         public static List<T> Randomize<T>(this IEnumerable<T> list)
         {
+            var random = IoC.Resolve<IUnityRandom>();
             var result = new List<T>(list);
             for (var i = 0; i < result.Count; i++)
             {
-                var rnd = (int)(Random.value * result.Count);
+                var rnd = (int)(random.Value * result.Count);
                 (result[rnd], result[i]) = (result[i], result[rnd]);
             }
 
@@ -61,7 +65,8 @@ namespace SystemBase.Utils.DotNet
         
         public static T RandomElement<T>(this ICollection<T> collection)
         {
-            var index = Random.Range(0, collection.Count);
+            var random = IoC.Resolve<IUnityRandom>();
+            var index = random.Range(0, collection.Count);
             return collection.ElementAt(index);
         }
 
