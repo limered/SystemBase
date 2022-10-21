@@ -17,30 +17,30 @@ namespace SystemBase.Utils.DotNet
         {
             for (var i = 0; i < list.Length; i++)
             {
-                var rnd = (int) (Random.value * list.Length);
+                var rnd = (int)(Random.value * list.Length);
                 (list[rnd], list[i]) = (list[i], list[rnd]);
             }
 
             return list;
         }
-        
+
         public static List<T> RandomizeInPlace<T>(this List<T> list)
         {
             for (var i = 0; i < list.Count; i++)
             {
-                var rnd = (int) (Random.value * list.Count);
+                var rnd = (int)(Random.value * list.Count);
                 (list[rnd], list[i]) = (list[i], list[rnd]);
             }
 
             return list;
         }
-        
+
         public static T[] Randomize<T>(this T[] list)
         {
-            var result = new T[list.Length];
+            var result = (T[])list.Clone();
             for (var i = 0; i < result.Length; i++)
             {
-                var rnd = (int) (Random.value * result.Length);
+                var rnd = (int)(Random.value * result.Length);
                 (result[rnd], result[i]) = (result[i], result[rnd]);
             }
 
@@ -52,11 +52,17 @@ namespace SystemBase.Utils.DotNet
             var result = new List<T>(list);
             for (var i = 0; i < result.Count; i++)
             {
-                var rnd = (int) (Random.value * result.Count);
+                var rnd = (int)(Random.value * result.Count);
                 (result[rnd], result[i]) = (result[i], result[rnd]);
             }
 
             return result;
+        }
+        
+        public static T RandomElement<T>(this ICollection<T> collection)
+        {
+            var index = Random.Range(0, collection.Count);
+            return collection.ElementAt(index);
         }
 
         public static IEnumerable<T> AddDefaultCount<T>(this IEnumerable<T> coll, int n) where T : new()
