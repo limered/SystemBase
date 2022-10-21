@@ -5,6 +5,7 @@ using SystemBase.Utils;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
+// ReSharper disable UnusedType.Global
 
 namespace SystemBase.Core
 {
@@ -69,7 +70,6 @@ namespace SystemBase.Core
 
                 foreach (var m in methods.Where(m => m.Name == "Register" && m.GetParameters().Length == 1))
                 {
-                    //Debug.Log(GetType().Name + ": found Register(" + m.GetParameters()[0].ParameterType.Name + ")");
                     // ReSharper disable once AccessToForEachVariableInClosure
                     _registerMethods.Add(m.GetParameters()[0].ParameterType, c => m.Invoke(this, new object[] { c }));
                 }
@@ -86,13 +86,14 @@ namespace SystemBase.Core
     {
         public virtual Type[] ComponentsToRegister { get; }
 
-        public virtual void Init()
+        protected GameSystem()
         {
+            ComponentsToRegister = Type.EmptyTypes;
         }
 
-        public virtual void RegisterComponent(GameComponent component)
-        {
-        }
+        public virtual void Init() { }
+
+        public abstract void RegisterComponent(GameComponent component);
 
         public IObservable<float> SystemUpdate()
         {
@@ -129,12 +130,7 @@ namespace SystemBase.Core
 
         #region Lazy Component registration
 
-        private readonly Dictionary<Type, ReactiveProperty<dynamic>> _lazy = new Dictionary<Type, ReactiveProperty<dynamic>>();
-
-        protected GameSystem()
-        {
-            ComponentsToRegister = Type.EmptyTypes;
-        }
+        private readonly Dictionary<Type, ReactiveProperty<dynamic>> _lazy = new();
 
         public AfterTheComponentIsAvailable<T> WaitOn<T>() where T : GameComponent
         {

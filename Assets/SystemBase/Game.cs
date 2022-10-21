@@ -12,32 +12,32 @@ namespace SystemBase
     public class Game : GameBase
     {
         // ReSharper disable once MemberCanBePrivate.Global
-        public readonly StateContext<Game> gameStateContext = new();
+        public StateContext<Game> gameStateContext;
 
         private void Awake()
         {
+            gameStateContext = new StateContext<Game>(this);
             gameStateContext.Start(new Loading());
 
             Init();
 
             MessageBroker.Default.Publish(new GameMsgFinishedLoading());
-            MessageBroker.Default.Publish(new GameMsgStart());
             Cursor.visible = true;
         }
 
         private void Start()
         {
-           // MessageBroker.Default.Publish(new GameMsgStart());
-            QualitySettings.vSyncCount = 1;
-            Application.targetFrameRate = 60;
+            // MessageBroker.Default.Publish(new GameMsgStart());
+            QualitySettings.vSyncCount = 0;
+            // Application.targetFrameRate = 60;
         }
 
         public override void Init()
         {
             base.Init();
-            
-            IoC.RegisterSingleton(this);
-            IoC.RegisterSingleton<ISFXComparer, SFXComparer>();
+
+            IoC.RegisterSingleton(this, true);
+            IoC.RegisterSingleton<ISFXComparer, SFXComparer>(true);
         }
     }
 }
