@@ -1,4 +1,7 @@
 ﻿using System;
+using SystemBase.Core.Components;
+using SystemBase.Core.GameSystems;
+using SystemBase.Utils;
 using UniRx;
 using UnityEngine;
 
@@ -6,18 +9,20 @@ namespace SystemBase.Core
 {
     public class GameBase : MonoBehaviour, IGameSystem
     {
-        private readonly GameSystemCollection _systems = new GameSystemCollection(); 
-        public StringReactiveProperty DebugMainFrameCallback = new StringReactiveProperty();
+        public StringReactiveProperty debugMainFrameCallback = new();
+        private readonly GameSystemCollection _systems = new();
+        private ISharedComponentCollection _sharedComponents;
 
         public Type[] ComponentsToRegister => Type.EmptyTypes;
 
         public virtual void Init()
         {
+            _sharedComponents = IoC.Resolve<ISharedComponentCollection>();
             _systems.Initialize();
-            
-            // DontDestroyOnLoad(this);
-            
-            DebugMainFrameCallback.ObserveOnMainThread()
+
+            DontDestroyOnLoad(this);
+
+            debugMainFrameCallback.ObserveOnMainThread()
                 .Subscribe(OnDebugCallbackCalled);
         }
 
@@ -35,6 +40,11 @@ namespace SystemBase.Core
         protected virtual void OnDebugCallbackCalled(string s)
         {
             print(s);
+        }
+
+        public void RegisterSingletonComponent(GameComponent gameComponent)
+        {
+            _sharedComponents.RegisterComponent(gameComponent);
         }
     }
 }

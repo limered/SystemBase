@@ -1,6 +1,6 @@
 ﻿using UniRx;
 
-namespace SystemBase.Core
+namespace SystemBase.Core.StateMachineBase
 {
     public class StateContext<T> : IStateContext<BaseState<T>, T>
     {

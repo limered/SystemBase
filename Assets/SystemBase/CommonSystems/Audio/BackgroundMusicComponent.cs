@@ -1,4 +1,5 @@
 ﻿using SystemBase.Core;
+using SystemBase.Core.Components;
 using UnityEngine;
 
 namespace SystemBase.CommonSystems.Audio

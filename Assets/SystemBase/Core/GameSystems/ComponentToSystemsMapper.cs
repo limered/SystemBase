@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SystemBase.Core
+namespace SystemBase.Core.GameSystems
 {
     public static class ComponentToSystemsMapper
     {

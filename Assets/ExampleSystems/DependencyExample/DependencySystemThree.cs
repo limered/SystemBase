@@ -1,6 +1,5 @@
-﻿using SystemBase;
-using ExampleSystems.Example;
-using SystemBase.Core;
+﻿using ExampleSystems.Example;
+using SystemBase.Core.GameSystems;
 
 namespace ExampleSystems.DependencyExample
 {

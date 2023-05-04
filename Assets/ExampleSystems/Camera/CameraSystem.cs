@@ -1,4 +1,4 @@
-﻿using SystemBase.Core;
+﻿using SystemBase.Core.GameSystems;
 using SystemBase.Utils;
 using UniRx;
 using UnityEngine;
@@ -22,23 +22,20 @@ namespace Systems.Camera
             var targetPosition = targetTransform.position;
             var camPosition = camTransform.position;
             var camToTarget = camPosition.DirectionTo(targetPosition);
-            
+
             var forward = camToTarget * Input.GetAxis("Vertical") * camera.speed;
             var side = new Vector3(camToTarget.z, 0, -camToTarget.x) * Input.GetAxis("Horizontal") * camera.speed;
             var movement = forward + side;
             movement.y = 0;
-            
+
             targetPosition += movement;
             camPosition += movement;
             targetTransform.position = targetPosition;
             camTransform.position = camPosition;
-            
+
             camera.transform.LookAt(camera.target.transform);
 
-            if (!Input.GetMouseButton(0))
-            {
-                return;
-            }
+            if (!Input.GetMouseButton(0)) return;
             var x = Input.GetAxis("Mouse X") * 10f;
             camera.transform.RotateAround(targetTransform.position, Vector3.up, x);
         }

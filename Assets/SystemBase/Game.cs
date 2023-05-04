@@ -1,6 +1,6 @@
-﻿using SystemBase.Adapter;
-using SystemBase.CommonSystems.Audio.Helper;
+﻿using SystemBase.CommonSystems.Audio.Helper;
 using SystemBase.Core;
+using SystemBase.Core.StateMachineBase;
 using SystemBase.GameState.Messages;
 using SystemBase.GameState.States;
 using SystemBase.Utils;
@@ -27,7 +27,6 @@ namespace SystemBase
 
         private void Start()
         {
-            // MessageBroker.Default.Publish(new GameMsgStart());
             QualitySettings.vSyncCount = 0;
             // Application.targetFrameRate = 60;
         }
