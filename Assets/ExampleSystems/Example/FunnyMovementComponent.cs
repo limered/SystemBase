@@ -1,5 +1,4 @@
-﻿using SystemBase;
-using SystemBase.Core;
+﻿using SystemBase.Core.Components;
 using UnityEngine;
 
 namespace ExampleSystems.Example

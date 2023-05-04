@@ -1,5 +1,6 @@
 using System;
 using SystemBase.Core;
+using SystemBase.Core.Components;
 using UniRx;
 using UnityEngine;
 
@@ -146,7 +147,7 @@ namespace SystemBase.Utils
         {
             if (gameComponent != null)
             {
-                return gameComponent.AddDisposablele(disposable);
+                return gameComponent.AddDisposable(disposable);
             }
             disposable.Dispose();
             return disposable;

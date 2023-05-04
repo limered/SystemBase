@@ -26,7 +26,7 @@ namespace SystemBase.Utils
         {
             var reg = new IoCRegister
             {
-                ResolveType = typeof(TImplementation),
+                ResolveType = typeof(TImplementation)
             };
 
             _registrations.Add(typeof(TInterface), reg);
@@ -36,7 +36,7 @@ namespace SystemBase.Utils
         {
             var reg = new IoCRegister
             {
-                ResolveType = typeof(TImplementation),
+                ResolveType = typeof(TImplementation)
             };
             _registrations.Add(typeof(TImplementation), reg);
         }
@@ -48,17 +48,13 @@ namespace SystemBase.Utils
             {
                 IsSingleton = true,
                 SingletonSubject = new ReactiveProperty<dynamic>(),
-                ResolveType = typeof(TImplementation),
+                ResolveType = typeof(TImplementation)
             };
 
             if (replaceIfAlreadyRegistered && _registrations.ContainsKey(typeof(TImplementation)))
-            {
                 _registrations[typeof(TInterface)] = reg;
-            }
             else
-            {
                 _registrations.Add(typeof(TInterface), reg);
-            }
         }
 
         public static void RegisterSingleton<TImplementation>(
@@ -74,13 +70,9 @@ namespace SystemBase.Utils
             };
 
             if (replaceIfAlreadyRegistered && _registrations.ContainsKey(typeof(TImplementation)))
-            {
                 _registrations[typeof(TImplementation)] = reg;
-            }
             else
-            {
                 _registrations.Add(typeof(TImplementation), reg);
-            }
         }
 
         public static void RegisterSingleton<TResolve, TImplementation>(TImplementation instance,
@@ -96,13 +88,9 @@ namespace SystemBase.Utils
             };
 
             if (replaceIfAlreadyRegistered && _registrations.ContainsKey(typeof(TResolve)))
-            {
                 _registrations[typeof(TResolve)] = reg;
-            }
             else
-            {
                 _registrations.Add(typeof(TResolve), reg);
-            }
         }
 
         public static void RegisterSingleton<TResolve>(Func<object> lazyInstance,
@@ -112,17 +100,13 @@ namespace SystemBase.Utils
             {
                 IsSingleton = true,
                 SingletonSubject = new ReactiveProperty<dynamic>(),
-                CreationFunction = lazyInstance,
+                CreationFunction = lazyInstance
             };
 
             if (replaceIfAlreadyRegistered && _registrations.ContainsKey(typeof(TResolve)))
-            {
                 _registrations[typeof(TResolve)] = reg;
-            }
             else
-            {
                 _registrations.Add(typeof(TResolve), reg);
-            }
         }
 
         public static void Overwrite<TResolve>(object replacement)
@@ -141,17 +125,15 @@ namespace SystemBase.Utils
 
         public static TResolve Resolve<TResolve>()
         {
-            if (!_registrations.TryGetValue(typeof(TResolve), out var reg))
-            {
-                throw new KeyNotFoundException("Unknown interface: " + typeof(TResolve).FullName);
-            }
+            return (TResolve)Resolve(typeof(TResolve));
+        }
 
-            if (!reg.IsSingleton)
-            {
-                return (TResolve)ResolveType(reg);
-            }
+        public static object Resolve(Type type)
+        {
+            if (!_registrations.TryGetValue(type, out var reg))
+                throw new KeyNotFoundException("Unknown interface: " + type.FullName);
 
-            return (TResolve)ResolveSingleton(reg);
+            return reg.IsSingleton ? ResolveSingleton(reg) : ResolveType(reg);
         }
 
         private static void RegisterAllRegistrations()
@@ -171,10 +153,7 @@ namespace SystemBase.Utils
 
         private static object ResolveSingleton(IoCRegister reg)
         {
-            if (reg.IsOverwritten)
-            {
-                return reg.OverwriteInstance;
-            }
+            if (reg.IsOverwritten) return reg.OverwriteInstance;
 
             if (reg.CachedInstance != null) return reg.CachedInstance;
 

@@ -2,7 +2,7 @@ using System;
 using System.Collections.ObjectModel;
 using UniRx;
 
-namespace SystemBase.Core
+namespace SystemBase.Core.StateMachineBase
 {
     public abstract class BaseState<T> : IState<T>, IDisposable
     {

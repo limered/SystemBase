@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 
-namespace SystemBase.Core
+namespace SystemBase.Core.StateMachineBase
 {
     public interface IState<T>
     {

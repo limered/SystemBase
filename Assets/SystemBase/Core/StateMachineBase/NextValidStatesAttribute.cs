@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SystemBase.Core
+namespace SystemBase.Core.StateMachineBase
 {
     [AttributeUsage(AttributeTargets.Class)]
     public class NextValidStatesAttribute : Attribute
